@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambiamos tu estancia</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAV */
+header {
+    position: fixed;
+    width: 100%;
+    background: #0d1b2a;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+header a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero img {
+    width: 120px;
+}
+
+.hero h1 {
+    font-size: 34px;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* PROYECTOS */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+}
+
+/* SERVICIOS */
+.servicios {
+    background: #f5f5f5;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background: #0d1b2a;
+    color: white;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="#inicio">Inicio</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+</header>
+
+<section class="hero" id="inicio">
+    <img src="logo.png">
+    <h1>Cambiamos tu estancia</h1>
+    <p>Transformamos tu hogar con calidad profesional</p>
+</section>
+
+<section id="proyectos">
+    <h2>Antes y Después</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+        </div>
+
+    </div>
+</section>
+
+<section class="servicios" id="servicios">
+    <h2>Servicios</h2>
+    <p>Reformas integrales, cocinas, baños, pintura y más.</p>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Contáctanos directamente por WhatsApp</p>
+</section>
+
+<a class="whatsapp" href="https://wa.me/34600000000">💬</a>
+
+<footer>
+    <p>© 2026 Cambiamos tu estancia</p>
+</footer>
+
+</body>
+</html>
