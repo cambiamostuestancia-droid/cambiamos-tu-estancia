@@ -31,7 +31,6 @@ color:white;
 margin-left:20px;
 text-decoration:none;
 font-weight:600;
-transition:.3s;
 }
 
 nav a:hover{color:#f5a623}
@@ -48,10 +47,7 @@ text-align:center;
 padding:20px;
 }
 
-.hero h1{
-font-size:42px;
-max-width:900px;
-}
+.hero h1{font-size:42px;max-width:900px}
 
 .hero p{
 margin:20px 0;
@@ -83,7 +79,13 @@ margin:auto;
 }
 
 h2{margin-bottom:20px}
-p{color:#ccc}
+p{color:#ccc;line-height:1.6}
+
+/* TEXTO PRO */
+.texto{
+max-width:800px;
+margin:20px auto;
+}
 
 /* BEFORE AFTER */
 .proyecto{
@@ -98,10 +100,7 @@ overflow:hidden;
 border-radius:12px;
 }
 
-.slider-container img{
-width:100%;
-display:block;
-}
+.slider-container img{width:100%}
 
 .after{
 position:absolute;
@@ -147,7 +146,8 @@ border-top:1px solid #222;
 
 <nav>
 <a href="#inicio">Inicio</a>
-<a href="#como">Cómo funciona</a>
+<a href="#servicio">Servicio</a>
+<a href="#proceso">Proceso</a>
 <a href="#proyectos">Proyectos</a>
 <a href="#contacto">Contacto</a>
 </nav>
@@ -159,22 +159,73 @@ border-top:1px solid #222;
 <h1>Descubre cómo quedará tu casa antes de gastar un solo euro</h1>
 
 <p>
-Evita errores, ahorra dinero y toma decisiones con seguridad antes de reformar
+Diseñamos tu estancia de forma realista para que tomes decisiones seguras, evites errores y ahorres dinero
 </p>
 
 <a class="btn" href="#contacto">Solicitar diseño</a>
 
 </section>
 
-<!-- COMO FUNCIONA -->
-<section id="como">
+<!-- SERVICIO -->
+<section id="servicio">
+
+<div class="container">
+
+<h2>¿Qué hacemos?</h2>
+
+<p class="texto">
+Transformamos tu estancia de forma digital antes de que hagas la reforma real.
+A partir de una foto de tu espacio actual, creamos un diseño completamente nuevo para que puedas visualizar cómo quedará el resultado final.
+</p>
+
+<p class="texto">
+Nuestro objetivo es ayudarte a tomar decisiones con seguridad, evitar errores costosos y tener una visión clara antes de invertir en una reforma.
+</p>
+
+</div>
+
+</section>
+
+<!-- PROCESO -->
+<section id="proceso">
 
 <div class="container">
 
 <h2>¿Cómo funciona?</h2>
 
-<p>
-Nos envías una foto → Diseñamos tu estancia → Ves el resultado antes de gastar dinero
+<p class="texto">
+El proceso es sencillo y está pensado para que obtengas el máximo valor sin complicaciones:
+</p>
+
+<p class="texto">
+1. Nos envías una foto de tu estancia actual  
+2. Analizamos el espacio y diseñamos una propuesta completamente renovada  
+3. Recibes una imagen realista del resultado final antes de reformar
+</p>
+
+<p class="texto">
+Así puedes ver exactamente cómo quedará tu casa antes de tomar decisiones importantes.
+</p>
+
+</div>
+
+</section>
+
+<!-- BENEFICIOS -->
+<section>
+
+<div class="container">
+
+<h2>¿Por qué hacerlo?</h2>
+
+<p class="texto">
+Muchas personas empiezan una reforma sin tener claro el resultado final,
+lo que provoca errores, cambios y gastos innecesarios.
+</p>
+
+<p class="texto">
+Con nuestro servicio puedes visualizar el resultado antes de empezar,
+tomar mejores decisiones y ahorrar tiempo y dinero.
 </p>
 
 </div>
@@ -188,10 +239,13 @@ Nos envías una foto → Diseñamos tu estancia → Ves el resultado antes de ga
 
 <h2>Transformaciones reales</h2>
 
+<p class="texto">
+Estos son algunos ejemplos reales de cómo convertimos espacios antiguos en estancias modernas, funcionales y con estilo.
+</p>
+
 <!-- SALON -->
 <div class="proyecto">
 <h3>Salón</h3>
-
 <div class="slider-container">
 <img src="IMG_7079.jpeg">
 <div class="after">
@@ -199,13 +253,11 @@ Nos envías una foto → Diseñamos tu estancia → Ves el resultado antes de ga
 </div>
 <div class="slider"></div>
 </div>
-
 </div>
 
 <!-- BAÑO -->
 <div class="proyecto">
 <h3>Baño</h3>
-
 <div class="slider-container">
 <img src="IMG_5359.jpeg">
 <div class="after">
@@ -213,13 +265,11 @@ Nos envías una foto → Diseñamos tu estancia → Ves el resultado antes de ga
 </div>
 <div class="slider"></div>
 </div>
-
 </div>
 
 <!-- COCINA -->
 <div class="proyecto">
 <h3>Cocina</h3>
-
 <div class="slider-container">
 <img src="IMG_7080.jpeg">
 <div class="after">
@@ -227,13 +277,11 @@ Nos envías una foto → Diseñamos tu estancia → Ves el resultado antes de ga
 </div>
 <div class="slider"></div>
 </div>
-
 </div>
 
 <!-- HABITACION -->
 <div class="proyecto">
 <h3>Habitación</h3>
-
 <div class="slider-container">
 <img src="IMG_7487.jpeg">
 <div class="after">
@@ -241,13 +289,11 @@ Nos envías una foto → Diseñamos tu estancia → Ves el resultado antes de ga
 </div>
 <div class="slider"></div>
 </div>
-
 </div>
 
 <!-- PATIO -->
 <div class="proyecto">
 <h3>Patio</h3>
-
 <div class="slider-container">
 <img src="IMG_7492.jpeg">
 <div class="after">
@@ -255,7 +301,6 @@ Nos envías una foto → Diseñamos tu estancia → Ves el resultado antes de ga
 </div>
 <div class="slider"></div>
 </div>
-
 </div>
 
 </div>
@@ -269,12 +314,14 @@ Nos envías una foto → Diseñamos tu estancia → Ves el resultado antes de ga
 
 <h2>Empieza tu transformación</h2>
 
-<p>Envíanos tus fotos y descubre cómo quedará tu casa</p>
+<p class="texto">
+Envíanos tus fotos y te mostraremos cómo puede quedar tu estancia antes de empezar la reforma.
+</p>
 
 <br>
 
 <a href="mailto:cambiamostuestancia@gmail.com">
-📩 cambiamos tu estancia@gmail.com
+📩 cambiamostuestancia@gmail.com
 </a>
 
 <a href="tel:617075486">
