@@ -3,19 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cambiamos tu estancia</title>
+
+<title>Cambiamos tu estancia | Diseño de interiores online</title>
+
+<meta name="description" content="Descubre cómo quedará tu casa antes de reformarla. Diseños realistas para ahorrar dinero y tomar decisiones seguras.">
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* NAV */
 header {
     position: fixed;
     width: 100%;
-    background: #0d1b2a;
+    background: rgba(0,0,0,0.85);
     padding: 15px;
     text-align: center;
     z-index: 1000;
@@ -23,14 +27,20 @@ header {
 
 header a {
     color: white;
-    margin: 0 12px;
+    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
 
+header a:hover {
+    color: #f4a742;
+}
+
 /* HERO */
 .hero {
-    background: #000;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+    background-size: cover;
     color: white;
     height: 100vh;
     display: flex;
@@ -38,35 +48,96 @@ header a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+
+    animation: fadeIn 1.5s ease;
 }
 
-/* LOGO */
 .logo {
-    width: 200px;
+    width: 220px;
     margin-bottom: 20px;
 }
 
-/* TEXTOS */
 h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+    font-size: 44px;
+    max-width: 800px;
 }
 
 p {
     font-size: 18px;
-    opacity: 0.9;
+    max-width: 600px;
 }
 
 /* BOTÓN */
 .boton {
-    display: inline-block;
     background: #f4a742;
+    padding: 16px 30px;
     color: white;
-    padding: 12px 25px;
-    border-radius: 6px;
     text-decoration: none;
-    margin-top: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    font-size: 18px;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.boton:hover {
+    background: #ff8c00;
+    transform: scale(1.07);
+}
+
+/* SECCIONES */
+section {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.bloque {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    margin: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+}
+
+.card img {
+    width: 100%;
+}
+
+/* TESTIMONIOS */
+.testimonio {
+    background: #f5f5f5;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 12px;
+}
+
+/* CTA FINAL */
+.cta {
+    background: #111;
+    color: white;
+}
+
+/* EMAIL */
+.email {
+    margin-top: 20px;
+    font-size: 18px;
 }
 
 /* WHATSAPP */
@@ -76,18 +147,34 @@ p {
     right: 20px;
     background: #25D366;
     color: white;
-    font-size: 26px;
-    padding: 15px;
+    font-size: 28px;
+    padding: 16px;
     border-radius: 50%;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     animation: pulse 1.5s infinite;
 }
 
+/* ANIMACIONES */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.12); }
-    100% { transform: scale(1); }
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
 }
 </style>
 
@@ -96,20 +183,93 @@ p {
 <body>
 
 <header>
-    <a href="index.html">Inicio</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="nosotros.html">Quiénes somos</a>
-    <a href="contacto.html">Contacto</a>
+    <a href="#">Inicio</a>
+    <a href="#como">Cómo funciona</a>
+    <a href="#ejemplos">Ejemplos</a>
+    <a href="#contacto">Contacto</a>
 </header>
 
 <section class="hero">
     <img src="logo.png" class="logo">
-    <h1>Cambiamos tu estancia</h1>
-    <p>Reformas profesionales para tu hogar</p>
-    <a class="boton" href="contacto.html">Pedir presupuesto</a>
+    <h1>Descubre cómo quedará tu casa antes de gastar un solo euro en la reforma</h1>
+    <p>Diseñamos tu estancia para que tomes decisiones seguras, ahorres dinero y evites errores</p>
+    <a class="boton" href="#contacto">QUIERO VER MI CASA TRANSFORMADA</a>
 </section>
 
-<a class="whatsapp" href="https://wa.me/34617075486" target="_blank">💬</a>
+<section id="como" class="fade">
+    <div class="bloque">
+        <h2>Cómo funciona</h2>
+        <p>
+        1. Nos envías una foto de tu estancia<br><br>
+        2. Creamos un diseño totalmente renovado<br><br>
+        3. Recibes una imagen realista del resultado final
+        </p>
+    </div>
+</section>
+
+<section class="fade">
+    <div class="bloque">
+        <h2>Por qué lo necesitas</h2>
+        <p>
+        ✔ Evita errores caros en reformas<br>
+        ✔ Visualiza antes de gastar dinero<br>
+        ✔ Ahorra tiempo y dudas<br>
+        ✔ Toma decisiones con seguridad
+        </p>
+    </div>
+</section>
+
+<section id="ejemplos" class="fade">
+    <h2>Ejemplos de transformación</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf">
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+        </div>
+    </div>
+</section>
+
+<section class="fade">
+    <h2>Lo que dicen nuestros clientes</h2>
+
+    <div class="testimonio">“Ahora sé exactamente cómo reformar mi casa.”</div>
+    <div class="testimonio">“Me ahorré dinero al ver el resultado antes.”</div>
+</section>
+
+<section id="contacto" class="cta fade">
+    <h2>Solicita tu diseño ahora</h2>
+
+    <p>Envíanos tu foto por WhatsApp o email y te mostramos el cambio</p>
+
+    <a class="boton" href="https://wa.me/34617075486?text=Hola,%20quiero%20ver%20mi%20estancia%20transformada">
+        HABLAR POR WHATSAPP
+    </a>
+
+    <div class="email">
+        📩 <a href="mailto:cambiamostuestancia@gmail.com" style="color:white;">
+        cambiamostuestancia@gmail.com
+        </a>
+    </div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/34617075486?text=Hola,%20quiero%20información" target="_blank">💬</a>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+            el.classList.add('visible');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
