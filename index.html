@@ -8,7 +8,7 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
 /* NAV */
@@ -18,6 +18,7 @@ header {
     background: #0d1b2a;
     padding: 15px;
     text-align: center;
+    z-index: 1000;
 }
 
 header a {
@@ -29,24 +30,43 @@ header a {
 
 /* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-    background-size: cover;
+    background: #000;
     color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 120px 20px;
+    padding: 20px;
 }
 
-.hero img {
-    width: 120px;
+/* LOGO */
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+/* TEXTOS */
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    opacity: 0.9;
 }
 
 /* BOTÓN */
 .boton {
-    background: orange;
+    display: inline-block;
+    background: #f4a742;
     color: white;
-    padding: 12px 20px;
+    padding: 12px 25px;
+    border-radius: 6px;
     text-decoration: none;
+    margin-top: 15px;
 }
 
 /* WHATSAPP */
@@ -56,11 +76,21 @@ header a {
     right: 20px;
     background: #25D366;
     color: white;
+    font-size: 26px;
     padding: 15px;
     border-radius: 50%;
     text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+    100% { transform: scale(1); }
 }
 </style>
+
 </head>
 
 <body>
@@ -73,13 +103,13 @@ header a {
 </header>
 
 <section class="hero">
-    <img src="logo.png.PNG">
+    <img src="logo.png" class="logo">
     <h1>Cambiamos tu estancia</h1>
     <p>Reformas profesionales para tu hogar</p>
     <a class="boton" href="contacto.html">Pedir presupuesto</a>
 </section>
 
-<a class="whatsapp" href="https://wa.me/34617075486">💬</a>
+<a class="whatsapp" href="https://wa.me/34617075486" target="_blank">💬</a>
 
 </body>
 </html>
