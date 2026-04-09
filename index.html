@@ -6,6 +6,8 @@
 
 <title>Cambiamos tu estancia | Diseño de interiores online</title>
 
+<meta name="description" content="Diseñamos tu estancia antes de reformarla. Visualiza el resultado final y evita errores costosos.">
+
 <style>
 
 /* RESET */
@@ -14,7 +16,7 @@
 /* NAV */
 header{
 position:fixed;top:0;width:100%;
-background:rgba(0,0,0,0.85);
+background:rgba(0,0,0,0.9);
 padding:15px 30px;
 display:flex;justify-content:space-between;align-items:center;
 z-index:1000
@@ -28,18 +30,28 @@ nav a{color:white;text-decoration:none;font-size:14px}
 /* HERO */
 .hero{
 height:100vh;
-background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
 display:flex;align-items:center;justify-content:center;
 text-align:center;color:white
 }
 
 .hero-content{max-width:800px}
 
-.logo-big{width:240px;margin-bottom:20px}
+/* FONDO NEGRO LOGO */
+.logo-box{
+background:black;
+padding:20px;
+border-radius:10px;
+display:inline-block;
+margin-bottom:20px;
+}
 
-.hero h1{font-size:40px;margin-bottom:20px}
+.logo-big{width:220px}
 
-.hero p{margin-bottom:30px}
+/* TEXTOS */
+.hero h1{font-size:38px;margin-bottom:20px}
+.hero p{margin-bottom:30px;font-size:18px}
 
 /* BOTÓN */
 .btn{
@@ -48,11 +60,35 @@ padding:15px 25px;
 color:black;
 text-decoration:none;
 border-radius:6px;
-font-weight:bold
+font-weight:bold;
+display:inline-block;
 }
 
 /* SECCIONES */
-section{padding:100px 20px;text-align:center}
+section{padding:90px 20px;text-align:center}
+h2{margin-bottom:30px;font-size:28px}
+
+.texto{
+max-width:800px;
+margin:auto;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:#f5f5f5;
+padding:25px;
+border-radius:10px;
+}
 
 /* SLIDER */
 .slider-container{
@@ -61,10 +97,7 @@ margin:auto;
 position:relative;
 }
 
-.slider-container img{
-width:100%;
-display:block;
-}
+.slider-container img{width:100%}
 
 .after{
 position:absolute;
@@ -114,6 +147,8 @@ padding:20px;
 
 <nav>
 <a href="#">Inicio</a>
+<a href="#servicio">Servicio</a>
+<a href="#proceso">Proceso</a>
 <a href="#antes">Antes/Después</a>
 <a href="#contacto">Contacto</a>
 </nav>
@@ -122,19 +157,56 @@ padding:20px;
 <section class="hero">
 <div class="hero-content">
 
+<div class="logo-box">
 <img src="logo.PNG" class="logo-big">
+</div>
 
-<h1>Así quedará tu casa antes de reformarla</h1>
+<h1>Descubre cómo quedará tu casa antes de reformarla</h1>
 
-<p>Visualiza el resultado antes de gastar dinero</p>
+<p>Diseñamos tu estancia de forma realista para que tomes decisiones seguras, evites errores y ahorres dinero</p>
 
 <a href="#contacto" class="btn">Solicitar diseño</a>
 
 </div>
 </section>
 
+<section id="servicio">
+<h2>¿Qué hacemos?</h2>
+
+<p class="texto">
+Transformamos tu estancia de forma digital antes de que hagas la reforma real.  
+A partir de una foto de tu espacio actual, creamos un diseño completamente nuevo para que puedas visualizar cómo quedará el resultado final.
+</p>
+
+<p class="texto">
+Nuestro objetivo es ayudarte a tomar decisiones con seguridad, evitar errores costosos y tener una visión clara antes de invertir en una reforma.
+</p>
+
+</section>
+
+<section id="proceso">
+<h2>¿Cómo funciona?</h2>
+
+<div class="grid">
+<div class="card">Nos envías fotos de tu estancia actual</div>
+<div class="card">Diseñamos una nueva propuesta completamente renovada</div>
+<div class="card">Recibes una imagen realista del resultado final</div>
+</div>
+
+</section>
+
+<section>
+<h2>¿Por qué hacerlo?</h2>
+
+<p class="texto">
+Muchas personas empiezan una reforma sin tener claro el resultado final, lo que provoca errores, cambios y gastos innecesarios.
+Con nuestro servicio, puedes ver el resultado antes de empezar, tomar mejores decisiones y ahorrar tiempo y dinero.
+</p>
+
+</section>
+
 <section id="antes">
-<h2>Antes / Después</h2>
+<h2>Ejemplo de transformación</h2>
 
 <div class="slider-container" id="sliderBox">
 
@@ -153,12 +225,14 @@ padding:20px;
 <section id="contacto">
 <h2>Solicita tu diseño</h2>
 
+<p>Envíanos tu estancia y te mostraremos el resultado</p>
+
 <div class="formulario">
 <form action="mailto:cambiamostuestancia@gmail.com" method="post">
 
 <input type="text" placeholder="Nombre" required>
 <input type="email" placeholder="Email" required>
-<textarea placeholder="Tu estancia"></textarea>
+<textarea placeholder="Cuéntanos tu idea"></textarea>
 
 <button class="btn">Enviar</button>
 
@@ -172,33 +246,21 @@ padding:20px;
 </footer>
 
 <script>
-
 const slider = document.getElementById('slider');
 const after = document.getElementById('afterBox');
 
-slider.addEventListener('mousedown', startDrag);
+slider.addEventListener('mousedown', ()=>{
+document.addEventListener('mousemove', move);
+document.addEventListener('mouseup', ()=>document.removeEventListener('mousemove', move));
+});
 
-function startDrag(e){
-document.addEventListener('mousemove', drag);
-document.addEventListener('mouseup', stopDrag);
+function move(e){
+let box=document.getElementById('sliderBox').getBoundingClientRect();
+let x=((e.clientX-box.left)/box.width)*100;
+if(x<0)x=0;if(x>100)x=100;
+slider.style.left=x+"%";
+after.style.width=x+"%";
 }
-
-function drag(e){
-let x = e.clientX;
-let box = document.getElementById('sliderBox').getBoundingClientRect();
-let position = ((x - box.left)/box.width)*100;
-
-if(position<0) position=0;
-if(position>100) position=100;
-
-slider.style.left = position + "%";
-after.style.width = position + "%";
-}
-
-function stopDrag(){
-document.removeEventListener('mousemove', drag);
-}
-
 </script>
 
 </body>
