@@ -6,39 +6,57 @@
 
 <title>Cambiamos tu estancia | Diseño antes de reformar</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#0d0d0d;color:white}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0d0d0d;
+color:white;
+scroll-behavior:smooth;
+}
 
 /* NAV */
 header{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,0.9);
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 25px;
+padding:15px 30px;
 z-index:1000;
 }
 
-.logo{height:55px}
+.logo{
+height:45px;
+}
 
 nav a{
 color:white;
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
-font-weight:600;
+font-weight:500;
+transition:.3s;
 }
 
-nav a:hover{color:#f5a623}
+nav a:hover{
+color:#f5a623;
+}
 
 /* HERO */
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),url('logo.PNG') center/cover;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),url('logo.PNG') center/cover;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -47,29 +65,37 @@ text-align:center;
 padding:20px;
 }
 
-.hero h1{font-size:42px;max-width:900px}
+.hero h1{
+font-size:38px;
+max-width:850px;
+margin-bottom:20px;
+}
 
 .hero p{
-margin:20px 0;
 color:#ccc;
-font-size:18px;
 max-width:600px;
+margin-bottom:30px;
+font-size:17px;
 }
 
 .btn{
 background:#f5a623;
 color:black;
 padding:15px 30px;
-border-radius:10px;
-font-weight:bold;
+border-radius:8px;
+font-weight:600;
 text-decoration:none;
-margin-top:20px;
-display:inline-block;
+margin-top:30px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
 }
 
 /* SECCIONES */
 section{
-padding:100px 20px;
+padding:110px 20px;
 text-align:center;
 }
 
@@ -78,29 +104,48 @@ max-width:1000px;
 margin:auto;
 }
 
-h2{margin-bottom:20px}
-p{color:#ccc;line-height:1.6}
+h2{
+font-size:28px;
+margin-bottom:25px;
+}
 
-/* TEXTO PRO */
 .texto{
-max-width:800px;
-margin:20px auto;
+max-width:750px;
+margin:15px auto;
+color:#ccc;
+line-height:1.7;
+}
+
+/* ANIMACIONES */
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* BEFORE AFTER */
 .proyecto{
-margin-bottom:100px;
+margin-bottom:110px;
 }
 
 .slider-container{
 position:relative;
-max-width:700px;
+max-width:750px;
 margin:30px auto;
 overflow:hidden;
 border-radius:12px;
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
 }
 
-.slider-container img{width:100%}
+.slider-container img{
+width:100%;
+display:block;
+}
 
 .after{
 position:absolute;
@@ -131,7 +176,7 @@ font-size:18px;
 
 /* FOOTER */
 footer{
-padding:30px;
+padding:40px;
 text-align:center;
 color:#777;
 border-top:1px solid #222;
@@ -155,7 +200,7 @@ border-top:1px solid #222;
 </header>
 
 <!-- HERO -->
-<section class="hero" id="inicio">
+<section class="hero fade" id="inicio">
 
 <h1>Descubre cómo quedará tu casa antes de gastar un solo euro</h1>
 
@@ -168,39 +213,11 @@ Diseñamos tu estancia de forma realista para que tomes decisiones seguras, evit
 </section>
 
 <!-- SERVICIO -->
-<section>
+<section id="servicio" class="fade">
 
 <div class="container">
 
-<h2>¿Qué incluye nuestro servicio?</h2>
-
-<p class="texto">
-No solo diseñamos tu estancia. Te damos todo lo necesario para que puedas llevarla a la realidad sin errores ni improvisaciones.
-</p>
-
-<div class="texto">
-
-<p>✔ Diseño completo y realista de tu estancia</p>
-
-<p>✔ Presupuesto orientativo para ejecutar la reforma</p>
-
-<p>✔ Recomendación de muebles y materiales utilizados en el diseño</p>
-
-<p>✔ Asesoramiento sobre dónde comprar cada elemento</p>
-
-<p>✔ Guía para realizar los cambios por tu cuenta si lo deseas</p>
-
-<p>✔ Soporte y orientación para tomar decisiones con seguridad</p>
-
-</div>
-
-<p class="texto">
-De esta forma no solo ves el resultado final, sino que sabes exactamente cómo conseguirlo.
-</p>
-
-</div>
-
-</section>
+<h2>¿Qué hacemos?</h2>
 
 <p class="texto">
 Transformamos tu estancia de forma digital antes de que hagas la reforma real.
@@ -216,63 +233,46 @@ Nuestro objetivo es ayudarte a tomar decisiones con seguridad, evitar errores co
 </section>
 
 <!-- PROCESO -->
-<section id="proceso">
+<section id="proceso" class="fade">
 
 <div class="container">
 
 <h2>¿Cómo funciona?</h2>
 
 <p class="texto">
-El proceso es sencillo y está pensado para que obtengas el máximo valor sin complicaciones:
-</p>
-
-<p class="texto">
-1. Nos envías una foto de tu estancia actual  
-2. Analizamos el espacio y diseñamos una propuesta completamente renovada  
-3. Recibes una imagen realista del resultado final antes de reformar
-</p>
-
-<p class="texto">
-Así puedes ver exactamente cómo quedará tu casa antes de tomar decisiones importantes.
+1. Nos envías una foto de tu estancia  
+2. Diseñamos una propuesta renovada  
+3. Recibes una imagen realista antes de reformar  
 </p>
 
 </div>
 
 </section>
 
-<!-- BENEFICIOS -->
-<section>
+<!-- SERVICIOS EXTRA -->
+<section class="fade">
 
 <div class="container">
 
-<h2>¿Por qué hacerlo?</h2>
+<h2>¿Qué incluye nuestro servicio?</h2>
 
-<p class="texto">
-Muchas personas empiezan una reforma sin tener claro el resultado final,
-lo que provoca errores, cambios y gastos innecesarios.
-</p>
-
-<p class="texto">
-Con nuestro servicio puedes visualizar el resultado antes de empezar,
-tomar mejores decisiones y ahorrar tiempo y dinero.
-</p>
+<p class="texto">✔ Diseño completo y realista</p>
+<p class="texto">✔ Presupuesto orientativo</p>
+<p class="texto">✔ Recomendación de muebles</p>
+<p class="texto">✔ Dónde comprar cada elemento</p>
+<p class="texto">✔ Asesoramiento para hacerlo tú mismo</p>
 
 </div>
 
 </section>
 
 <!-- PROYECTOS -->
-<section id="proyectos">
+<section id="proyectos" class="fade">
 
 <div class="container">
 
 <h2>Transformaciones reales</h2>
 
-<p class="texto">
-Estos son algunos ejemplos reales de cómo convertimos espacios antiguos en estancias modernas, funcionales y con estilo.
-</p>
-
-<!-- SALON -->
 <div class="proyecto">
 <h3>Salón</h3>
 <div class="slider-container">
@@ -284,7 +284,6 @@ Estos son algunos ejemplos reales de cómo convertimos espacios antiguos en esta
 </div>
 </div>
 
-<!-- BAÑO -->
 <div class="proyecto">
 <h3>Baño</h3>
 <div class="slider-container">
@@ -296,7 +295,6 @@ Estos son algunos ejemplos reales de cómo convertimos espacios antiguos en esta
 </div>
 </div>
 
-<!-- COCINA -->
 <div class="proyecto">
 <h3>Cocina</h3>
 <div class="slider-container">
@@ -308,7 +306,6 @@ Estos son algunos ejemplos reales de cómo convertimos espacios antiguos en esta
 </div>
 </div>
 
-<!-- HABITACION -->
 <div class="proyecto">
 <h3>Habitación</h3>
 <div class="slider-container">
@@ -320,7 +317,6 @@ Estos son algunos ejemplos reales de cómo convertimos espacios antiguos en esta
 </div>
 </div>
 
-<!-- PATIO -->
 <div class="proyecto">
 <h3>Patio</h3>
 <div class="slider-container">
@@ -337,17 +333,15 @@ Estos son algunos ejemplos reales de cómo convertimos espacios antiguos en esta
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto">
+<section id="contacto" class="fade">
 
 <div class="container contacto">
 
 <h2>Empieza tu transformación</h2>
 
 <p class="texto">
-Envíanos tus fotos y te mostraremos cómo puede quedar tu estancia antes de empezar la reforma.
+Envíanos tus fotos y te mostraremos cómo puede quedar tu estancia
 </p>
-
-<br>
 
 <a href="mailto:cambiamostuestancia@gmail.com">
 📩 cambiamostuestancia@gmail.com
@@ -363,8 +357,20 @@ Envíanos tus fotos y te mostraremos cómo puede quedar tu estancia antes de emp
 
 <script>
 
-document.querySelectorAll(".slider-container").forEach(container=>{
+/* ANIMACIONES SCROLL */
+const faders=document.querySelectorAll(".fade");
 
+window.addEventListener("scroll",()=>{
+faders.forEach(el=>{
+const rect=el.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){
+el.classList.add("visible");
+}
+});
+});
+
+/* SLIDER */
+document.querySelectorAll(".slider-container").forEach(container=>{
 let slider=container.querySelector(".slider");
 let after=container.querySelector(".after");
 
@@ -378,14 +384,10 @@ document.removeEventListener("mousemove",move);
 function move(e){
 let box=container.getBoundingClientRect();
 let x=((e.clientX-box.left)/box.width)*100;
-
-if(x<0)x=0;
-if(x>100)x=100;
-
+if(x<0)x=0;if(x>100)x=100;
 slider.style.left=x+"%";
 after.style.width=x+"%";
 }
-
 });
 
 </script>
