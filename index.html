@@ -31,14 +31,8 @@ backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-.nav-logo{
-height:40px;
-}
-
-.nav-links{
-display:flex;
-gap:25px;
-}
+.nav-logo{height:40px}
+.nav-links{display:flex;gap:25px}
 
 nav a{
 color:#fff;
@@ -48,9 +42,7 @@ opacity:0.8;
 transition:0.3s;
 }
 
-nav a:hover{
-opacity:1;
-}
+nav a:hover{opacity:1}
 
 /* HERO */
 .hero{
@@ -63,10 +55,7 @@ text-align:center;
 padding:20px;
 }
 
-.logo{
-width:200px; /* MÁS PEQUEÑO */
-margin-bottom:30px;
-}
+.logo{width:200px;margin-bottom:30px}
 
 .hero h1{
 font-size:42px;
@@ -77,7 +66,7 @@ margin-bottom:20px;
 .hero p{
 max-width:600px;
 opacity:0.8;
-margin-bottom:40px; /* MÁS ESPACIO */
+margin-bottom:40px;
 }
 
 .btn{
@@ -88,34 +77,27 @@ border-radius:30px;
 text-decoration:none;
 font-weight:600;
 transition:0.3s;
-margin-top:10px;
 }
 
-.btn:hover{
-transform:scale(1.05);
-}
+.btn:hover{transform:scale(1.05)}
 
 /* SECTIONS */
-section{
-padding:100px 20px;
-}
+section{padding:100px 20px}
+.container{max-width:1100px;margin:auto}
 
-.container{
-max-width:1100px;
-margin:auto;
-}
+h2{text-align:center;margin-bottom:10px;font-size:36px}
 
-h2{
+.subtitulo{
 text-align:center;
-margin-bottom:20px;
-font-size:36px;
+opacity:0.7;
+margin-bottom:50px;
 }
 
 .divider{
 width:80px;
 height:2px;
 background:#c8a96a;
-margin:20px auto 60px;
+margin:20px auto 30px;
 }
 
 /* SERVICIOS */
@@ -132,24 +114,53 @@ border-radius:15px;
 transition:0.3s;
 }
 
-.servicio:hover{
-transform:translateY(-5px);
-}
+.servicio:hover{transform:translateY(-5px)}
 
 /* PROYECTOS */
 .proyecto{
-margin-bottom:60px;
+margin-bottom:80px;
+padding:20px;
+background:#1a1a22;
+border-radius:15px;
 }
 
-.before-after{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
+.proyecto-titulo{
+text-align:center;
+margin-bottom:20px;
+font-size:18px;
+opacity:0.8;
 }
 
-.before-after img{
-width:100%;
+/* SLIDER */
+.slider-container{
+position:relative;
+max-width:700px;
+margin:auto;
+overflow:hidden;
 border-radius:10px;
+}
+
+.slider-container img{
+width:100%;
+display:block;
+}
+
+.after{
+position:absolute;
+top:0;
+left:0;
+width:50%;
+overflow:hidden;
+}
+
+.slider{
+position:absolute;
+top:0;
+left:50%;
+width:4px;
+height:100%;
+background:white;
+cursor:pointer;
 }
 
 /* QUIENES */
@@ -167,9 +178,7 @@ margin-bottom:20px;
 }
 
 /* CONTACTO */
-.contacto{
-text-align:center;
-}
+.contacto{text-align:center}
 
 footer{
 text-align:center;
@@ -179,13 +188,7 @@ opacity:0.6;
 
 /* RESPONSIVE */
 @media(max-width:768px){
-.before-after{
-grid-template-columns:1fr;
-}
-
-.nav-links{
-display:none;
-}
+.nav-links{display:none}
 }
 </style>
 </head>
@@ -193,7 +196,7 @@ display:none;
 <body>
 
 <nav>
-<img src="logo.png" class="nav-logo">
+<img src="logo.PNG" class="nav-logo">
 
 <div class="nav-links">
 <a href="#inicio">Inicio</a>
@@ -206,7 +209,7 @@ display:none;
 
 <!-- HERO -->
 <section id="inicio" class="hero">
-<img src="logo.png" class="logo">
+<img src="logo.PNG" class="logo">
 
 <h1>Transforma tu vivienda antes de gastar un solo euro</h1>
 
@@ -228,23 +231,17 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 
 <div class="servicio">
 <h3>Diseño previo</h3>
-<p>
-Te mostramos cómo quedará tu vivienda antes de cualquier reforma para que tomes decisiones con total claridad.
-</p>
+<p>Te mostramos cómo quedará tu vivienda antes de cualquier reforma.</p>
 </div>
 
 <div class="servicio">
 <h3>Presupuesto orientativo</h3>
-<p>
-Te ayudamos a entender cuánto puede costar el cambio, evitando sorpresas y ajustándolo a tu realidad.
-</p>
+<p>Te ayudamos a entender cuánto puede costar el cambio.</p>
 </div>
 
 <div class="servicio">
 <h3>Asesoramiento completo</h3>
-<p>
-Te guiamos paso a paso, tanto si decides hacerlo tú mismo como si prefieres delegarlo.
-</p>
+<p>Te guiamos paso a paso en todo el proceso.</p>
 </div>
 
 </div>
@@ -256,34 +253,56 @@ Te guiamos paso a paso, tanto si decides hacerlo tú mismo como si prefieres del
 <section id="proyectos">
 <div class="container">
 
-<h2>Antes y después</h2>
+<h2>Proyectos</h2>
 <div class="divider"></div>
 
+<p class="subtitulo">Desliza para ver el antes y después</p>
+
+<!-- PROYECTO 1 -->
 <div class="proyecto">
-<div class="before-after">
+<div class="proyecto-titulo">Salón</div>
+<div class="slider-container">
 <img src="IMG_7079.jpeg">
+<div class="after">
 <img src="IMG_4559.png">
 </div>
+<div class="slider"></div>
+</div>
 </div>
 
+<!-- PROYECTO 2 -->
 <div class="proyecto">
-<div class="before-after">
+<div class="proyecto-titulo">Baño</div>
+<div class="slider-container">
 <img src="IMG_5359.jpeg">
+<div class="after">
 <img src="IMG_5371.jpeg">
 </div>
+<div class="slider"></div>
+</div>
 </div>
 
+<!-- PROYECTO 3 -->
 <div class="proyecto">
-<div class="before-after">
+<div class="proyecto-titulo">Cocina</div>
+<div class="slider-container">
 <img src="IMG_7080.jpeg">
+<div class="after">
 <img src="IMG_4955.jpeg">
 </div>
+<div class="slider"></div>
+</div>
 </div>
 
+<!-- PROYECTO 4 -->
 <div class="proyecto">
-<div class="before-after">
+<div class="proyecto-titulo">Exterior</div>
+<div class="slider-container">
 <img src="IMG_7492.jpeg">
+<div class="after">
 <img src="D1DFDF70-6C21-4B12-A1F2-04EC50160F3C.png">
+</div>
+<div class="slider"></div>
 </div>
 </div>
 
@@ -298,7 +317,6 @@ Te guiamos paso a paso, tanto si decides hacerlo tú mismo como si prefieres del
 <div class="divider"></div>
 
 <div class="quienes-card">
-
 <img src="3FEEAB41-1A6C-4EBB-8277-E0D0EB1F2F51.png">
 
 <p>
@@ -324,15 +342,35 @@ Nuestro compromiso es que veas el resultado antes de empezar, para que el cambio
 <h2>Contacto</h2>
 <div class="divider"></div>
 
-<p>Solicita tu diseño personalizado:</p>
-<br>
-<p><strong>cambiamos.tuestancia@gmail.com</strong></p>
+<p><strong>cambiamostuestancia@gmail.com</strong></p>
 
 </section>
 
 <footer>
 © Cambiamos Tu Estancia
 </footer>
+
+<script>
+document.querySelectorAll(".slider-container").forEach(container=>{
+let slider=container.querySelector(".slider");
+let after=container.querySelector(".after");
+
+slider.addEventListener("mousedown",()=>{
+document.addEventListener("mousemove",move);
+document.addEventListener("mouseup",()=>{
+document.removeEventListener("mousemove",move);
+});
+});
+
+function move(e){
+let box=container.getBoundingClientRect();
+let x=((e.clientX-box.left)/box.width)*100;
+if(x<0)x=0;if(x>100)x=100;
+slider.style.left=x+"%";
+after.style.width=x+"%";
+}
+});
+</script>
 
 </body>
 </html>
