@@ -15,20 +15,44 @@ body{background:#0f0f14;color:#fff}
 
 /* NAV */
 nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 25px;
+padding:10px 20px;
 background:#0f0f14;
+position:fixed;
+top:0;
+width:100%;
 z-index:9999;
 border-bottom:1px solid #222;
 }
 
-.nav-logo{height:45px}
+.nav-left{flex:1;}
+
+.nav-center{
+flex:2;
+text-align:center;
+}
+
+.nav-center h1{
+font-size:16px;
+margin:0;
+}
+
+.nav-center p{
+font-size:11px;
+opacity:0.7;
+margin:0;
+}
+
+.nav-right{
+flex:1;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+
+.nav-logo{height:40px}
 
 .menu-icon{display:none;font-size:25px;cursor:pointer}
 
@@ -52,7 +76,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-margin-top:120px;
+margin-top:100px;
 }
 
 .logo{
@@ -82,27 +106,6 @@ border-radius:30px;
 text-decoration:none;
 cursor:pointer;
 display:inline-block;
-}
-
-/* HEADER TEXTO SUPERIOR */
-.header-top{
-position:fixed;
-top:0;
-width:100%;
-text-align:center;
-padding:10px;
-background:#0f0f14;
-z-index:10000;
-border-bottom:1px solid #222;
-}
-
-.header-top h1{
-font-size:20px;
-}
-
-.header-top p{
-font-size:12px;
-opacity:0.7;
 }
 
 /* SECTIONS */
@@ -167,7 +170,7 @@ width:100%;
 border-radius:10px;
 }
 
-/* FRASE ENTRE SECCIONES */
+/* FRASE */
 .frase{
 text-align:center;
 font-size:20px;
@@ -235,15 +238,17 @@ padding:20px;
 
 <body>
 
-<!-- TEXTO ARRIBA -->
-<div class="header-top">
+<nav>
+<div class="nav-left">
+<img src="logo.PNG" class="nav-logo">
+</div>
+
+<div class="nav-center">
 <h1>CAMBIAMOS TU ESTANCIA</h1>
 <p>Visualiza tu casa antes de cambiarla</p>
 </div>
 
-<nav style="top:50px;">
-<img src="logo.PNG" class="nav-logo">
-
+<div class="nav-right">
 <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
 <div class="nav-links" id="menu">
@@ -253,6 +258,7 @@ padding:20px;
 <a href="#planes">Planes</a>
 <a href="#proceso">Cómo trabajamos</a>
 <a href="#contacto">Contacto</a>
+</div>
 </div>
 </nav>
 
@@ -299,6 +305,36 @@ Creamos el diseño de tu vivienda antes de reformarla y te ayudamos a llevarlo a
 </div>
 
 </div>
+
+</div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso">
+<div class="container">
+
+<h2>Nuestra forma de trabajar</h2>
+<div class="divider"></div>
+
+<p class="texto">
+Partimos de un estudio previo de cada estancia, teniendo en cuenta tus necesidades, gustos y el uso real del espacio.
+</p>
+
+<p class="texto">
+A partir de ahí, desarrollamos un diseño adaptado a lo que buscas, cuidando la distribución, el estilo y la coherencia del conjunto.
+</p>
+
+<p class="texto">
+Durante el proceso, aportamos ideas y asesoramiento cuando es necesario, para mejorar el resultado y encontrar soluciones que quizás no habías considerado.
+</p>
+
+<p class="texto">
+El objetivo es que el diseño no solo sea visualmente atractivo, sino también práctico y pensado para tu día a día.
+</p>
+
+<p class="texto">
+Muchas veces no es cuestión de hacer una gran reforma, sino de saber exactamente qué cambiar. Ahí es donde realmente se marca la diferencia.
+</p>
 
 </div>
 </section>
@@ -353,7 +389,6 @@ Creamos el diseño de tu vivienda antes de reformarla y te ayudamos a llevarlo a
 </div>
 </section>
 
-<!-- FRASE -->
 <div class="frase">
 Visualiza el cambio. Decide con seguridad. Hazlo realidad.
 </div>
