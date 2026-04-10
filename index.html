@@ -26,7 +26,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 40px;
-background:rgba(15,15,20,0.85);
+background:rgba(15,15,20,0.9);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
@@ -39,7 +39,6 @@ color:#fff;
 text-decoration:none;
 font-size:14px;
 opacity:0.8;
-transition:0.3s;
 }
 
 nav a:hover{opacity:1}
@@ -53,9 +52,13 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+margin-top:60px;
 }
 
-.logo{width:200px;margin-bottom:30px}
+.logo{
+width:300px; /* MÁS GRANDE PERO LEGIBLE */
+margin-bottom:30px;
+}
 
 .hero h1{
 font-size:42px;
@@ -76,10 +79,7 @@ padding:15px 30px;
 border-radius:30px;
 text-decoration:none;
 font-weight:600;
-transition:0.3s;
 }
-
-.btn:hover{transform:scale(1.05)}
 
 /* SECTIONS */
 section{padding:100px 20px}
@@ -111,15 +111,12 @@ gap:30px;
 background:#1a1a22;
 padding:25px;
 border-radius:15px;
-transition:0.3s;
 }
-
-.servicio:hover{transform:translateY(-5px)}
 
 /* PROYECTOS */
 .proyecto{
 margin-bottom:80px;
-padding:20px;
+padding:25px;
 background:#1a1a22;
 border-radius:15px;
 }
@@ -131,36 +128,15 @@ font-size:18px;
 opacity:0.8;
 }
 
-/* SLIDER */
-.slider-container{
-position:relative;
-max-width:700px;
-margin:auto;
-overflow:hidden;
-border-radius:10px;
+.before-after{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
 }
 
-.slider-container img{
+.before-after img{
 width:100%;
-display:block;
-}
-
-.after{
-position:absolute;
-top:0;
-left:0;
-width:50%;
-overflow:hidden;
-}
-
-.slider{
-position:absolute;
-top:0;
-left:50%;
-width:4px;
-height:100%;
-background:white;
-cursor:pointer;
+border-radius:10px;
 }
 
 /* QUIENES */
@@ -186,8 +162,8 @@ padding:40px;
 opacity:0.6;
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
+.before-after{grid-template-columns:1fr}
 .nav-links{display:none}
 }
 </style>
@@ -231,17 +207,17 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 
 <div class="servicio">
 <h3>Diseño previo</h3>
-<p>Te mostramos cómo quedará tu vivienda antes de cualquier reforma.</p>
+<p>Visualiza tu casa antes de reformarla.</p>
 </div>
 
 <div class="servicio">
 <h3>Presupuesto orientativo</h3>
-<p>Te ayudamos a entender cuánto puede costar el cambio.</p>
+<p>Evita errores y controla tu inversión.</p>
 </div>
 
 <div class="servicio">
 <h3>Asesoramiento completo</h3>
-<p>Te guiamos paso a paso en todo el proceso.</p>
+<p>Te guiamos paso a paso.</p>
 </div>
 
 </div>
@@ -256,53 +232,50 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 <h2>Proyectos</h2>
 <div class="divider"></div>
 
-<p class="subtitulo">Desliza para ver el antes y después</p>
+<p class="subtitulo">Antes y después de transformaciones reales</p>
 
-<!-- PROYECTO 1 -->
+<!-- SALÓN -->
 <div class="proyecto">
 <div class="proyecto-titulo">Salón</div>
-<div class="slider-container">
+<div class="before-after">
 <img src="IMG_7079.jpeg">
-<div class="after">
 <img src="IMG_4559.png">
 </div>
-<div class="slider"></div>
-</div>
 </div>
 
-<!-- PROYECTO 2 -->
+<!-- BAÑO -->
 <div class="proyecto">
 <div class="proyecto-titulo">Baño</div>
-<div class="slider-container">
+<div class="before-after">
 <img src="IMG_5359.jpeg">
-<div class="after">
 <img src="IMG_5371.jpeg">
 </div>
-<div class="slider"></div>
-</div>
 </div>
 
-<!-- PROYECTO 3 -->
+<!-- COCINA -->
 <div class="proyecto">
 <div class="proyecto-titulo">Cocina</div>
-<div class="slider-container">
+<div class="before-after">
 <img src="IMG_7080.jpeg">
-<div class="after">
 <img src="IMG_4955.jpeg">
-</div>
-<div class="slider"></div>
 </div>
 </div>
 
-<!-- PROYECTO 4 -->
+<!-- HABITACIÓN -->
 <div class="proyecto">
-<div class="proyecto-titulo">Exterior</div>
-<div class="slider-container">
-<img src="IMG_7492.jpeg">
-<div class="after">
-<img src="D1DFDF70-6C21-4B12-A1F2-04EC50160F3C.png">
+<div class="proyecto-titulo">Habitación</div>
+<div class="before-after">
+<img src="IMG_7487.jpeg"> <!-- ANTES -->
+<img src="D1DFDF70-6C21-4B12-A1F2-04EC50160F3C.png"> <!-- DESPUÉS -->
 </div>
-<div class="slider"></div>
+</div>
+
+<!-- TERRAZA -->
+<div class="proyecto">
+<div class="proyecto-titulo">Terraza</div>
+<div class="before-after">
+<img src="IMG_7492.jpeg"> <!-- ANTES -->
+<img src="5E7B7D3F-BDEB-4897-B0B9-E9D29395FBD7.jpeg"> <!-- DESPUÉS -->
 </div>
 </div>
 
@@ -317,19 +290,11 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 <div class="divider"></div>
 
 <div class="quienes-card">
+
 <img src="3FEEAB41-1A6C-4EBB-8277-E0D0EB1F2F51.png">
 
-<p>
-Detrás de cada proyecto hay un proceso claro: entender tu espacio, visualizar su potencial y ayudarte a tomar decisiones con seguridad.
-</p>
-
-<p>
-No se trata solo de diseño, sino de evitar errores, optimizar tu inversión y transformar tu vivienda con una visión profesional.
-</p>
-
-<p>
-Nuestro compromiso es que veas el resultado antes de empezar, para que el cambio sea una decisión segura y no una apuesta.
-</p>
+<p>Te ayudamos a visualizar tu vivienda antes de reformarla.</p>
+<p>Evita errores y toma decisiones con seguridad.</p>
 
 </div>
 
@@ -349,28 +314,6 @@ Nuestro compromiso es que veas el resultado antes de empezar, para que el cambio
 <footer>
 © Cambiamos Tu Estancia
 </footer>
-
-<script>
-document.querySelectorAll(".slider-container").forEach(container=>{
-let slider=container.querySelector(".slider");
-let after=container.querySelector(".after");
-
-slider.addEventListener("mousedown",()=>{
-document.addEventListener("mousemove",move);
-document.addEventListener("mouseup",()=>{
-document.removeEventListener("mousemove",move);
-});
-});
-
-function move(e){
-let box=container.getBoundingClientRect();
-let x=((e.clientX-box.left)/box.width)*100;
-if(x<0)x=0;if(x>100)x=100;
-slider.style.left=x+"%";
-after.style.width=x+"%";
-}
-});
-</script>
 
 </body>
 </html>
