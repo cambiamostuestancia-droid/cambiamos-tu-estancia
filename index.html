@@ -30,12 +30,7 @@ border-bottom:1px solid #222;
 
 .nav-logo{height:45px}
 
-/* MENU */
-.menu-icon{
-display:none;
-font-size:25px;
-cursor:pointer;
-}
+.menu-icon{display:none;font-size:25px;cursor:pointer}
 
 .nav-links{
 display:flex;
@@ -61,7 +56,7 @@ margin-top:70px;
 }
 
 .logo{
-width:600px; /* MÁS GRANDE */
+width:600px;
 max-width:90%;
 margin-bottom:30px;
 }
@@ -74,8 +69,9 @@ margin-bottom:20px;
 
 .hero p{
 max-width:700px;
-opacity:0.8;
+opacity:0.85;
 margin-bottom:40px;
+line-height:1.6;
 }
 
 .btn{
@@ -100,6 +96,14 @@ background:#c8a96a;
 margin:20px auto;
 }
 
+.texto{
+max-width:800px;
+margin:15px auto;
+text-align:center;
+line-height:1.7;
+opacity:0.85;
+}
+
 /* PROYECTOS */
 .proyecto{
 margin-bottom:80px;
@@ -119,11 +123,40 @@ width:100%;
 border-radius:10px;
 }
 
-/* CONTACTO EXTRA */
-.extra-contacto{
+/* FORMULARIO */
+.formulario{
+max-width:500px;
+margin:40px auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.formulario input,.formulario textarea{
+padding:12px;
+border:none;
+border-radius:8px;
+}
+
+.formulario button{
+background:#c8a96a;
+border:none;
+padding:15px;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* EXTRA */
+.copy-btn{
+margin-top:15px;
+}
+
+/* FOOTER */
+footer{
 text-align:center;
-margin-top:40px;
-opacity:0.9;
+padding:40px;
+opacity:0.6;
 }
 
 /* RESPONSIVE */
@@ -173,24 +206,41 @@ padding:20px;
 <h1>Descubre cómo quedará tu casa antes de gastar un solo euro</h1>
 
 <p>
-Diseñamos tu estancia de forma realista para ayudarte a tomar decisiones seguras antes de reformar.
+Diseñamos tu estancia de forma realista para que puedas visualizar el resultado final antes de empezar cualquier reforma.
+Evita errores, ahorra dinero y toma decisiones con total seguridad.
 </p>
 
 <a href="#contacto" class="btn">Solicitar diseño</a>
 </section>
 
-<!-- SERVICIOS -->
+<!-- SERVICIO -->
 <section id="servicios">
 <div class="container">
+
 <h2>¿Qué hacemos?</h2>
 <div class="divider"></div>
-<p style="text-align:center">Transformamos tu espacio antes de reformarlo.</p>
+
+<p class="texto">
+Transformamos tu espacio de forma digital antes de que hagas cualquier reforma real.
+A partir de una imagen de tu vivienda actual, creamos un diseño completamente nuevo para que puedas ver con claridad cómo quedará el resultado final.
+</p>
+
+<p class="texto">
+Nuestro objetivo es ayudarte a tomar decisiones con seguridad, evitando errores costosos y cambios innecesarios durante la obra.
+</p>
+
+<p class="texto">
+Además, no solo diseñamos, sino que te damos las herramientas para llevarlo a la realidad:
+presupuesto orientativo, asesoramiento y guía para ejecutar el cambio.
+</p>
+
 </div>
 </section>
 
 <!-- PROYECTOS -->
 <section id="proyectos">
 <div class="container">
+
 <h2>Proyectos</h2>
 <div class="divider"></div>
 
@@ -214,9 +264,16 @@ Diseñamos tu estancia de forma realista para ayudarte a tomar decisiones segura
 <!-- QUIENES -->
 <section id="quienes">
 <div class="container">
+
 <h2>Quiénes somos</h2>
 <div class="divider"></div>
+
 <img src="3FEEAB41-1A6C-4EBB-8277-E0D0EB1F2F51.png" style="width:100%;border-radius:15px">
+
+<p class="texto">
+@Cambiamos Tu Estancia
+</p>
+
 </div>
 </section>
 
@@ -227,22 +284,35 @@ Diseñamos tu estancia de forma realista para ayudarte a tomar decisiones segura
 <h2>Contacto</h2>
 <div class="divider"></div>
 
-<p style="text-align:center"><strong>cambiamostuestancia@gmail.com</strong></p>
+<p class="texto"><strong id="email">cambiamostuestancia@gmail.com</strong></p>
 
-<div class="extra-contacto">
-<p>Contacta con nosotros sin compromiso y empieza a transformar tu espacio.</p>
-</div>
+<button class="btn copy-btn" onclick="copiarEmail()">Copiar correo</button>
+
+<!-- FORMULARIO -->
+<form class="formulario">
+<input type="text" placeholder="Tu nombre">
+<input type="email" placeholder="Tu email">
+<textarea placeholder="Cuéntanos tu proyecto"></textarea>
+<button type="submit">Enviar</button>
+</form>
+
+<p class="texto">Contacta con nosotros sin compromiso.</p>
 
 </div>
 </section>
 
 <footer>
-© Cambiamos Tu Estancia
+@Cambiamos Tu Estancia
 </footer>
 
 <script>
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
+}
+
+function copiarEmail(){
+navigator.clipboard.writeText("cambiamostuestancia@gmail.com");
+alert("Correo copiado");
 }
 </script>
 
