@@ -15,34 +15,28 @@ body{background:#0f0f14;color:#fff}
 
 /* NAV */
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 20px;
-background:#0f0f14;
 position:fixed;
 top:0;
 width:100%;
+background:#0f0f14;
 z-index:9999;
 border-bottom:1px solid #222;
 }
 
+.nav-top{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 20px;
+}
+
 .nav-left{flex:1;}
 
-.nav-center{
+.nav-title{
 flex:2;
 text-align:center;
-}
-
-.nav-center h1{
-font-size:16px;
-margin:0;
-}
-
-.nav-center p{
-font-size:11px;
-opacity:0.7;
-margin:0;
+font-size:14px;
+font-weight:600;
 }
 
 .nav-right{
@@ -52,13 +46,26 @@ justify-content:flex-end;
 align-items:center;
 }
 
-.nav-logo{height:40px}
+.nav-subtitle{
+text-align:center;
+font-size:11px;
+opacity:0.7;
+padding-bottom:8px;
+}
 
-.menu-icon{display:none;font-size:25px;cursor:pointer}
+.nav-logo{
+height:38px;
+}
 
 .nav-links{
 display:flex;
 gap:20px;
+}
+
+.menu-icon{
+display:none;
+font-size:25px;
+cursor:pointer;
 }
 
 nav a{
@@ -76,7 +83,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-margin-top:100px;
+margin-top:110px;
 }
 
 .logo{
@@ -142,6 +149,11 @@ background:#1a1a22;
 padding:25px;
 border-radius:15px;
 text-align:center;
+}
+
+/* PROCESO */
+#proceso .texto{
+margin-bottom:10px;
 }
 
 /* PROYECTOS */
@@ -239,13 +251,13 @@ padding:20px;
 <body>
 
 <nav>
+<div class="nav-top">
 <div class="nav-left">
 <img src="logo.PNG" class="nav-logo">
 </div>
 
-<div class="nav-center">
-<h1>CAMBIAMOS TU ESTANCIA</h1>
-<p>Visualiza tu casa antes de cambiarla</p>
+<div class="nav-title">
+CAMBIAMOS TU ESTANCIA
 </div>
 
 <div class="nav-right">
@@ -259,6 +271,11 @@ padding:20px;
 <a href="#proceso">Cómo trabajamos</a>
 <a href="#contacto">Contacto</a>
 </div>
+</div>
+</div>
+
+<div class="nav-subtitle">
+Visualiza tu casa antes de cambiarla
 </div>
 </nav>
 
