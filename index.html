@@ -31,7 +31,7 @@ backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-.nav-logo{height:40px}
+.nav-logo{height:45px}
 .nav-links{display:flex;gap:25px}
 
 nav a{
@@ -56,7 +56,7 @@ margin-top:60px;
 }
 
 .logo{
-width:300px; /* MÁS GRANDE PERO LEGIBLE */
+width:400px; /* MÁS GRANDE */
 margin-bottom:30px;
 }
 
@@ -67,9 +67,10 @@ margin-bottom:20px;
 }
 
 .hero p{
-max-width:600px;
+max-width:700px;
 opacity:0.8;
 margin-bottom:40px;
+line-height:1.6;
 }
 
 .btn{
@@ -100,11 +101,21 @@ background:#c8a96a;
 margin:20px auto 30px;
 }
 
+/* TEXTO */
+.texto{
+max-width:800px;
+margin:15px auto;
+line-height:1.7;
+opacity:0.85;
+text-align:center;
+}
+
 /* SERVICIOS */
 .servicios-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
+margin-top:40px;
 }
 
 .servicio{
@@ -165,6 +176,7 @@ opacity:0.6;
 @media(max-width:768px){
 .before-after{grid-template-columns:1fr}
 .nav-links{display:none}
+.logo{width:280px}
 }
 </style>
 </head>
@@ -176,8 +188,8 @@ opacity:0.6;
 
 <div class="nav-links">
 <a href="#inicio">Inicio</a>
+<a href="#servicios">Servicio</a>
 <a href="#proyectos">Proyectos</a>
-<a href="#servicios">Servicios</a>
 <a href="#quienes">Quiénes somos</a>
 <a href="#contacto">Contacto</a>
 </div>
@@ -187,37 +199,50 @@ opacity:0.6;
 <section id="inicio" class="hero">
 <img src="logo.PNG" class="logo">
 
-<h1>Transforma tu vivienda antes de gastar un solo euro</h1>
+<h1>Descubre cómo quedará tu casa antes de gastar un solo euro</h1>
 
 <p>
-Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisiones con seguridad total.
+Diseñamos tu estancia de forma realista para que puedas visualizar el resultado final antes de empezar cualquier reforma. 
+Evita errores, toma mejores decisiones y ahorra tiempo y dinero.
 </p>
 
 <a href="#contacto" class="btn">Solicitar diseño</a>
 </section>
 
-<!-- SERVICIOS -->
+<!-- SERVICIO -->
 <section id="servicios">
 <div class="container">
 
-<h2>Qué hacemos</h2>
+<h2>¿Qué hacemos?</h2>
+<div class="divider"></div>
+
+<p class="texto">
+Transformamos tu espacio de forma digital antes de que hagas la reforma real. 
+A partir de una imagen de tu vivienda actual, creamos un diseño completamente nuevo para que veas cómo quedará el resultado final.
+</p>
+
+<p class="texto">
+Nuestro objetivo es que tomes decisiones con seguridad, evites errores costosos y tengas una visión clara antes de invertir dinero.
+</p>
+
+<h2 style="margin-top:60px">¿Qué incluye?</h2>
 <div class="divider"></div>
 
 <div class="servicios-grid">
 
 <div class="servicio">
-<h3>Diseño previo</h3>
-<p>Visualiza tu casa antes de reformarla.</p>
+<h3>Diseño completo</h3>
+<p>Visualización realista de tu estancia antes de reformar.</p>
 </div>
 
 <div class="servicio">
 <h3>Presupuesto orientativo</h3>
-<p>Evita errores y controla tu inversión.</p>
+<p>Estimación del coste para ejecutar el cambio.</p>
 </div>
 
 <div class="servicio">
-<h3>Asesoramiento completo</h3>
-<p>Te guiamos paso a paso.</p>
+<h3>Asesoramiento</h3>
+<p>Te guiamos para llevar el diseño a la realidad.</p>
 </div>
 
 </div>
@@ -225,7 +250,7 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 </div>
 </section>
 
-<!-- PROYECTOS -->
+<!-- PROYECTOS (NO TOCADO) -->
 <section id="proyectos">
 <div class="container">
 
@@ -234,7 +259,6 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 
 <p class="subtitulo">Antes y después de transformaciones reales</p>
 
-<!-- SALÓN -->
 <div class="proyecto">
 <div class="proyecto-titulo">Salón</div>
 <div class="before-after">
@@ -243,7 +267,6 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 </div>
 </div>
 
-<!-- BAÑO -->
 <div class="proyecto">
 <div class="proyecto-titulo">Baño</div>
 <div class="before-after">
@@ -252,7 +275,6 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 </div>
 </div>
 
-<!-- COCINA -->
 <div class="proyecto">
 <div class="proyecto-titulo">Cocina</div>
 <div class="before-after">
@@ -261,21 +283,19 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 </div>
 </div>
 
-<!-- HABITACIÓN -->
 <div class="proyecto">
 <div class="proyecto-titulo">Habitación</div>
 <div class="before-after">
-<img src="IMG_7487.jpeg"> <!-- ANTES -->
-<img src="D1DFDF70-6C21-4B12-A1F2-04EC50160F3C.png"> <!-- DESPUÉS -->
+<img src="IMG_7487.jpeg">
+<img src="D1DFDF70-6C21-4B12-A1F2-04EC50160F3C.png">
 </div>
 </div>
 
-<!-- TERRAZA -->
 <div class="proyecto">
 <div class="proyecto-titulo">Terraza</div>
 <div class="before-after">
-<img src="IMG_7492.jpeg"> <!-- ANTES -->
-<img src="5E7B7D3F-BDEB-4897-B0B9-E9D29395FBD7.jpeg"> <!-- DESPUÉS -->
+<img src="IMG_7492.jpeg">
+<img src="5E7B7D3F-BDEB-4897-B0B9-E9D29395FBD7.jpeg">
 </div>
 </div>
 
@@ -293,8 +313,13 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 
 <img src="3FEEAB41-1A6C-4EBB-8277-E0D0EB1F2F51.png">
 
-<p>Te ayudamos a visualizar tu vivienda antes de reformarla.</p>
-<p>Evita errores y toma decisiones con seguridad.</p>
+<p class="texto">
+Te ayudamos a visualizar con claridad cómo puede transformarse tu vivienda antes de tomar decisiones.
+</p>
+
+<p class="texto">
+No se trata solo de diseño, sino de evitar errores, optimizar tu inversión y tener seguridad en cada paso.
+</p>
 
 </div>
 
@@ -306,6 +331,8 @@ Visualiza el cambio completo de tu casa antes de hacerlo realidad y toma decisio
 
 <h2>Contacto</h2>
 <div class="divider"></div>
+
+<p class="texto">Solicita tu diseño personalizado:</p>
 
 <p><strong>cambiamostuestancia@gmail.com</strong></p>
 
