@@ -52,7 +52,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-margin-top:70px;
+margin-top:120px;
 }
 
 .logo{
@@ -82,6 +82,27 @@ border-radius:30px;
 text-decoration:none;
 cursor:pointer;
 display:inline-block;
+}
+
+/* HEADER TEXTO SUPERIOR */
+.header-top{
+position:fixed;
+top:0;
+width:100%;
+text-align:center;
+padding:10px;
+background:#0f0f14;
+z-index:10000;
+border-bottom:1px solid #222;
+}
+
+.header-top h1{
+font-size:20px;
+}
+
+.header-top p{
+font-size:12px;
+opacity:0.7;
 }
 
 /* SECTIONS */
@@ -146,6 +167,14 @@ width:100%;
 border-radius:10px;
 }
 
+/* FRASE ENTRE SECCIONES */
+.frase{
+text-align:center;
+font-size:20px;
+margin:80px 0;
+opacity:0.9;
+}
+
 /* FORMULARIO */
 .formulario{
 max-width:500px;
@@ -170,7 +199,6 @@ cursor:pointer;
 font-weight:bold;
 }
 
-/* BOTÓN CENTRADO */
 .centro{
 text-align:center;
 margin-top:15px;
@@ -207,7 +235,13 @@ padding:20px;
 
 <body>
 
-<nav>
+<!-- TEXTO ARRIBA -->
+<div class="header-top">
+<h1>CAMBIAMOS TU ESTANCIA</h1>
+<p>Visualiza tu casa antes de cambiarla</p>
+</div>
+
+<nav style="top:50px;">
 <img src="logo.PNG" class="nav-logo">
 
 <div class="menu-icon" onclick="toggleMenu()">☰</div>
@@ -269,32 +303,6 @@ Creamos el diseño de tu vivienda antes de reformarla y te ayudamos a llevarlo a
 </div>
 </section>
 
-<!-- PROCESO -->
-<section id="proceso">
-<div class="container">
-
-<h2>Nuestra forma de trabajar</h2>
-<div class="divider"></div>
-
-<p class="texto">
-Partimos de un estudio previo de cada estancia, teniendo en cuenta tus necesidades, gustos y el uso real del espacio.
-</p>
-
-<p class="texto">
-A partir de ahí, desarrollamos un diseño adaptado a lo que buscas, cuidando la distribución, el estilo y la coherencia del conjunto.
-</p>
-
-<p class="texto">
-Durante el proceso, aportamos ideas y asesoramiento cuando es necesario, para mejorar el resultado y encontrar soluciones que quizás no habías considerado.
-</p>
-
-<p class="texto">
-El objetivo es que el diseño no solo sea visualmente atractivo, sino también práctico y pensado para tu día a día.
-</p>
-
-</div>
-</section>
-
 <!-- PROYECTOS -->
 <section id="proyectos">
 <div class="container">
@@ -344,6 +352,11 @@ El objetivo es que el diseño no solo sea visualmente atractivo, sino también p
 
 </div>
 </section>
+
+<!-- FRASE -->
+<div class="frase">
+Visualiza el cambio. Decide con seguridad. Hazlo realidad.
+</div>
 
 <!-- CONTACTO -->
 <section id="contacto">
