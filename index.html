@@ -81,6 +81,7 @@ padding:15px 30px;
 border-radius:30px;
 text-decoration:none;
 cursor:pointer;
+display:inline-block;
 }
 
 /* SECTIONS */
@@ -104,12 +105,34 @@ line-height:1.7;
 opacity:0.85;
 }
 
+/* SERVICIOS */
+.servicios-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.servicio{
+background:#1a1a22;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
 /* PROYECTOS */
 .proyecto{
 margin-bottom:80px;
 padding:25px;
 background:#1a1a22;
 border-radius:15px;
+}
+
+.proyecto-titulo{
+text-align:center;
+margin-bottom:15px;
+font-size:18px;
+opacity:0.8;
 }
 
 .before-after{
@@ -147,8 +170,9 @@ cursor:pointer;
 font-weight:bold;
 }
 
-/* EXTRA */
-.copy-btn{
+/* BOTÓN CENTRADO */
+.centro{
+text-align:center;
 margin-top:15px;
 }
 
@@ -221,18 +245,27 @@ Evita errores, ahorra dinero y toma decisiones con total seguridad.
 <div class="divider"></div>
 
 <p class="texto">
-Transformamos tu espacio de forma digital antes de que hagas cualquier reforma real.
-A partir de una imagen de tu vivienda actual, creamos un diseño completamente nuevo para que puedas ver con claridad cómo quedará el resultado final.
+Creamos el diseño de tu vivienda antes de reformarla y te ayudamos a llevarlo a la realidad sin errores.
 </p>
 
-<p class="texto">
-Nuestro objetivo es ayudarte a tomar decisiones con seguridad, evitando errores costosos y cambios innecesarios durante la obra.
-</p>
+<div class="servicios-grid">
 
-<p class="texto">
-Además, no solo diseñamos, sino que te damos las herramientas para llevarlo a la realidad:
-presupuesto orientativo, asesoramiento y guía para ejecutar el cambio.
-</p>
+<div class="servicio">
+<h3>Diseño previo</h3>
+<p>Visualización realista de tu estancia.</p>
+</div>
+
+<div class="servicio">
+<h3>Asesoramiento</h3>
+<p>Te guiamos para ejecutar el cambio.</p>
+</div>
+
+<div class="servicio">
+<h3>Presupuesto</h3>
+<p>Estimación del coste del proyecto.</p>
+</div>
+
+</div>
 
 </div>
 </section>
@@ -245,6 +278,7 @@ presupuesto orientativo, asesoramiento y guía para ejecutar el cambio.
 <div class="divider"></div>
 
 <div class="proyecto">
+<div class="proyecto-titulo">Salón</div>
 <div class="before-after">
 <img src="IMG_7079.jpeg">
 <img src="IMG_4559.png">
@@ -252,6 +286,31 @@ presupuesto orientativo, asesoramiento y guía para ejecutar el cambio.
 </div>
 
 <div class="proyecto">
+<div class="proyecto-titulo">Baño</div>
+<div class="before-after">
+<img src="IMG_5359.jpeg">
+<img src="IMG_5371.jpeg">
+</div>
+</div>
+
+<div class="proyecto">
+<div class="proyecto-titulo">Cocina</div>
+<div class="before-after">
+<img src="IMG_7080.jpeg">
+<img src="IMG_4955.jpeg">
+</div>
+</div>
+
+<div class="proyecto">
+<div class="proyecto-titulo">Habitación</div>
+<div class="before-after">
+<img src="IMG_7487.jpeg">
+<img src="D1DFDF70-6C21-4B12-A1F2-04EC50160F3C.png">
+</div>
+</div>
+
+<div class="proyecto">
+<div class="proyecto-titulo">Terraza</div>
 <div class="before-after">
 <img src="IMG_7492.jpeg">
 <img src="5E7B7D3F-BDEB-4897-B0B9-E9D29395FBD7.jpeg">
@@ -270,10 +329,6 @@ presupuesto orientativo, asesoramiento y guía para ejecutar el cambio.
 
 <img src="3FEEAB41-1A6C-4EBB-8277-E0D0EB1F2F51.png" style="width:100%;border-radius:15px">
 
-<p class="texto">
-@Cambiamos Tu Estancia
-</p>
-
 </div>
 </section>
 
@@ -286,9 +341,10 @@ presupuesto orientativo, asesoramiento y guía para ejecutar el cambio.
 
 <p class="texto"><strong id="email">cambiamostuestancia@gmail.com</strong></p>
 
-<button class="btn copy-btn" onclick="copiarEmail()">Copiar correo</button>
+<div class="centro">
+<button class="btn" onclick="copiarEmail()">Copiar correo</button>
+</div>
 
-<!-- FORMULARIO -->
 <form class="formulario">
 <input type="text" placeholder="Tu nombre">
 <input type="email" placeholder="Tu email">
