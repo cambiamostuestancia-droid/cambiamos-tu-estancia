@@ -6,450 +6,466 @@
 
 <title>Kirels Visual</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 
-body{background:#0f0f14;color:#fff}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
 
 /* NAV */
+
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#0f0f14;
-z-index:9999;
-border-bottom:1px solid #222;
-}
-
-.nav-top{
+padding:18px 8%;
 display:flex;
-align-items:center;
 justify-content:space-between;
-padding:10px 20px;
-}
-
-.nav-left{flex:1;}
-
-.nav-title{
-flex:2;
-text-align:center;
-line-height:1.1; /* 🔥 pegado */
-}
-
-.nav-title h1{
-font-size:14px;
-margin:0;
-}
-
-.nav-title p{
-font-size:11px;
-opacity:0.7;
-margin:0; /* 🔥 sin espacio */
-}
-
-.nav-right{
-flex:1;
-display:flex;
-justify-content:flex-end;
 align-items:center;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(10px);
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-.nav-logo{
-height:38px;
-}
-
-.nav-links{
-display:flex;
-gap:20px;
-}
-
-.menu-icon{
-display:none;
-font-size:25px;
-cursor:pointer;
+nav img{
+height:45px;
+border-radius:10px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
+margin-left:25px;
 font-size:14px;
+opacity:0.8;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:1;
+color:#c8a96a;
 }
 
 /* HERO */
+
 .hero{
 height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.78)),
+url('1D503860-AFDA-4739-BD36-1789D4F64CB6.png');
+
+background-size:cover;
+background-position:center;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 padding:20px;
-margin-top:110px;
 }
 
-.logo{
-width:600px;
-max-width:90%;
+.hero-content{
+max-width:850px;
+}
+
+.hero-logo{
+width:190px;
 margin-bottom:30px;
+border-radius:20px;
+box-shadow:0 0 40px rgba(0,0,0,0.5);
 }
 
 .hero h1{
-font-size:40px;
-max-width:700px;
-margin-bottom:20px;
+font-size:62px;
+line-height:1.1;
+margin-bottom:25px;
+font-weight:600;
 }
 
 .hero p{
-max-width:700px;
+font-size:18px;
 opacity:0.85;
+line-height:1.8;
 margin-bottom:40px;
-line-height:1.6;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
 }
 
 .btn{
-background:#c8a96a;
-color:#000;
-padding:15px 30px;
-border-radius:30px;
-text-decoration:none;
-cursor:pointer;
 display:inline-block;
-}
-
-/* SECTIONS */
-section{padding:100px 20px}
-.container{max-width:1100px;margin:auto}
-
-h2{text-align:center;margin-bottom:10px;font-size:36px}
-
-.divider{
-width:80px;
-height:2px;
+padding:17px 38px;
 background:#c8a96a;
-margin:20px auto;
+color:black;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
 }
 
-.texto{
-max-width:800px;
-margin:15px auto;
-text-align:center;
-line-height:1.7;
-opacity:0.85;
+.btn:hover{
+transform:translateY(-4px);
 }
 
-/* SERVICIOS */
-.servicios-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
+/* SECCIONES */
+
+section{
+padding:110px 8%;
 }
 
-.servicio{
-background:#1a1a22;
-padding:25px;
-border-radius:15px;
-text-align:center;
-}
-
-/* PROCESO */
-#proceso .texto{
-margin-bottom:10px;
-}
-
-/* PROYECTOS */
-.proyecto{
-margin-bottom:80px;
-padding:25px;
-background:#1a1a22;
-border-radius:15px;
-}
-
-.proyecto-titulo{
-text-align:center;
+.section-title{
+font-size:42px;
 margin-bottom:15px;
-font-size:18px;
-opacity:0.8;
+text-align:center;
 }
 
-.before-after{
+.section-sub{
+text-align:center;
+opacity:0.7;
+max-width:700px;
+margin:auto;
+line-height:1.7;
+margin-bottom:70px;
+}
+
+/* VIDEOS */
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.video-card{
+background:#0f0f0f;
+border-radius:25px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.05);
+transition:0.4s;
+}
+
+.video-card:hover{
+transform:translateY(-6px);
+}
+
+.video-card iframe{
+width:100%;
+height:500px;
+border:none;
+}
+
+.video-info{
+padding:25px;
+}
+
+.video-info h3{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.video-info p{
+opacity:0.75;
+line-height:1.6;
+}
+
+/* CEO */
+
+.ceo{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:20px;
+gap:60px;
+align-items:center;
 }
 
-.before-after img{
+.ceo img{
 width:100%;
-border-radius:10px;
-}
-
-/* FRASE */
-.frase{
-text-align:center;
-font-size:20px;
-margin:80px 0;
-opacity:0.9;
-}
-
-/* FORMULARIO */
-.formulario{
-max-width:500px;
-margin:40px auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-.formulario input,.formulario textarea{
-padding:12px;
-border:none;
-border-radius:8px;
-}
-
-.formulario button{
-background:#c8a96a;
-border:none;
-padding:15px;
 border-radius:30px;
-cursor:pointer;
-font-weight:bold;
 }
 
-.centro{
-text-align:center;
-margin-top:15px;
+.ceo-text h2{
+font-size:45px;
+margin-bottom:25px;
 }
+
+.ceo-text p{
+opacity:0.8;
+line-height:1.9;
+margin-bottom:20px;
+}
+
+/* CONTACTO */
+
+.contacto{
+text-align:center;
+}
+
+.contacto h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.contacto p{
+opacity:0.75;
+margin-bottom:35px;
+}
+
+.contact-links{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.contact-links a{
+padding:15px 28px;
+border:1px solid rgba(255,255,255,0.1);
+border-radius:50px;
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+.contact-links a:hover{
+background:#c8a96a;
+color:black;
+}
+
+/* FOOTER */
 
 footer{
-text-align:center;
 padding:40px;
-opacity:0.6;
-}
-
-@media(max-width:768px){
-
-.menu-icon{display:block}
-
-.nav-links{
-display:none;
-flex-direction:column;
-position:absolute;
-top:60px;
-right:0;
-background:#0f0f14;
-width:100%;
 text-align:center;
-padding:20px;
+opacity:0.4;
+font-size:14px;
 }
 
-.nav-links.active{display:flex}
+/* MOBILE */
 
-.before-after{grid-template-columns:1fr}
+@media(max-width:900px){
+
+.hero h1{
+font-size:42px;
 }
+
+.hero p{
+font-size:16px;
+}
+
+.ceo{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.video-card iframe{
+height:420px;
+}
+
+nav{
+padding:15px 5%;
+}
+
+nav a{
+margin-left:15px;
+font-size:12px;
+}
+
+.hero-logo{
+width:150px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <nav>
-<div class="nav-top">
-<div class="nav-left">
-<img src="logo.PNG" class="nav-logo">
-</div>
 
-<div class="nav-title">
-<h1>KIRELS VISUAL</h1>
-<p>Tus fotos en vídeo</p>
-</div>
+<img src="IMG_7790.jpeg">
 
-<div class="nav-right">
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
-
-<div class="nav-links" id="menu">
-<a href="#inicio">Inicio</a>
-<a href="#servicios">Sectores</a>
-<a href="#proyectos">Ejemplos</a>
-<a href="#sobre-mi">Sobre mí</a>
+<div>
+<a href="#portfolio">Portfolio</a>
+<a href="#sobre">Sobre mí</a>
 <a href="#contacto">Contacto</a>
 </div>
-</div>
-</div>
+
 </nav>
 
 <!-- HERO -->
-<section id="inicio" class="hero">
-<img src="logo.PNG" class="logo">
 
-<h1>TUS FOTOS EN VÍDEO</h1>
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="IMG_7790.jpeg" class="hero-logo">
+
+<h1>Transformamos fotografías en vídeos que venden.</h1>
 
 <p>
-Transformamos fotografías en vídeos promocionales para alojamientos, inmobiliarias y marcas.
-
-Capta atención. Transmite confianza. Haz que tu negocio destaque.
+Contenido visual premium para inmobiliarias,
+alojamientos turísticos, marcas y productos.
+Creamos piezas visuales preparadas para captar atención y elevar el valor percibido de cada proyecto.
 </p>
 
-<a href="#contacto" class="btn">Ver ejemplos</a>
+<a href="#portfolio" class="btn">Ver portfolio</a>
+
+</div>
+
 </section>
 
-<!-- SERVICIO -->
-<section id="servicios">
-<div class="container">
+<!-- PORTFOLIO -->
 
-<h2>Sectores</h2>
-<div class="divider"></div>
+<section id="portfolio">
 
-<p class="texto">
-Creamos vídeos promocionales a partir de fotografías para ayudar a negocios y propiedades a destacar visualmente.
+<h2 class="section-title">Portfolio</h2>
+
+<p class="section-sub">
+Vídeos diseñados para captar atención,
+transmitir profesionalidad y generar impacto visual.
 </p>
 
-<div class="servicios-grid">
+<div class="video-grid">
 
-<div class="servicio">
-<h3>🏡 Alojamientos turísticos</h3>
-<p>Haz que los viajeros se imaginen ya disfrutando de tu alojamiento.</p>
-</div>
+<div class="video-card">
 
-<div class="servicio">
-<h3>🏢 Inmobiliarias</h3>
-<p>Propiedades que destacan desde el primer vistazo.</p>
-</div>
+<iframe src="https://www.youtube.com/embed/8F1cfAr7ZWw" allowfullscreen></iframe>
 
-<div class="servicio">
-<h3>🍷 Marcas y productos</h3>
-<p>Haz que tus clientes deseen tu producto antes de tenerlo.</p>
-
-</div>
-
-</div>
-</section>
-
-<!-- PROCESO -->
-
-
-<!-- PROYECTOS -->
-<section id="proyectos">
-<div class="container">
-
-<h2>Ejemplos</h2>
-<div class="divider"></div>
-
-<p class="texto">
-Algunos ejemplos de vídeos promocionales creados para alojamientos, inmobiliarias y productos.
+<div class="video-info">
+<h3>Alojamientos</h3>
+<p>
+Creamos vídeos que transmiten experiencia,
+calidez y sensación premium.
 </p>
-  
-<div class="proyecto">
-<div class="proyecto-titulo">Salón</div>
-<div class="before-after">
-<img src="IMG_7079.jpeg">
-<img src="IMG_4559.png">
-</div>
-</div>
-
-<div class="proyecto">
-<div class="proyecto-titulo">Baño</div>
-<div class="before-after">
-<img src="IMG_5359.jpeg">
-<img src="IMG_5371.jpeg">
-</div>
-</div>
-
-<div class="proyecto">
-<div class="proyecto-titulo">Cocina</div>
-<div class="before-after">
-<img src="IMG_7080.jpeg">
-<img src="IMG_4955.jpeg">
-</div>
-</div>
-
-<div class="proyecto">
-<div class="proyecto-titulo">Habitación</div>
-<div class="before-after">
-<img src="IMG_7487.jpeg">
-<img src="D1DFDF70-6C21-4B12-A1F2-04EC50160F3C.png">
-</div>
-</div>
-
-<div class="proyecto">
-<div class="proyecto-titulo">Terraza</div>
-<div class="before-after">
-<img src="IMG_7492.jpeg">
-<img src="5E7B7D3F-BDEB-4897-B0B9-E9D29395FBD7.jpeg">
-</div>
 </div>
 
 </div>
+
+<div class="video-card">
+
+<iframe src="https://www.youtube.com/embed/uk4pyIlGCSE" allowfullscreen></iframe>
+
+<div class="video-info">
+<h3>Inmobiliario</h3>
+<p>
+Transformamos fotografías estáticas
+en anuncios visuales mucho más atractivos.
+</p>
+</div>
+
+</div>
+
+<div class="video-card">
+
+<iframe src="https://www.youtube.com/embed/XrVrc4fSvkg" allowfullscreen></iframe>
+
+<div class="video-info">
+<h3>Marcas y productos</h3>
+<p>
+Contenido diseñado para captar atención
+y aumentar el valor percibido.
+</p>
+</div>
+
+</div>
+
+<div class="video-card">
+
+<iframe src="https://www.youtube.com/embed/jEPj1epDyRs" allowfullscreen></iframe>
+
+<div class="video-info">
+<h3>Contenido visual</h3>
+<p>
+Vídeos preparados para redes sociales,
+publicidad y captación de clientes.
+</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<div class="frase">
-Visualiza el cambio. Decide con seguridad. Hazlo realidad.
-</div>
+<!-- SOBRE MI -->
 
-<!-- CONTACTO -->
- <section id="sobre-mi">
-<div class="container">
+<section id="sobre">
 
-<h2>Sobre mí</h2>
+<div class="ceo">
 
-<div class="divider"></div>
+<img src="09B4011C-2217-4415-90C4-593CE29A5A2F.png">
 
-<p class="texto">
+<div class="ceo-text">
+
+<h2>Kirels Visual</h2>
+
+<p>
 Soy Juan Carlos, fundador de Kirels Visual.
 </p>
 
-<p class="texto">
-Ayudo a empresas, alojamientos, inmobiliarias y marcas a transformar sus fotografías en vídeos promocionales profesionales sin necesidad de grabaciones.
+<p>
+Ayudo a negocios, alojamientos y marcas
+a transformar sus fotografías en vídeos promocionales
+profesionales preparados para redes sociales y publicidad.
 </p>
 
-<p class="texto">
-Mi objetivo es ayudarte a destacar con contenido visual atractivo, profesional y preparado para captar más atención.
+<p>
+El objetivo no es solo crear contenido bonito,
+sino generar impacto visual y hacer que cada proyecto destaque.
 </p>
 
 </div>
-</section> 
-<section id="contacto">
-<div class="container">
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto" class="contacto">
 
 <h2>Contacto</h2>
-<div class="divider"></div>
 
-<p class="texto"><strong id="email">cambiamostuestancia@gmail.com</strong></p>
+<p>
+Hablemos sobre tu proyecto.
+</p>
 
-<div class="centro">
-<button onclick="copiarEmail()">Copiar correo</button>
-</div>
+<div class="contact-links">
 
-<form class="formulario">
-<input type="text" placeholder="Tu nombre">
-<input type="email" placeholder="Tu email">
-<textarea placeholder="Cuéntanos tu proyecto"></textarea>
-<button type="submit">Enviar</button>
-</form>
+<a href="mailto:info@kirelsvisual.es">
+info@kirelsvisual.es
+</a>
 
-<p class="texto">¿Hablamos?
+<a href="https://instagram.com/" target="_blank">
+Instagram
+</a>
 
-Convierte tus fotografías en una herramienta de venta.
-
-Solicita información sin compromiso.</p>
+<a href="https://wa.me/34617075486" target="_blank">
+WhatsApp
+</a>
 
 </div>
+
 </section>
 
 <footer>
 © Kirels Visual
 </footer>
-
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-
-function copiarEmail(){
-navigator.clipboard.writeText("cambiamostuestancia@gmail.com");
-alert("Correo copiado");
-}
-</script>
 
 </body>
 </html>
