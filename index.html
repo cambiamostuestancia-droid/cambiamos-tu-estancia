@@ -829,6 +829,683 @@ display:none;
 
 }
 
+/*==============================
+SERVICIOS
+==============================*/
+
+#servicios{
+
+background:
+linear-gradient(180deg,#050505,#0b0b0b);
+
+}
+
+.services-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:28px;
+
+}
+
+.service-card{
+
+padding:45px;
+
+border-radius:28px;
+
+transition:.45s;
+
+position:relative;
+
+overflow:hidden;
+
+min-height:260px;
+
+}
+
+.service-card::before{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+background:rgba(212,175,115,.08);
+
+border-radius:50%;
+
+right:-90px;
+
+top:-90px;
+
+filter:blur(40px);
+
+}
+
+.service-card:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(212,175,115,.25);
+
+}
+
+.service-big{
+
+grid-row:span 2;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.service-wide{
+
+grid-column:span 2;
+
+}
+
+.service-icon{
+
+width:78px;
+
+height:78px;
+
+border-radius:20px;
+
+background:rgba(212,175,115,.10);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:1.8rem;
+
+color:var(--gold);
+
+margin-bottom:28px;
+
+}
+
+.service-card h3{
+
+font-size:1.7rem;
+
+margin-bottom:18px;
+
+}
+
+.service-card p{
+
+color:#b8b8b8;
+
+line-height:1.8;
+
+}
+
+@media(max-width:1100px){
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.service-big,
+
+.service-wide{
+
+grid-column:auto;
+
+grid-row:auto;
+
+}
+
+}
+
+/*==============================
+PROCESO
+==============================*/
+
+#proceso{
+
+background:#090909;
+
+}
+
+.timeline{
+
+position:relative;
+
+max-width:1100px;
+
+margin:auto;
+
+padding:40px 0;
+
+}
+
+.timeline-line{
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:linear-gradient(var(--gold),transparent);
+
+transform:translateX(-50%);
+
+}
+
+.timeline-item{
+
+position:relative;
+
+width:50%;
+
+padding:35px;
+
+}
+
+.timeline-item.left{
+
+left:0;
+
+text-align:right;
+
+}
+
+.timeline-item.right{
+
+left:50%;
+
+}
+
+.timeline-card{
+
+padding:35px;
+
+border-radius:24px;
+
+transition:.4s;
+
+}
+
+.timeline-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.timeline-card h3{
+
+font-size:1.5rem;
+
+margin-bottom:16px;
+
+}
+
+.timeline-card p{
+
+color:#bdbdbd;
+
+line-height:1.8;
+
+}
+
+.timeline-number{
+
+position:absolute;
+
+font-size:5rem;
+
+font-weight:800;
+
+color:rgba(212,175,115,.08);
+
+top:15px;
+
+}
+
+.timeline-item.left .timeline-number{
+
+right:30px;
+
+}
+
+.timeline-item.right .timeline-number{
+
+left:30px;
+
+}
+
+@media(max-width:900px){
+
+.timeline-line{
+
+left:18px;
+
+}
+
+.timeline-item,
+
+.timeline-item.left,
+
+.timeline-item.right{
+
+width:100%;
+
+left:0;
+
+padding-left:60px;
+
+text-align:left;
+
+}
+
+.timeline-number{
+
+left:0!important;
+
+right:auto!important;
+
+font-size:3.8rem;
+
+}
+
+}
+
+/*==============================
+PRECIOS
+==============================*/
+
+#precios{
+
+background:linear-gradient(180deg,#050505,#0a0a0a);
+
+}
+
+.pricing-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+}
+
+.price-card{
+
+padding:45px;
+
+border-radius:30px;
+
+text-align:center;
+
+position:relative;
+
+transition:.45s;
+
+}
+
+.price-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+.price-card h4{
+
+letter-spacing:3px;
+
+color:var(--gold);
+
+margin-bottom:25px;
+
+}
+
+.price{
+
+font-size:3.4rem;
+
+font-weight:800;
+
+margin-bottom:30px;
+
+}
+
+.price-card ul{
+
+list-style:none;
+
+margin:35px 0;
+
+text-align:left;
+
+}
+
+.price-card li{
+
+padding:12px 0;
+
+color:#cfcfcf;
+
+}
+
+.price-card li i{
+
+color:var(--gold);
+
+margin-right:10px;
+
+}
+
+.featured{
+
+background:linear-gradient(180deg,#1b1710,#0f0f0f);
+
+border:1px solid rgba(212,175,115,.35);
+
+transform:scale(1.04);
+
+}
+
+.badge{
+
+position:absolute;
+
+top:-15px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+padding:8px 18px;
+
+background:var(--gold);
+
+color:#111;
+
+border-radius:100px;
+
+font-size:.8rem;
+
+font-weight:700;
+
+}
+
+#garantia{
+
+background:#0b0b0b;
+
+}
+
+.guarantee{
+
+display:flex;
+
+align-items:center;
+
+gap:45px;
+
+padding:60px;
+
+border-radius:35px;
+
+}
+
+.guarantee-icon{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:rgba(212,175,115,.12);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:3rem;
+
+color:var(--gold);
+
+flex-shrink:0;
+
+}
+
+@media(max-width:1100px){
+
+.pricing-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.featured{
+
+transform:none;
+
+}
+
+.guarantee{
+
+flex-direction:column;
+
+text-align:center;
+
+padding:40px;
+
+}
+
+}
+
+/*==============================
+SOBRE
+==============================*/
+
+#sobre{
+
+background:#070707;
+
+}
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+
+}
+
+.about-image{
+
+padding:20px;
+
+border-radius:30px;
+
+}
+
+.about-image img{
+
+border-radius:20px;
+
+width:100%;
+
+}
+
+.about-text{
+
+margin:30px 0;
+
+color:#bfbfbf;
+
+line-height:1.9;
+
+}
+
+.about-features{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+margin-top:40px;
+
+}
+
+.about-features div{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-weight:600;
+
+}
+
+.about-features i{
+
+color:var(--gold);
+
+}
+
+/*==============================
+FAQ
+==============================*/
+
+#faq{
+
+background:linear-gradient(180deg,#0b0b0b,#050505);
+
+}
+
+.faq{
+
+max-width:900px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:22px;
+
+}
+
+.faq-item{
+
+border-radius:22px;
+
+overflow:hidden;
+
+}
+
+.faq-question{
+
+width:100%;
+
+padding:28px;
+
+background:none;
+
+border:none;
+
+color:white;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+cursor:pointer;
+
+font-size:1.05rem;
+
+font-weight:700;
+
+}
+
+.faq-answer{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:.45s;
+
+padding:0 28px;
+
+color:#bdbdbd;
+
+line-height:1.8;
+
+}
+
+.faq-item.active .faq-answer{
+
+max-height:220px;
+
+padding:0 28px 28px;
+
+}
+
+.faq-item.active i{
+
+transform:rotate(45deg);
+
+transition:.35s;
+
+}
+
+@media(max-width:1000px){
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-features{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
 </style>
 
 </head>
@@ -1155,4 +1832,985 @@ PORTFOLIO
     </div>
 
 </section>
+
+<!-- ===========================
+SERVICIOS
+=========================== -->
+
+<section id="servicios">
+
+<div class="blur-orb blur-right"></div>
+
+<div class="container">
+
+<div style="text-align:center;max-width:900px;margin:auto 0 90px auto;">
+
+<div class="title-mini">
+
+Servicios Premium
+
+</div>
+
+<h2 class="title">
+
+Todo lo necesario para que tu marca
+<span>venda más.</span>
+
+</h2>
+
+<p class="subtitle">
+
+No hacemos únicamente vídeos. Construimos la imagen completa de tu negocio para que destaque frente a la competencia.
+
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card service-big glass">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-film"></i>
+
+</div>
+
+<h3>Vídeos Cinematográficos</h3>
+
+<p>
+
+Producciones premium para hoteles, villas, apartamentos turísticos e inmobiliarias con edición profesional y storytelling visual.
+
+</p>
+
+</div>
+
+<div class="service-card glass">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-globe"></i>
+
+</div>
+
+<h3>Páginas Web</h3>
+
+<p>
+
+Webs rápidas, modernas y optimizadas para convertir visitas en reservas.
+
+</p>
+
+</div>
+
+<div class="service-card glass">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-camera"></i>
+
+</div>
+
+<h3>Fotografía Premium</h3>
+
+<p>
+
+Fotografía profesional preparada para Booking, Airbnb y redes sociales.
+
+</p>
+
+</div>
+
+<div class="service-card glass">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-mobile-screen"></i>
+
+</div>
+
+<h3>Redes Sociales</h3>
+
+<p>
+
+Contenido vertical optimizado para Instagram, TikTok y Reels.
+
+</p>
+
+</div>
+
+<div class="service-card service-wide glass">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+<h3>Estrategia Visual</h3>
+
+<p>
+
+Analizamos tu negocio y diseñamos una identidad visual capaz de aumentar el valor percibido de tu alojamiento y mejorar la conversión.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PROCESO
+=========================== -->
+
+<section id="proceso">
+
+<div class="container">
+
+<div style="text-align:center;margin-bottom:100px;">
+
+<div class="title-mini">
+Cómo trabajamos
+</div>
+
+<h2 class="title">
+
+Un proceso diseñado para que
+<span>no tengas que preocuparte</span>
+
+</h2>
+
+<p class="subtitle" style="margin:auto;max-width:760px;">
+
+Nos encargamos de todo el proceso creativo para que tú solo tengas que disfrutar del resultado.
+
+</p>
+
+</div>
+
+<div class="timeline">
+
+<div class="timeline-line"></div>
+
+<div class="timeline-item left">
+
+<div class="timeline-number">01</div>
+
+<div class="timeline-card glass">
+
+<h3>Primera reunión</h3>
+
+<p>
+
+Conocemos tu alojamiento, tus objetivos y el tipo de cliente que quieres atraer.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item right">
+
+<div class="timeline-number">02</div>
+
+<div class="timeline-card glass">
+
+<h3>Planificación</h3>
+
+<p>
+
+Diseñamos el guion, los planos, la estructura y la estrategia visual del proyecto.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item left">
+
+<div class="timeline-number">03</div>
+
+<div class="timeline-card glass">
+
+<h3>Producción</h3>
+
+<p>
+
+Grabación profesional con drones, cámaras estabilizadas y edición cinematográfica.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item right">
+
+<div class="timeline-number">04</div>
+
+<div class="timeline-card glass">
+
+<h3>Entrega</h3>
+
+<p>
+
+Recibes todos los archivos optimizados para web, redes sociales y plataformas de reservas.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PRECIOS
+=========================== -->
+
+<section id="precios">
+
+<div class="container">
+
+<div style="text-align:center;margin-bottom:90px;">
+
+<div class="title-mini">
+Planes
+</div>
+
+<h2 class="title">
+
+Invierte en una imagen que
+<span>genere reservas</span>
+
+</h2>
+
+<p class="subtitle" style="margin:auto;max-width:760px;">
+
+Cada proyecto es diferente, pero estos planes sirven como referencia para que tengas una idea del nivel de inversión.
+
+</p>
+
+</div>
+
+<div class="pricing-grid">
+
+<div class="price-card glass">
+
+<h4>START</h4>
+
+<div class="price">
+
+299€
+
+</div>
+
+<ul>
+
+<li><i class="fa-solid fa-check"></i> Vídeo corto</li>
+
+<li><i class="fa-solid fa-check"></i> Edición profesional</li>
+
+<li><i class="fa-solid fa-check"></i> Música licenciada</li>
+
+<li><i class="fa-solid fa-check"></i> Entrega HD</li>
+
+</ul>
+
+<a href="#contacto" class="btn btn-dark">
+
+Solicitar
+
+</a>
+
+</div>
+
+<div class="price-card featured">
+
+<div class="badge">
+
+Más solicitado
+
+</div>
+
+<h4>PREMIUM</h4>
+
+<div class="price">
+
+699€
+
+</div>
+
+<ul>
+
+<li><i class="fa-solid fa-check"></i> Vídeo cinematográfico</li>
+
+<li><i class="fa-solid fa-check"></i> Drone</li>
+
+<li><i class="fa-solid fa-check"></i> Reels incluidos</li>
+
+<li><i class="fa-solid fa-check"></i> Optimización redes</li>
+
+<li><i class="fa-solid fa-check"></i> Miniaturas</li>
+
+</ul>
+
+<a href="#contacto" class="btn btn-gold">
+
+Elegir plan
+
+</a>
+
+</div>
+
+<div class="price-card glass">
+
+<h4>FULL BRAND</h4>
+
+<div class="price">
+
+Desde 1490€
+
+</div>
+
+<ul>
+
+<li><i class="fa-solid fa-check"></i> Web premium</li>
+
+<li><i class="fa-solid fa-check"></i> Vídeo</li>
+
+<li><i class="fa-solid fa-check"></i> Fotografía</li>
+
+<li><i class="fa-solid fa-check"></i> Redes sociales</li>
+
+<li><i class="fa-solid fa-check"></i> Estrategia visual</li>
+
+</ul>
+
+<a href="#contacto" class="btn btn-dark">
+
+Consultar
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+GARANTÍA
+=========================== -->
+
+<section id="garantia">
+
+<div class="container">
+
+<div class="guarantee glass">
+
+<div class="guarantee-icon">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+</div>
+
+<div>
+
+<div class="title-mini">
+
+Garantía
+
+</div>
+
+<h2 style="font-size:2.5rem;margin-bottom:20px;">
+
+Trabajamos contigo hasta que el resultado esté al nivel esperado.
+
+</h2>
+
+<p class="subtitle">
+
+No desaparecemos después de entregar el proyecto. Realizamos ajustes razonables para que el resultado final represente correctamente tu marca.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+SOBRE
+=========================== -->
+
+<section id="sobre">
+
+<div class="container about-grid">
+
+<div class="about-image glass">
+
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Estudio creativo">
+
+</div>
+
+<div class="about-content">
+
+<div class="title-mini">
+
+Sobre Kirels Visual
+
+</div>
+
+<h2 class="title">
+
+Creamos experiencias visuales que
+<span>transmiten confianza.</span>
+
+</h2>
+
+<p class="subtitle">
+
+En Kirels Visual creemos que una buena imagen no consiste únicamente en verse bien. Consiste en generar confianza antes incluso del primer contacto con el cliente.
+
+</p>
+
+<p class="about-text">
+
+Cada vídeo, fotografía y página web está diseñada para aumentar el valor percibido de tu negocio con una estética limpia, elegante y atemporal.
+
+</p>
+
+<div class="about-features">
+
+<div>
+
+<i class="fa-solid fa-check"></i>
+
+Diseño exclusivo
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-check"></i>
+
+Entrega rápida
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-check"></i>
+
+Comunicación directa
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-check"></i>
+
+Calidad premium
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FAQ
+=========================== -->
+
+<section id="faq">
+
+<div class="container">
+
+<div style="text-align:center;margin-bottom:70px;">
+
+<div class="title-mini">
+
+FAQ
+
+</div>
+
+<h2 class="title">
+
+Preguntas
+<span>frecuentes</span>
+
+</h2>
+
+</div>
+
+<div class="faq">
+
+<div class="faq-item glass">
+
+<button class="faq-question">
+
+¿Cuánto tarda un proyecto?
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+Normalmente entre 3 y 10 días dependiendo del servicio contratado.
+
+</div>
+
+</div>
+
+<div class="faq-item glass">
+
+<button class="faq-question">
+
+¿Trabajáis en toda España?
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+Sí. También realizamos proyectos internacionales bajo presupuesto.
+
+</div>
+
+</div>
+
+<div class="faq-item glass">
+
+<button class="faq-question">
+
+¿Puedo solicitar cambios?
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+Sí. Todos los proyectos incluyen revisiones razonables para asegurar un resultado profesional.
+
+</div>
+
+</div>
+
+<div class="faq-item glass">
+
+<button class="faq-question">
+
+¿También diseñáis páginas web?
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+Sí. Diseñamos webs premium totalmente personalizadas y optimizadas para SEO.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+CTA FINAL
+=========================== -->
+
+<section id="contacto">
+
+<div class="container">
+
+<div class="final-cta glass">
+
+<div>
+
+<div class="title-mini">
+
+¿Empezamos?
+
+</div>
+
+<h2 class="title">
+
+Tu alojamiento merece una
+<span>imagen premium.</span>
+
+</h2>
+
+<p class="subtitle">
+
+Solicita un presupuesto sin compromiso y descubre cómo podemos ayudarte a diferenciarte de la competencia.
+
+</p>
+
+</div>
+
+<div class="cta-buttons">
+
+<a href="https://wa.me/34600000000" class="btn btn-gold">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Hablar por WhatsApp
+
+</a>
+
+<a href="mailto:info@kirelsvisual.com" class="btn btn-dark">
+
+Enviar Email
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<h2>Kirels Visual</h2>
+
+<p>
+
+Contenido visual premium para alojamientos, hoteles, inmobiliarias y empresas.
+
+</p>
+
+</div>
+
+<div>
+
+<h4>Navegación</h4>
+
+<a href="#inicio">Inicio</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#servicios">Servicios</a>
+<a href="#contacto">Contacto</a>
+
+</div>
+
+<div>
+
+<h4>Contacto</h4>
+
+<p>info@kirelsvisual.com</p>
+
+<p>+34 600 000 000</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2025 Kirels Visual · Todos los derechos reservados.
+
+</div>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/34600000000">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<script>
+
+/* Navbar */
+
+const nav=document.querySelector(".navbar");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>60){
+
+nav.classList.add("scrolled");
+
+}else{
+
+nav.classList.remove("scrolled");
+
+}
+
+});
+
+/* FAQ */
+
+document.querySelectorAll(".faq-question").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+btn.parentElement.classList.toggle("active");
+
+});
+
+});
+
+/* Aparición suave */
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{threshold:.15});
+
+document.querySelectorAll("section,.project,.service-card,.price-card,.timeline-card").forEach(el=>{
+
+el.classList.add("hidden");
+
+observer.observe(el);
+
+});
+
+</script>
+
+<style>
+
+/* CTA */
+
+#contacto{
+
+background:#050505;
+
+}
+
+.final-cta{
+
+padding:80px;
+
+border-radius:36px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:60px;
+
+}
+
+.cta-buttons{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#030303;
+
+padding:80px 8% 30px;
+
+border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:50px;
+
+}
+
+.footer-grid h4{
+
+margin-bottom:18px;
+
+color:var(--gold);
+
+}
+
+.footer-grid a{
+
+display:block;
+
+margin-bottom:12px;
+
+color:#bdbdbd;
+
+transition:.3s;
+
+}
+
+.footer-grid a:hover{
+
+color:white;
+
+}
+
+.footer-grid p{
+
+color:#9f9f9f;
+
+margin-bottom:12px;
+
+}
+
+.copyright{
+
+text-align:center;
+
+margin-top:60px;
+
+color:#666;
+
+font-size:.9rem;
+
+}
+
+/* WhatsApp */
+
+.whatsapp{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:68px;
+
+height:68px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:2rem;
+
+background:#25D366;
+
+color:white;
+
+z-index:99999;
+
+box-shadow:0 20px 50px rgba(0,0,0,.4);
+
+transition:.35s;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.08);
+
+}
+
+/* Animaciones */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:none;
+
+}
+
+@media(max-width:900px){
+
+.final-cta{
+
+padding:45px;
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+}
+
+</style>
+
+</body>
+
+</html>
+
+
+
+
 
