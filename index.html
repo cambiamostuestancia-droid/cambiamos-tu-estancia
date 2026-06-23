@@ -313,3 +313,618 @@ border:1px solid rgba(255,255,255,.08);
 box-shadow:var(--shadow);
 
 }
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+position:fixed;
+top:24px;
+left:50%;
+transform:translateX(-50%);
+width:min(1400px,92%);
+padding:16px 26px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-radius:22px;
+z-index:9999;
+transition:var(--transition);
+
+}
+
+.navbar.scrolled{
+
+background:rgba(10,10,10,.88);
+backdrop-filter:blur(30px);
+
+}
+
+.logo{
+
+display:flex;
+flex-direction:column;
+
+}
+
+.logo h2{
+
+font-size:2rem;
+font-weight:800;
+letter-spacing:2px;
+color:var(--gold);
+
+}
+
+.logo span{
+
+font-size:.70rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#999;
+
+}
+
+.menu{
+
+display:flex;
+gap:34px;
+align-items:center;
+
+}
+
+.menu a{
+
+position:relative;
+font-size:.95rem;
+color:#ddd;
+transition:.35s;
+
+}
+
+.menu a:hover{
+
+color:white;
+
+}
+
+.menu a::after{
+
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:0;
+height:2px;
+background:var(--gold);
+transition:.4s;
+
+}
+
+.menu a:hover::after{
+
+width:100%;
+
+}
+
+.hero{
+
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:90px;
+padding-top:170px;
+
+}
+
+.hero-left{
+
+position:relative;
+z-index:5;
+
+}
+
+.hero-buttons{
+
+display:flex;
+gap:18px;
+margin-top:50px;
+flex-wrap:wrap;
+
+}
+
+.stats{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:70px;
+
+}
+
+.stat{
+
+padding:26px;
+text-align:center;
+border-radius:22px;
+
+}
+
+.stat h3{
+
+font-size:2rem;
+color:var(--gold);
+
+}
+
+.stat p{
+
+margin-top:10px;
+color:#aaa;
+
+}
+
+.hero-video{
+
+position:relative;
+border-radius:30px;
+overflow:hidden;
+
+}
+
+.hero-video video{
+
+width:100%;
+display:block;
+border-radius:30px;
+
+}
+
+.video-placeholder{
+
+aspect-ratio:16/9;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:
+
+linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.35)),
+
+url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+border-radius:30px;
+
+}
+
+.play{
+
+width:110px;
+height:110px;
+border-radius:50%;
+background:rgba(212,175,115,.92);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2rem;
+color:#111;
+cursor:pointer;
+transition:.4s;
+
+}
+
+.play:hover{
+
+transform:scale(1.08);
+
+}
+
+.scroll-indicator{
+
+position:absolute;
+
+bottom:35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:.8rem;
+
+letter-spacing:3px;
+
+color:#888;
+
+animation:float 2s infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translate(-50%,0);
+
+}
+
+50%{
+
+transform:translate(-50%,10px);
+
+}
+
+}
+
+@media(max-width:1100px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+gap:70px;
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+section{
+
+padding:110px 7%;
+
+}
+
+.title{
+
+font-size:3rem;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="blur-orb blur-left"></div>
+<div class="blur-orb blur-right"></div>
+
+<nav class="navbar glass">
+
+<div class="logo">
+
+<h2>KV</h2>
+
+<span>KIRELS VISUAL</span>
+
+</div>
+
+<div class="menu">
+
+<a href="#inicio">Inicio</a>
+
+<a href="#portfolio">Portfolio</a>
+
+<a href="#servicios">Servicios</a>
+
+<a href="#proceso">Proceso</a>
+
+<a href="#precios">Precios</a>
+
+<a href="#sobre">Sobre</a>
+
+<a href="#faq">FAQ</a>
+
+<a href="#contacto">Contacto</a>
+
+</div>
+
+<a class="btn btn-gold" href="#contacto">
+
+Solicitar presupuesto
+
+</a>
+
+</nav>
+
+<section id="inicio">
+
+<div class="container hero">
+
+<div class="hero-left">
+
+<div class="title-mini">
+
+Contenido Visual Premium
+
+</div>
+
+<h1 class="title">
+
+Haz que tu alojamiento
+
+<span>enamore</span>
+
+antes incluso
+
+de que llegue
+
+el cliente.
+
+</h1>
+
+<p class="subtitle">
+
+Creamos vídeos promocionales, páginas web y contenido visual exclusivo para alojamientos, inmobiliarias y empresas que quieren transmitir una imagen moderna, elegante y preparada para convertir visitas en reservas.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#portfolio" class="btn btn-gold">
+
+Ver proyectos
+
+</a>
+
+<a href="#contacto" class="btn btn-dark">
+
+Solicitar presupuesto
+
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat glass">
+
+<h3>100%</h3>
+
+<p>Trabajo online</p>
+
+</div>
+
+<div class="stat glass">
+
+<h3>3-5</h3>
+
+<p>Días de entrega</p>
+
+</div>
+
+<div class="stat glass">
+
+<h3>Premium</h3>
+
+<p>Diseño exclusivo</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-video">
+
+<div class="video-placeholder">
+
+<div class="play">
+
+<i class="fa-solid fa-play"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="scroll-indicator">
+
+SCROLL
+
+</div>
+
+</section>
+
+<!-- ===========================
+PORTFOLIO
+=========================== -->
+
+<section id="portfolio">
+
+    <div class="blur-orb blur-left"></div>
+
+    <div class="container">
+
+        <div style="text-align:center;margin-bottom:70px;">
+
+            <div class="title-mini">
+                Portfolio
+            </div>
+
+            <h2 class="title">
+                Algunos de nuestros
+                <span>trabajos</span>
+            </h2>
+
+            <p class="subtitle" style="margin:auto;">
+                Cada proyecto está diseñado para transmitir una experiencia,
+                aumentar el valor percibido y conseguir más reservas.
+            </p>
+
+        </div>
+
+        <div class="portfolio-slider">
+
+            <button class="slider-btn prev">
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+            </button>
+
+            <div class="portfolio-track">
+
+                <!-- Proyecto -->
+
+                <article class="project glass">
+
+                    <div class="project-image">
+
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80">
+
+                        <div class="project-overlay">
+
+                            <div class="play-small">
+
+                                <i class="fa-solid fa-play"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Villa en Menorca</h3>
+
+                        <p>Vídeo Promocional</p>
+
+                    </div>
+
+                </article>
+
+                <article class="project glass">
+
+                    <div class="project-image">
+
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80">
+
+                        <div class="project-overlay">
+
+                            <div class="play-small">
+
+                                <i class="fa-solid fa-play"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Hotel Boutique</h3>
+
+                        <p>Vídeo Promocional</p>
+
+                    </div>
+
+                </article>
+
+                <article class="project glass">
+
+                    <div class="project-image">
+
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80">
+
+                        <div class="project-overlay">
+
+                            <div class="play-small">
+
+                                <i class="fa-solid fa-play"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Villa Ibiza</h3>
+
+                        <p>Vídeo Promocional</p>
+
+                    </div>
+
+                </article>
+
+                <article class="project glass">
+
+                    <div class="project-image">
+
+                        <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=80">
+
+                        <div class="project-overlay">
+
+                            <div class="play-small">
+
+                                <i class="fa-solid fa-play"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Apartamento Madrid</h3>
+
+                        <p>Vídeo Promocional</p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <button class="slider-btn next">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+        </div>
+
+        <div class="slider-dots">
+
+            <span class="active"></span>
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </div>
+
+    </div>
+
+</section>
+
