@@ -1,14 +1,37 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kirels Visual</title>
+<title>Kirels Visual | Vídeos promocionales y páginas web</title>
+
+<meta name="description" content="Creamos vídeos promocionales, páginas web y contenido visual premium para alojamientos turísticos, rurales e inmobiliarias.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+
+--gold:#c8a96a;
+--gold2:#dfc17e;
+
+--bg:#050505;
+--bg2:#0b0b0b;
+--card:rgba(255,255,255,.05);
+
+--text:#ffffff;
+--soft:#cfcfcf;
+
+--radius:28px;
+
+--shadow:
+0 20px 60px rgba(0,0,0,.45);
+
+}
 
 *{
 margin:0;
@@ -19,374 +42,1437 @@ scroll-behavior:smooth;
 }
 
 body{
+
 background:
-radial-gradient(circle at top left, rgba(200,169,106,.12), transparent 35%),
-radial-gradient(circle at bottom right, rgba(255,255,255,.04), transparent 30%),
-linear-gradient(180deg,#030303 0%,#0b0b0b 50%,#050505 100%);
-color:white;
+
+radial-gradient(circle at 10% 0%,rgba(200,169,106,.15),transparent 28%),
+
+radial-gradient(circle at 90% 100%,rgba(255,255,255,.04),transparent 25%),
+
+linear-gradient(180deg,#030303,#090909,#050505);
+
+color:var(--text);
+
 overflow-x:hidden;
+
+}
+
+/* Scroll */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#080808;
+}
+
+::-webkit-scrollbar-thumb{
+background:var(--gold);
+border-radius:20px;
+}
+
+/* Fondo luminoso */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:650px;
+
+height:650px;
+
+background:
+
+radial-gradient(circle,rgba(200,169,106,.12),transparent 70%);
+
+top:-220px;
+
+left:-180px;
+
+pointer-events:none;
+
+filter:blur(35px);
+
+z-index:-2;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:700px;
+
+height:700px;
+
+background:
+
+radial-gradient(circle,rgba(255,255,255,.05),transparent 70%);
+
+right:-250px;
+
+bottom:-250px;
+
+pointer-events:none;
+
+filter:blur(50px);
+
+z-index:-2;
+
 }
 
 /* NAV */
 
 nav{
+
 position:fixed;
-top:0;
-width:100%;
-padding:18px 8%;
+
+top:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:min(1180px,92%);
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
-background:rgba(0,0,0,0.75);
-backdrop-filter:blur(10px);
-z-index:999;
-border-bottom:1px solid rgba(255,255,255,0.05);
+
+padding:16px 28px;
+
+background:rgba(15,15,15,.72);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:22px;
+
+z-index:9999;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
 }
 
 nav img{
-height:45px;
-border-radius:10px;
+
+height:48px;
+
+border-radius:14px;
+
+}
+
+nav div{
+
+display:flex;
+
+gap:28px;
+
+align-items:center;
+
 }
 
 nav a{
+
 color:white;
+
 text-decoration:none;
-margin-left:25px;
+
 font-size:14px;
-opacity:0.8;
-transition:0.3s;
+
+font-weight:500;
+
+opacity:.82;
+
+transition:.35s;
+
 }
 
 nav a:hover{
+
+color:var(--gold);
+
 opacity:1;
-color:#c8a96a;
+
 }
 
 /* HERO */
 
 .hero{
-height:100vh;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:140px 25px 100px;
+
 background:
-linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.78)),
+
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.82)),
+
 url('1D503860-AFDA-4739-BD36-1789D4F64CB6.png');
 
 background-size:cover;
+
 background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
+
 position:relative;
+
 overflow:hidden;
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(to top,#050505 0%,transparent 35%);
+
 }
 
 .hero-content{
-max-width:850px;
+
+max-width:920px;
+
+position:relative;
+
+z-index:5;
+
+animation:fadeUp 1s ease;
+
 }
 
 .hero-logo{
-width:190px;
-margin-bottom:30px;
-border-radius:20px;
-box-shadow:0 0 40px rgba(0,0,0,0.5);
+
+width:180px;
+
+border-radius:22px;
+
+margin-bottom:35px;
+
+box-shadow:
+
+0 25px 70px rgba(0,0,0,.45);
+
 }
 
 .hero h1{
-font-size:62px;
-line-height:1.1;
-margin-bottom:25px;
-font-weight:600;
+
+font-size:68px;
+
+font-weight:700;
+
+line-height:1.08;
+
+margin-bottom:28px;
+
+letter-spacing:-1px;
+
 }
 
 .hero p{
-font-size:18px;
-opacity:0.85;
-line-height:1.8;
-margin-bottom:40px;
-max-width:700px;
-margin-left:auto;
-margin-right:auto;
+
+font-size:19px;
+
+line-height:1.9;
+
+color:#dadada;
+
+max-width:760px;
+
+margin:auto;
+
+margin-bottom:45px;
+
 }
 
+/* BOTÓN */
+
 .btn{
-display:inline-block;
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
 padding:18px 42px;
-background:#c8a96a;
+
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+border-radius:60px;
+
 color:black;
-border-radius:50px;
+
+font-weight:700;
+
 text-decoration:none;
-font-weight:600;
-letter-spacing:.5px;
+
 transition:.35s;
-box-shadow:0 12px 30px rgba(200,169,106,.30);
+
+box-shadow:
+
+0 15px 35px rgba(200,169,106,.35);
+
 }
 
 .btn:hover{
-transform:translateY(-6px);
-box-shadow:0 18px 40px rgba(200,169,106,.45);
+
+transform:translateY(-5px) scale(1.02);
+
+box-shadow:
+
+0 25px 55px rgba(200,169,106,.5);
+
 }
 
 /* SECCIONES */
 
 section{
-padding:110px 8%;
+
+padding:120px 8%;
+
 }
 
 .section-title{
 
-font-size:48px;
+font-size:52px;
 
 font-weight:700;
 
-margin-bottom:18px;
-
 text-align:center;
 
-letter-spacing:1px;
+margin-bottom:18px;
+
+letter-spacing:-1px;
 
 }
 
 .section-sub{
-text-align:center;
-opacity:.78;
-max-width:850px;
+
+max-width:900px;
+
 margin:auto;
-line-height:1.9;
-margin-bottom:80px;
+
+text-align:center;
+
 font-size:18px;
-color:#d5d5d5;
+
+line-height:1.9;
+
+color:#cfcfcf;
+
+margin-bottom:70px;
+
 }
 
-/* VIDEOS */
-
-.video-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
+/* TARJETAS */
 
 .video-card{
 
-background:rgba(255,255,255,.04);
-
-backdrop-filter:blur(14px);
-
--webkit-backdrop-filter:blur(14px);
-
-border-radius:28px;
-
-overflow:hidden;
+background:rgba(255,255,255,.045);
 
 border:1px solid rgba(255,255,255,.08);
 
-box-shadow:
+border-radius:30px;
 
-0 12px 35px rgba(0,0,0,.35);
+overflow:hidden;
+
+backdrop-filter:blur(20px);
 
 transition:.45s;
+
+box-shadow:var(--shadow);
 
 }
 
 .video-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-12px);
 
-border:1px solid rgba(200,169,106,.45);
+border-color:rgba(200,169,106,.45);
 
 box-shadow:
 
-0 30px 60px rgba(0,0,0,.45);
+0 35px 80px rgba(0,0,0,.55);
 
-}
-.video-card iframe{
-width:100%;
-height:500px;
-border:none;
 }
 
 .video-info{
-padding:25px;
+
+padding:28px;
+
 }
 
 .video-info h3{
-margin-bottom:10px;
-font-size:22px;
+
+font-size:24px;
+
+margin-bottom:12px;
+
 }
 
 .video-info p{
-opacity:0.75;
-line-height:1.6;
+
+line-height:1.8;
+
+color:#d0d0d0;
+
 }
 
-/* CEO */
+/* Animaciones */
 
-.ceo{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
 }
 
-.ceo img{
-width:100%;
-border-radius:30px;
+to{
+
+opacity:1;
+
+transform:none;
+
 }
 
-.ceo-text h2{
-font-size:45px;
-margin-bottom:25px;
 }
 
-.ceo-text p{
-opacity:0.8;
-line-height:1.9;
-margin-bottom:20px;
-}
-
-/* CONTACTO */
-
-.contacto{
-text-align:center;
-}
-
-.contacto h2{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.contacto p{
-opacity:0.75;
-margin-bottom:35px;
-}
-
-.contact-links{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.contact-links a{
-padding:15px 28px;
-border:1px solid rgba(255,255,255,0.1);
-border-radius:50px;
-color:white;
-text-decoration:none;
-transition:0.3s;
-}
-
-.contact-links a:hover{
-background:#c8a96a;
-color:black;
-}
-
-/* FOOTER */
-
-footer{
-padding:40px;
-text-align:center;
-opacity:0.4;
-font-size:14px;
-}
-
-/* MOBILE */
+/* Responsive */
 
 @media(max-width:900px){
 
 .hero h1{
-font-size:42px;
+
+font-size:44px;
+
 }
 
 .hero p{
-font-size:16px;
-}
 
-.ceo{
-grid-template-columns:1fr;
+font-size:17px;
+
 }
 
 .section-title{
-font-size:34px;
-}
 
-.video-card iframe{
-height:420px;
+font-size:36px;
+
 }
 
 nav{
-padding:15px 5%;
+
+padding:15px 20px;
+
+}
+
+nav div{
+
+gap:16px;
+
 }
 
 nav a{
-margin-left:15px;
-font-size:12px;
+
+font-size:13px;
+
 }
 
 .hero-logo{
-width:150px;
+
+width:145px;
+
+}
+
+}
+
+/* ===========================
+   HERO PREMIUM
+=========================== */
+
+.hero-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:12px 24px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:50px;
+
+backdrop-filter:blur(18px);
+
+margin-bottom:35px;
+
+font-size:14px;
+
+font-weight:500;
+
+color:#ececec;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+margin-bottom:60px;
+
+}
+
+.btn-outline{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:18px 42px;
+
+border-radius:60px;
+
+text-decoration:none;
+
+font-weight:600;
+
+color:white;
+
+border:1px solid rgba(255,255,255,.14);
+
+background:rgba(255,255,255,.04);
+
+backdrop-filter:blur(18px);
+
+transition:.35s;
+
+}
+
+.btn-outline:hover{
+
+background:rgba(255,255,255,.08);
+
+transform:translateY(-5px);
+
+}
+
+.hero-stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:22px;
+
+margin-top:15px;
+
+}
+
+.stat{
+
+padding:28px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:26px;
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+transition:.4s;
+
+}
+
+.stat:hover{
+
+transform:translateY(-8px);
+
+border-color:rgba(200,169,106,.45);
+
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.stat h2{
+
+font-size:34px;
+
+color:var(--gold);
+
+margin-bottom:10px;
+
+}
+
+.stat span{
+
+font-size:15px;
+
+color:#d6d6d6;
+
+line-height:1.5;
+
+}
+
+/* ===========================
+   GRID GENERAL
+=========================== */
+
+.video-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.video-card iframe{
+
+width:100%;
+
+height:500px;
+
+border:none;
+
+}
+
+/* ===========================
+   MÓVIL
+=========================== */
+
+@media(max-width:900px){
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.hero-stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.video-card iframe{
+
+height:420px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-stats{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.section-title{
+
+font-size:34px;
+
+}
+
+}
+
+/* ETIQUETAS DE LAS TARJETAS */
+
+.card-tag{
+
+display:inline-block;
+
+padding:8px 16px;
+
+margin-bottom:18px;
+
+border-radius:50px;
+
+background:rgba(200,169,106,.15);
+
+border:1px solid rgba(200,169,106,.35);
+
+color:var(--gold);
+
+font-size:13px;
+
+font-weight:600;
+
+letter-spacing:.5px;
+
+text-transform:uppercase;
+
+}
+
+/* ===========================
+      PRECIOS
+=========================== */
+
+.pricing-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:20px;
+
+}
+
+.price-card{
+
+position:relative;
+
+padding:45px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+transition:.4s;
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.price-card:hover{
+
+transform:translateY(-12px);
+
+border-color:rgba(200,169,106,.45);
+
+}
+
+.price-card h4{
+
+font-size:15px;
+
+letter-spacing:2px;
+
+color:var(--gold);
+
+margin-bottom:15px;
+
+}
+
+.price-card h2{
+
+font-size:56px;
+
+margin-bottom:20px;
+
+}
+
+.price-desc{
+
+color:#cfcfcf;
+
+line-height:1.7;
+
+margin-bottom:30px;
+
+}
+
+.price-card ul{
+
+list-style:none;
+
+margin-bottom:35px;
+
+}
+
+.price-card li{
+
+padding:10px 0;
+
+color:#dddddd;
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.price-card .btn{
+
+margin-top:auto;
+
+}
+
+.featured{
+
+transform:scale(1.04);
+
+border:1px solid rgba(200,169,106,.55);
+
+box-shadow:0 25px 70px rgba(200,169,106,.18);
+
+}
+
+.featured:hover{
+
+transform:scale(1.06);
+
+}
+
+.featured-badge{
+
+position:absolute;
+
+top:-15px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+padding:10px 22px;
+
+border-radius:40px;
+
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+color:black;
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+}
+
+/* ===========================
+        BENEFICIOS
+=========================== */
+
+.benefits-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.benefit-card{
+
+padding:40px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+transition:.4s;
+
+}
+
+.benefit-card:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(200,169,106,.45);
+
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.benefit-icon{
+
+width:72px;
+
+height:72px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:34px;
+
+margin-bottom:25px;
+
+border-radius:20px;
+
+background:rgba(200,169,106,.12);
+
+border:1px solid rgba(200,169,106,.25);
+
+}
+
+.benefit-card h3{
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+.benefit-card p{
+
+line-height:1.8;
+
+color:#d3d3d3;
+
+}
+
+/* ===========================
+        TIMELINE
+=========================== */
+
+.timeline{
+
+max-width:900px;
+
+margin:70px auto 0;
+
+position:relative;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:30px;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:rgba(200,169,106,.35);
+
+}
+
+.timeline-item{
+
+display:flex;
+
+gap:35px;
+
+margin-bottom:55px;
+
+position:relative;
+
+}
+
+.timeline-number{
+
+width:62px;
+
+height:62px;
+
+flex-shrink:0;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+color:black;
+
+font-weight:700;
+
+font-size:18px;
+
+box-shadow:0 15px 35px rgba(200,169,106,.35);
+
+z-index:2;
+
+}
+
+.timeline-content{
+
+flex:1;
+
+padding:28px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:24px;
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+transition:.35s;
+
+}
+
+.timeline-content:hover{
+
+transform:translateY(-6px);
+
+border-color:rgba(200,169,106,.45);
+
+}
+
+.timeline-content h3{
+
+margin-bottom:12px;
+
+font-size:24px;
+
+}
+
+.timeline-content p{
+
+line-height:1.8;
+
+color:#d2d2d2;
+
+}
+
+@media(max-width:700px){
+
+.timeline::before{
+
+display:none;
+
+}
+
+.timeline-item{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.timeline-number{
+
+margin:auto;
+
+}
+
+}
+
+/* ===========================
+        CTA PREMIUM
+=========================== */
+
+.cta-section{
+
+padding:140px 8%;
+
+}
+
+.cta-box{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:80px 60px;
+
+border-radius:40px;
+
+text-align:center;
+
+background:
+
+linear-gradient(145deg,
+rgba(200,169,106,.14),
+rgba(255,255,255,.05));
+
+border:1px solid rgba(200,169,106,.25);
+
+backdrop-filter:blur(22px);
+
+box-shadow:
+
+0 40px 100px rgba(0,0,0,.45);
+
+}
+
+.cta-mini{
+
+display:inline-block;
+
+padding:10px 22px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.10);
+
+margin-bottom:30px;
+
+letter-spacing:2px;
+
+font-size:12px;
+
+font-weight:600;
+
+color:var(--gold);
+
+}
+
+.cta-box h2{
+
+font-size:56px;
+
+line-height:1.15;
+
+max-width:850px;
+
+margin:auto;
+
+margin-bottom:30px;
+
+}
+
+.cta-box p{
+
+max-width:760px;
+
+margin:auto;
+
+font-size:19px;
+
+line-height:1.9;
+
+color:#d6d6d6;
+
+margin-bottom:45px;
+
+}
+
+@media(max-width:900px){
+
+.cta-box{
+
+padding:50px 30px;
+
+}
+
+.cta-box h2{
+
+font-size:38px;
+
+}
+
+.cta-box p{
+
+font-size:17px;
+
+}
+
+}
+
+/* ===========================
+        ABOUT
+=========================== */
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.about-image img{
+
+width:100%;
+
+border-radius:32px;
+
+box-shadow:0 35px 80px rgba(0,0,0,.45);
+
+transition:.4s;
+
+}
+
+.about-image img:hover{
+
+transform:scale(1.02);
+
+}
+
+.about-content h2{
+
+font-size:48px;
+
+line-height:1.15;
+
+margin:25px 0;
+
+}
+
+.about-content p{
+
+line-height:1.9;
+
+font-size:18px;
+
+color:#d5d5d5;
+
+margin-bottom:22px;
+
+}
+
+.about-stats{
+
+display:flex;
+
+gap:50px;
+
+margin-top:45px;
+
+}
+
+.about-stats h3{
+
+font-size:42px;
+
+color:var(--gold);
+
+margin-bottom:6px;
+
+}
+
+.about-stats span{
+
+color:#d5d5d5;
+
+}
+
+@media(max-width:900px){
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-content h2{
+
+font-size:36px;
+
+}
+
+.about-stats{
+
+justify-content:space-between;
+
+gap:15px;
+
+}
+
+.about-stats h3{
+
+font-size:28px;
+
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- =========================
+     NAVEGACIÓN
+========================== -->
+
 <nav>
 
-<img src="IMG_7790.jpeg">
+<img src="IMG_7790.jpeg" alt="Kirels Visual Logo">
 
 <div>
+
 <a href="#portfolio">Proyectos</a>
+
 <a href="#servicios">Servicios</a>
+
 <a href="#precios">Precios</a>
+
 <a href="#sobre">Sobre KV</a>
+
 <a href="#contacto">Contacto</a>
+
 </div>
 
 </nav>
 
-<!-- HERO -->
+<!-- =========================
+          HERO
+========================== -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<img src="IMG_7790.jpeg" class="hero-logo">
+<div class="hero-badge">
+✨ Contenido visual premium para alojamientos y marcas
+</div>
 
-<h1>Vídeos promocionales y páginas web para alojamientos que quieren destacar.</h1>
+<img src="IMG_7790.jpeg" class="hero-logo" alt="Kirels Visual">
+
+<h1>
+
+Haz que tu alojamiento destaque
+antes incluso de que el cliente reserve.
+
+</h1>
 
 <p>
-Creamos vídeos promocionales, páginas web y contenido visual premium para alojamientos rurales, turísticos, inmobiliarias y marcas.
 
-Transformamos tus fotografías en una presencia digital profesional preparada para captar atención, transmitir confianza y conseguir más reservas.
-</p>
+Creamos vídeos promocionales, páginas web y contenido visual premium utilizando las fotografías que ya tienes.
 
-<a href="#portfolio" class="btn">Ver nuestros trabajos</a>
-<p style="margin-top:35px;opacity:.75;font-size:15px;">
-
-✔ Sin desplazamientos &nbsp;&nbsp; • &nbsp;&nbsp;
-
-✔ Aprovechamos tus fotografías &nbsp;&nbsp; • &nbsp;&nbsp;
-
-✔ Trabajo online en toda España
+Transformamos una buena imagen en una herramienta capaz de transmitir confianza, aumentar el valor percibido y ayudarte a conseguir más reservas.
 
 </p>
+
+<div class="hero-buttons">
+
+<a href="#portfolio" class="btn">
+Ver proyectos
+</a>
+
+<a href="#contacto" class="btn-outline">
+Solicitar información
+</a>
+
+</div>
+
+<div class="hero-stats">
+
+<div class="stat">
+
+<h2>100%</h2>
+
+<span>Trabajo online</span>
+
+</div>
+
+<div class="stat">
+
+<h2>3-5</h2>
+
+<span>Días de entrega</span>
+
+</div>
+
+<div class="stat">
+
+<h2>25%</h2>
+
+<span>Reserva inicial</span>
+
+</div>
+
+<div class="stat">
+
+<h2>🇪🇸</h2>
+
+<span>Servicio en toda España</span>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- PORTFOLIO -->
+<!-- =========================
+        PROYECTOS
+========================== -->
 
 <section id="portfolio">
 
-<h2 class="section-title">Proyectos realizados</h2>
+<h2 class="section-title">
+Proyectos realizados
+</h2>
 
 <p class="section-sub">
-Algunos ejemplos de cómo transformamos fotografías en contenido visual profesional preparado para captar la atención desde el primer segundo.
+
+Algunos ejemplos de cómo transformamos fotografías en vídeos promocionales y contenido visual capaz de transmitir calidad, emoción y confianza desde el primer segundo.
+
 </p>
 
 <div class="video-grid">
@@ -396,10 +1482,19 @@ Algunos ejemplos de cómo transformamos fotografías en contenido visual profesi
 <iframe src="https://www.youtube.com/embed/jEPj1epDyRs" allowfullscreen></iframe>
 
 <div class="video-info">
-<h3>Alojamientos</h3>
+
+<div class="card-tag">
+Alojamientos
+</div>
+
+<h3>Vídeos para alojamientos turísticos</h3>
+
 <p>
-Vídeos que muestran la experiencia de alojarse, transmiten emociones y ayudan al huésped a imaginarse allí antes de reservar.
+
+Mostramos la experiencia de alojarse antes incluso de que el huésped llegue, creando una primera impresión mucho más atractiva.
+
 </p>
+
 </div>
 
 </div>
@@ -409,10 +1504,19 @@ Vídeos que muestran la experiencia de alojarse, transmiten emociones y ayudan a
 <iframe src="https://www.youtube.com/embed/uk4pyIlGCSE" allowfullscreen></iframe>
 
 <div class="video-info">
-<h3>Inmobiliario</h3>
+
+<div class="card-tag">
+Inmobiliario
+</div>
+
+<h3>Presentaciones de inmuebles</h3>
+
 <p>
-Presentaciones visuales que convierten fotografías en recorridos dinámicos para captar más atención y generar mayor interés.
+
+Convertimos fotografías en recorridos visuales dinámicos que generan más interés y aumentan el valor percibido del inmueble.
+
 </p>
+
 </div>
 
 </div>
@@ -422,23 +1526,41 @@ Presentaciones visuales que convierten fotografías en recorridos dinámicos par
 <iframe src="https://www.youtube.com/embed/XrVrc4fSvkg" allowfullscreen></iframe>
 
 <div class="video-info">
-<h3>Marcas y productos</h3>
+
+<div class="card-tag">
+Marca
+</div>
+
+<h3>Contenido para empresas</h3>
+
 <p>
-Contenido visual pensado para destacar productos, reforzar la imagen de marca y aumentar el valor percibido.
+
+Creamos piezas visuales preparadas para redes sociales, páginas web y campañas publicitarias con una imagen totalmente profesional.
+
 </p>
+
 </div>
 
 </div>
 
 <div class="video-card">
 
-  <iframe src="https://www.youtube.com/embed/8F1cfAr7ZWw" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/8F1cfAr7ZWw" allowfullscreen></iframe>
 
 <div class="video-info">
-<h3>Contenido visual</h3>
+
+<div class="card-tag">
+Social Media
+</div>
+
+<h3>Contenido para redes sociales</h3>
+
 <p>
-Contenido adaptado para redes sociales, páginas web y campañas publicitarias, preparado para captar clientes desde el primer segundo.
+
+Vídeos verticales y horizontales optimizados para captar la atención durante los primeros segundos y mejorar la presencia digital.
+
 </p>
+
 </div>
 
 </div>
@@ -447,15 +1569,19 @@ Contenido adaptado para redes sociales, páginas web y campañas publicitarias, 
 
 </section>
 
-<!-- SERVICIOS -->
+<!-- =========================
+        SERVICIOS
+========================== -->
 
 <section id="servicios">
 
-<h2 class="section-title">Servicios</h2>
+<h2 class="section-title">
+Servicios
+</h2>
 
 <p class="section-sub">
 
-Soluciones visuales para que tu alojamiento destaque, transmita confianza y consiga más reservas.
+Creamos una presencia digital completa para que tu alojamiento transmita profesionalidad y consiga más reservas.
 
 </p>
 
@@ -465,11 +1591,13 @@ Soluciones visuales para que tu alojamiento destaque, transmita confianza y cons
 
 <div class="video-info">
 
-<h3>🎬 Vídeos Promocionales</h3>
+<div class="card-tag">Vídeo</div>
+
+<h3>🎬 Vídeos promocionales</h3>
 
 <p>
 
-Transformamos tus fotografías en vídeos dinámicos y profesionales preparados para páginas web, redes sociales y plataformas de reservas.
+Transformamos tus fotografías en vídeos dinámicos con acabado cinematográfico, ideales para páginas web, redes sociales y plataformas de reservas.
 
 </p>
 
@@ -481,11 +1609,13 @@ Transformamos tus fotografías en vídeos dinámicos y profesionales preparados 
 
 <div class="video-info">
 
-<h3>🌐 Páginas Web</h3>
+<div class="card-tag">Web</div>
+
+<h3>🌐 Diseño de páginas web</h3>
 
 <p>
 
-Diseñamos páginas web modernas, rápidas y adaptadas a móvil para que tu alojamiento tenga una imagen profesional y una presencia online propia.
+Creamos páginas modernas, rápidas, adaptadas a móviles y enfocadas en transmitir confianza desde el primer vistazo.
 
 </p>
 
@@ -497,11 +1627,13 @@ Diseñamos páginas web modernas, rápidas y adaptadas a móvil para que tu aloj
 
 <div class="video-info">
 
-<h3>📸 Optimización de imágenes</h3>
+<div class="card-tag">Imagen</div>
+
+<h3>📸 Optimización de fotografías</h3>
 
 <p>
 
-Mejoramos tus fotografías para conseguir un acabado más atractivo, luminoso y profesional sin necesidad de realizar nuevas sesiones.
+Mejoramos iluminación, color y calidad para conseguir una imagen mucho más profesional sin necesidad de realizar nuevas sesiones.
 
 </p>
 
@@ -513,11 +1645,13 @@ Mejoramos tus fotografías para conseguir un acabado más atractivo, luminoso y 
 
 <div class="video-info">
 
-<h3>📅 Reservas Online</h3>
+<div class="card-tag">Reservas</div>
+
+<h3>📅 Sistema de reservas</h3>
 
 <p>
 
-Posibilidad de incorporar calendario de disponibilidad, formulario de reservas y pagos online para facilitar la gestión de tu alojamiento.
+Integramos formularios, calendarios de disponibilidad y sistemas de reserva para facilitar la gestión de tu alojamiento.
 
 </p>
 
@@ -529,272 +1663,237 @@ Posibilidad de incorporar calendario de disponibilidad, formulario de reservas y
 
 </section>
 
-<!-- PLANES Y PRECIOS -->
+<!-- =========================
+        PLANES
+========================== -->
 
 <section id="precios">
 
-<h2 class="section-title">Planes y Precios</h2>
+<h2 class="section-title">
+Planes y precios
+</h2>
 
 <p class="section-sub">
-Elige la solución que mejor se adapta a tu alojamiento. Todos los proyectos se realizan utilizando las fotografías existentes, sin necesidad de desplazamientos.
-</p>
 
-<div class="video-grid">
-
-<div class="video-card">
-<div class="video-info">
-<h3>PACK 1</h3>
-<h2 style="color:#c8a96a;font-size:38px;margin:15px 0;">99 €</h2>
-
-<p>
-✔ Vídeo dinámico del alojamiento<br><br>
-
-✔ Formato horizontal para web y redes sociales<br><br>
-
-✔ Música y edición profesional<br><br>
-
-✔ Entrega rápida<br><br>
-
-✔ Creado a partir de tus fotografías
-</p>
-
-</div>
-</div>
-
-<div class="video-card">
-<div class="video-info">
-<h3>PACK PREMIUM</h3>
-
-<h2 style="color:#c8a96a;font-size:38px;margin:15px 0;">149 €</h2>
-
-<p>
-
-✔ Todo lo anterior<br><br>
-
-✔ Acabado visual premium<br><br>
-
-✔ Formato horizontal y vertical<br><br>
-
-✔ Movimiento cinematográfico<br><br>
-
-✔ Mejora profesional de fotografías<br><br>
-
-✔ Entrega de fotografías mejoradas<br><br>
-
-✔ Optimización para Instagram, web y publicidad<br><br>
-
-✔ Publicación en nuestras redes y YouTube
+Elige la solución que mejor se adapte a tu alojamiento. Todos los proyectos se realizan de forma 100 % online utilizando tus fotografías.
 
 </p>
 
+<div class="pricing-grid">
+
+<!-- PACK 1 -->
+
+<div class="price-card">
+
+<h4>PACK BÁSICO</h4>
+
+<h2>99€</h2>
+
+<p class="price-desc">
+Ideal para comenzar a mejorar tu imagen online.
+</p>
+
+<ul>
+
+<li>✔ Vídeo promocional</li>
+
+<li>✔ Formato horizontal</li>
+
+<li>✔ Música profesional</li>
+
+<li>✔ Edición completa</li>
+
+<li>✔ Entrega rápida</li>
+
+</ul>
+
+<a href="#contacto" class="btn">
+Solicitar
+</a>
+
 </div>
+
+<!-- PREMIUM -->
+
+<div class="price-card featured">
+
+<div class="featured-badge">
+MÁS ELEGIDO
 </div>
 
-<div class="video-card">
+<h4>PACK PREMIUM</h4>
 
-<div class="video-info">
+<h2>149€</h2>
 
-<h3>PÁGINA WEB</h3>
+<p class="price-desc">
 
-<h2 style="color:#c8a96a;font-size:38px;margin:15px 0;">299 €</h2>
-
-<p>
-
-✔ Diseño personalizado<br><br>
-
-✔ Adaptada a móvil<br><br>
-
-✔ Fotografías y vídeos<br><br>
-
-✔ WhatsApp directo<br><br>
-
-✔ Google Maps<br><br>
-
-✔ Formulario de contacto<br><br>
-
-✔ SEO básico<br><br>
-
-✔ Dominio incluido<br><br>
-
-✔ Asistencia durante el primer mes
+La opción más completa para conseguir una imagen profesional.
 
 </p>
 
-</div>
+<ul>
+
+<li>✔ Todo el Pack Básico</li>
+
+<li>✔ Movimiento cinematográfico</li>
+
+<li>✔ Formato horizontal y vertical</li>
+
+<li>✔ Mejora profesional de fotografías</li>
+
+<li>✔ Fotografías optimizadas</li>
+
+<li>✔ Publicación en redes</li>
+
+<li>✔ Acabado Premium</li>
+
+</ul>
+
+<a href="#contacto" class="btn">
+Lo quiero
+</a>
 
 </div>
 
-<div class="video-card">
+<!-- WEB -->
 
-<div class="video-info">
+<div class="price-card">
 
-<h3>WEB + RESERVAS</h3>
+<h4>PÁGINA WEB</h4>
 
-<h2 style="color:#c8a96a;font-size:38px;margin:15px 0;">399 €</h2>
+<h2>299€</h2>
 
-<p>
+<p class="price-desc">
 
-✔ Todo lo anterior<br><br>
-
-✔ Calendario de disponibilidad<br><br>
-
-✔ Sistema de reservas<br><br>
-
-✔ Pago online<br><br>
-
-✔ Gestión de reservas
+Una web profesional preparada para convertir visitas en reservas.
 
 </p>
 
-</div>
+<ul>
+
+<li>✔ Diseño personalizado</li>
+
+<li>✔ Adaptada a móvil</li>
+
+<li>✔ WhatsApp</li>
+
+<li>✔ Google Maps</li>
+
+<li>✔ SEO básico</li>
+
+<li>✔ Dominio incluido</li>
+
+</ul>
+
+<a href="#contacto" class="btn">
+Solicitar
+</a>
 
 </div>
-
-</div>
-
-<div style="margin-top:60px;background:#101010;padding:45px;border-radius:25px;text-align:center;">
-
-<h2 style="color:#c8a96a;margin-bottom:25px;">PACK PREMIUM + PÁGINA WEB</h2>
-
-<p style="font-size:48px;font-weight:700;margin-bottom:25px;">399 €</p>
-
-<p style="max-width:850px;margin:auto;line-height:2;opacity:.85;">
-
-La solución más completa para alojamientos que desean renovar su imagen digital.
-
-Incluye el <strong>Pack Premium</strong> junto con una <strong>página web profesional</strong>, lista para mostrar el alojamiento, integrar vídeos, fotografías, WhatsApp, Google Maps y facilitar el contacto con los futuros huéspedes.
-
-</p>
-
-</div>
-
-<div style="margin-top:45px;background:#c8a96a;color:black;padding:30px;border-radius:20px;text-align:center;">
-
-<h3 style="margin-bottom:15px;">Garantía Kirels Visual</h3>
-
-<p style="line-height:1.9;">
-
-Solo solicitamos el <strong>25 %</strong> como reserva para comenzar el proyecto.
-
-El resto se abona una vez terminado y mostrado el trabajo.
-
-<br><br>
-
-Si el resultado final no cumple con lo acordado, devolvemos íntegramente el importe de la reserva.
-
-</p>
 
 </div>
 
 </section>
 
-<!-- POR QUÉ KIRELS VISUAL -->
+<!-- =========================
+        POR QUÉ KIRELS VISUAL
+========================== -->
 
 <section id="ventajas">
 
-<h2 class="section-title">¿Por qué elegir Kirels Visual?</h2>
+<h2 class="section-title">
+¿Por qué elegir Kirels Visual?
+</h2>
 
 <p class="section-sub">
 
-No solo creamos contenido visual. Ayudamos a que tu alojamiento transmita confianza, destaque frente a la competencia y consiga una imagen profesional sin necesidad de realizar nuevas sesiones fotográficas.
+No solo diseñamos vídeos y páginas web. Creamos una imagen capaz de transmitir confianza, aumentar el valor percibido y ayudarte a destacar frente a la competencia.
 
 </p>
 
-<div class="video-grid">
+<div class="benefits-grid">
 
-<div class="video-card">
+<div class="benefit-card">
 
-<div class="video-info">
+<div class="benefit-icon">🚀</div>
 
-<h3>🚫 Sin desplazamientos</h3>
+<h3>Entrega rápida</h3>
 
 <p>
 
-Trabajamos utilizando las fotografías que ya tienes, evitando desplazamientos y reduciendo costes.
+La mayoría de proyectos están terminados entre 3 y 5 días laborables.
 
 </p>
 
 </div>
 
-</div>
+<div class="benefit-card">
 
-<div class="video-card">
+<div class="benefit-icon">📸</div>
 
-<div class="video-info">
-
-<h3>📸 Aprovechamos tus fotografías</h3>
+<h3>Aprovechamos tus fotografías</h3>
 
 <p>
 
-No es necesario contratar una nueva sesión fotográfica. Creamos contenido profesional a partir del material existente.
+No necesitas contratar una nueva sesión fotográfica para obtener un resultado profesional.
 
 </p>
 
 </div>
 
-</div>
+<div class="benefit-card">
 
-<div class="video-card">
+<div class="benefit-icon">🌍</div>
 
-<div class="video-info">
-
-<h3>⚡ Entrega rápida</h3>
+<h3>100% online</h3>
 
 <p>
 
-Recibirás tu proyecto terminado en pocos días, listo para comenzar a utilizarlo.
+Trabajamos con alojamientos de cualquier punto de España sin desplazamientos.
 
 </p>
 
 </div>
 
-</div>
+<div class="benefit-card">
 
-<div class="video-card">
+<div class="benefit-icon">🎬</div>
 
-<div class="video-info">
-
-<h3>📱 Adaptado a todas las plataformas</h3>
+<h3>Acabado cinematográfico</h3>
 
 <p>
 
-Vídeos horizontales y verticales preparados para web, Instagram, Facebook, YouTube y publicidad.
+Cada vídeo está diseñado para generar impacto y transmitir una imagen de mayor calidad.
 
 </p>
 
 </div>
 
-</div>
+<div class="benefit-card">
 
-<div class="video-card">
+<div class="benefit-icon">📱</div>
 
-<div class="video-info">
-
-<h3>🇪🇸 Trabajo online en toda España</h3>
+<h3>Preparado para todas las plataformas</h3>
 
 <p>
 
-Podemos trabajar con cualquier alojamiento del país sin importar la ubicación.
+Web, Instagram, Facebook, TikTok, YouTube o campañas publicitarias.
 
 </p>
 
 </div>
 
-</div>
+<div class="benefit-card">
 
-<div class="video-card">
+<div class="benefit-icon">⭐</div>
 
-<div class="video-info">
-
-<h3>✨ Imagen Premium</h3>
+<h3>Imagen Premium</h3>
 
 <p>
 
-Cada proyecto se desarrolla con un enfoque visual cuidado para transmitir calidad, profesionalidad y confianza.
+Diseño moderno, elegante y pensado para aumentar la confianza del futuro cliente.
 
 </p>
-
-</div>
 
 </div>
 
@@ -802,29 +1901,37 @@ Cada proyecto se desarrolla con un enfoque visual cuidado para transmitir calida
 
 </section>
 
-<!-- CÓMO TRABAJAMOS -->
+<!-- =========================
+        PROCESO
+========================== -->
 
 <section id="proceso">
 
-<h2 class="section-title">¿Cómo trabajamos?</h2>
+<h2 class="section-title">
+Así de sencillo es trabajar con nosotros
+</h2>
 
 <p class="section-sub">
 
-Un proceso sencillo, rápido y completamente online para que puedas disponer de contenido visual profesional sin desplazamientos.
+Todo el proceso es online, rápido y pensado para que obtengas un resultado profesional sin desplazamientos ni complicaciones.
 
 </p>
 
-<div class="video-grid">
+<div class="timeline">
 
-<div class="video-card">
+<div class="timeline-item">
 
-<div class="video-info">
+<div class="timeline-number">
+01
+</div>
 
-<h3>1️⃣ Envíanos tus fotografías</h3>
+<div class="timeline-content">
+
+<h3>Nos envías tus fotografías</h3>
 
 <p>
 
-Solo necesitamos las fotografías de tu alojamiento. Si ya las utilizas en plataformas de reservas o en tu página web, son suficientes para comenzar.
+Utilizamos las imágenes que ya tienes de tu alojamiento. Si están publicadas en Booking, Airbnb o tu web, normalmente son suficientes.
 
 </p>
 
@@ -832,15 +1939,19 @@ Solo necesitamos las fotografías de tu alojamiento. Si ya las utilizas en plata
 
 </div>
 
-<div class="video-card">
+<div class="timeline-item">
 
-<div class="video-info">
+<div class="timeline-number">
+02
+</div>
 
-<h3>2️⃣ Diseñamos tu proyecto</h3>
+<div class="timeline-content">
+
+<h3>Diseñamos tu proyecto</h3>
 
 <p>
 
-Creamos un vídeo promocional o una página web adaptada a la imagen de tu alojamiento, cuidando cada detalle para transmitir profesionalidad y confianza.
+Creamos el vídeo, la página web o ambos, cuidando cada detalle para conseguir una imagen mucho más atractiva.
 
 </p>
 
@@ -848,15 +1959,19 @@ Creamos un vídeo promocional o una página web adaptada a la imagen de tu aloja
 
 </div>
 
-<div class="video-card">
+<div class="timeline-item">
 
-<div class="video-info">
+<div class="timeline-number">
+03
+</div>
 
-<h3>3️⃣ Revisamos el resultado</h3>
+<div class="timeline-content">
+
+<h3>Revisión</h3>
 
 <p>
 
-Te mostramos una versión previa para que puedas revisarla antes de la entrega final y comprobar que todo está a tu gusto.
+Te mostramos una versión previa para que puedas comprobar que todo está exactamente como esperabas.
 
 </p>
 
@@ -864,145 +1979,19 @@ Te mostramos una versión previa para que puedas revisarla antes de la entrega f
 
 </div>
 
-<div class="video-card">
+<div class="timeline-item">
 
-<div class="video-info">
+<div class="timeline-number">
+04
+</div>
 
-<h3>4️⃣ Entrega final</h3>
+<div class="timeline-content">
+
+<h3>Entrega final</h3>
 
 <p>
 
-Una vez aprobado el proyecto, recibirás todos los archivos en máxima calidad, listos para utilizarlos en tu web, redes sociales y plataformas de reservas.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div style="margin-top:55px;background:#101010;padding:40px;border-radius:25px;text-align:center;border:1px solid rgba(255,255,255,.05);">
-
-<h3 style="color:#c8a96a;font-size:28px;margin-bottom:20px;">
-
-Sin desplazamientos. Sin complicaciones.
-
-</h3>
-
-<p style="line-height:2;opacity:.85;max-width:850px;margin:auto;">
-
-Todo el proceso se realiza de forma online. Aprovechamos las fotografías que ya tienes para crear una imagen profesional sin necesidad de realizar nuevas sesiones fotográficas, ahorrando tiempo y costes.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- PREGUNTAS FRECUENTES -->
-
-<section id="faq">
-
-<h2 class="section-title">Preguntas frecuentes</h2>
-
-<p class="section-sub">
-
-Resolvemos las dudas más habituales antes de comenzar el proyecto.
-
-</p>
-
-<div class="video-grid">
-
-<div class="video-card">
-
-<div class="video-info">
-
-<h3>📸 ¿Necesito hacer fotografías nuevas?</h3>
-
-<p>
-
-No. Trabajamos con las fotografías que ya tengas disponibles. Si dispones de imágenes de calidad, podemos transformarlas en un contenido visual profesional sin necesidad de realizar nuevas sesiones.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="video-card">
-
-<div class="video-info">
-
-<h3>⏱ ¿Cuánto tarda el proyecto?</h3>
-
-<p>
-
-La mayoría de los proyectos se entregan entre 3 y 5 días laborables, dependiendo del tipo de trabajo y del volumen de fotografías.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="video-card">
-
-<div class="video-info">
-
-<h3>📱 ¿Dónde puedo utilizar el contenido?</h3>
-
-<p>
-
-Los vídeos se entregan preparados para páginas web, Instagram, Facebook, YouTube, publicidad y cualquier otra plataforma digital.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="video-card">
-
-<div class="video-info">
-
-<h3>💳 ¿Cómo se realiza el pago?</h3>
-
-<p>
-
-Solo solicitamos el 25% como reserva para comenzar el proyecto. El resto se abona una vez finalizado y mostrado el trabajo.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="video-card">
-
-<div class="video-info">
-
-<h3>🇪🇸 ¿Trabajáis en toda España?</h3>
-
-<p>
-
-Sí. Todo el proceso se realiza online, por lo que podemos trabajar con alojamientos de cualquier punto del país.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="video-card">
-
-<div class="video-info">
-
-<h3>⭐ ¿Qué ocurre si no quedo satisfecho?</h3>
-
-<p>
-
-Nuestro objetivo es que el resultado cumpla con lo acordado. Si el trabajo final no se ajusta a lo pactado, devolvemos íntegramente el importe de la reserva.
+Recibes todo listo para publicar: vídeos, fotografías optimizadas y, si corresponde, tu nueva página web.
 
 </p>
 
@@ -1014,32 +2003,199 @@ Nuestro objetivo es que el resultado cumpla con lo acordado. Si el trabajo final
 
 </section>
 
-<!-- SOBRE KIRELS VISUAL -->
+<!-- =========================
+        CTA PREMIUM
+========================== -->
+
+<section class="cta-section">
+
+<div class="cta-box">
+
+<span class="cta-mini">
+KIRELS VISUAL
+</span>
+
+<h2>
+
+Tu alojamiento solo tiene unos segundos para causar una buena impresión.
+
+</h2>
+
+<p>
+
+Una imagen cuidada transmite confianza. Un vídeo profesional despierta emociones. Una buena página web convierte visitas en reservas.
+
+Nosotros nos encargamos de todo.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contacto" class="btn">
+Solicitar presupuesto
+</a>
+
+<a href="#portfolio" class="btn-outline">
+Ver proyectos
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+        SOBRE KV
+========================== -->
 
 <section id="sobre">
 
-<div class="ceo">
+<div class="about-grid">
 
-<img src="710F23B8-FF0B-4339-B38B-EFC51A1F6B14.png">
+<div class="about-image">
 
-<div class="ceo-text">
+<img src="710F23B8-FF0B-4339-B38B-EFC51A1F6B14.png" alt="Kirels Visual">
 
-<h2>SOBRE KIRELS VISUAL</h2>
+</div>
+
+<div class="about-content">
+
+<span class="card-tag">
+SOBRE NOSOTROS
+</span>
+
+<h2>
+
+No creamos simplemente vídeos.
+Creamos primeras impresiones.
+
+</h2>
 
 <p>
-En un entorno donde la atención dura apenas unos segundos, la imagen ya no es suficiente. En Kirels Visual transformamos fotografías en contenido visual dinámico capaz de captar miradas, transmitir confianza y generar interés desde el primer instante.
+
+En Kirels Visual ayudamos a alojamientos turísticos, empresas e inmobiliarias a transmitir una imagen mucho más profesional utilizando el material que ya poseen.
+
 </p>
 
 <p>
-Somos un estudio especializado en la creación de contenido visual premium para empresas, alojamientos e inmobiliarias que entienden la importancia de una imagen profesional.
+
+Combinamos diseño, narrativa visual y tecnología para transformar fotografías estáticas en contenido que genera confianza y aumenta el valor percibido de cada proyecto.
+
 </p>
 
 <p>
-Cada proyecto se desarrolla con un enfoque visual cuidado, combinando diseño, narrativa y tecnología para convertir espacios, productos y servicios en experiencias visuales que conectan con el cliente.
+
+Nuestro objetivo no es únicamente crear una web bonita o un vídeo atractivo. Queremos que quien visite tu alojamiento piense desde el primer segundo:
+
+<strong>"Este lugar merece la pena."</strong>
+
 </p>
 
+<div class="about-stats">
+
+<div>
+
+<h3>100%</h3>
+
+<span>Online</span>
+
+</div>
+
+<div>
+
+<h3>3-5</h3>
+
+<span>Días</span>
+
+</div>
+
+<div>
+
+<h3>Premium</h3>
+
+<span>Acabado</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+        GARANTÍAS
+========================== -->
+
+<section id="garantias">
+
+<h2 class="section-title">
+Trabajamos con total transparencia
+</h2>
+
+<p class="section-sub">
+
+Queremos que contrates con tranquilidad. Nuestro proceso está pensado para que tengas seguridad desde el primer momento.
+
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<div class="benefit-icon">💳</div>
+
+<h3>Solo un 25% para comenzar</h3>
+
 <p>
-Porque una buena imagen muestra. Un gran contenido visual vende.
+
+Únicamente solicitamos una pequeña reserva para iniciar el proyecto. El resto se abona cuando el trabajo esté terminado.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">👀</div>
+
+<h3>Revisión antes de entregar</h3>
+
+<p>
+
+Siempre te mostramos una versión previa para que puedas revisar el resultado antes de darlo por finalizado.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">🤝</div>
+
+<h3>Sin sorpresas</h3>
+
+<p>
+
+Antes de empezar dejamos claro qué incluye el proyecto, los plazos y el resultado esperado.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">🛡️</div>
+
+<h3>Compromiso Kirels Visual</h3>
+
+<p>
+
+Si el trabajo final no cumple con lo acordado, devolvemos íntegramente el importe de la reserva.
+
 </p>
 
 </div>
@@ -1047,38 +2203,4 @@ Porque una buena imagen muestra. Un gran contenido visual vende.
 </div>
 
 </section>
-  
-<!-- CONTACTO -->
 
-<section id="contacto" class="contacto">
-
-<h2>Contacto</h2>
-
-<p>
-Hablemos sobre tu proyecto.
-</p>
-
-<div class="contact-links">
-
-<a href="mailto:info@kirelsvisual.es">
-info@kirelsvisual.es
-</a>
-
-<a href="https://www.instagram.com/kirelsvisual" target="_blank">
-Instagram
-</a>
-
-<a href="https://wa.me/34677994250" target="_blank">
-WhatsApp
-</a>
-
-</div>
-
-</section>
-
-<footer>
-© Kirels Visual
-</footer>
-
-</body>
-</html>
