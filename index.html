@@ -1,49 +1,36 @@
-<!DOCTYPE html>
-<html lang="es">
 
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kirels Visual | Contenido visual premium para alojamientos</title>
+<title>Kirels Visual | Vídeos promocionales y páginas web</title>
 
-<meta name="description" content="Vídeos cinematográficos, diseño web y contenido visual para alojamientos turísticos, hoteles e inmobiliarias.">
-
-<meta name="theme-color" content="#050505">
-
-<meta property="og:title" content="Kirels Visual">
-<meta property="og:description" content="Contenido visual premium para alojamientos.">
-<meta property="og:type" content="website">
+<meta name="description" content="Creamos vídeos promocionales, páginas web y contenido visual premium para alojamientos turísticos, rurales e inmobiliarias.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
 
+--gold:#c8a96a;
+--gold2:#dfc17e;
+
 --bg:#050505;
 --bg2:#0b0b0b;
---card:rgba(255,255,255,.045);
---line:rgba(255,255,255,.08);
+--card:rgba(255,255,255,.05);
 
---white:#f5f5f5;
---text:#cfcfcf;
---gold:#d5b27d;
+--text:#ffffff;
+--soft:#cfcfcf;
 
 --radius:28px;
 
 --shadow:
-0 40px 80px rgba(0,0,0,.45);
-
---transition:.45s cubic-bezier(.2,.6,.2,1);
-
---max:1450px;
+0 20px 60px rgba(0,0,0,.45);
 
 }
 
@@ -51,25 +38,42 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
-
-html{
-
+font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
-
 }
 
 body{
 
-font-family:Manrope,sans-serif;
+background:
 
-background:var(--bg);
+radial-gradient(circle at 10% 0%,rgba(200,169,106,.15),transparent 28%),
 
-color:var(--white);
+radial-gradient(circle at 90% 100%,rgba(255,255,255,.04),transparent 25%),
+
+linear-gradient(180deg,#030303,#090909,#050505);
+
+color:var(--text);
 
 overflow-x:hidden;
 
 }
+
+/* Scroll */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#080808;
+}
+
+::-webkit-scrollbar-thumb{
+background:var(--gold);
+border-radius:20px;
+}
+
+/* Fondo luminoso */
 
 body::before{
 
@@ -77,325 +81,103 @@ content:"";
 
 position:fixed;
 
-inset:0;
+width:650px;
+
+height:650px;
 
 background:
 
-radial-gradient(circle at 20% 10%,rgba(213,178,125,.06),transparent 28%),
+radial-gradient(circle,rgba(200,169,106,.12),transparent 70%);
 
-radial-gradient(circle at 85% 0%,rgba(213,178,125,.04),transparent 20%),
+top:-220px;
 
-radial-gradient(circle at 50% 100%,rgba(213,178,125,.05),transparent 40%);
+left:-180px;
 
 pointer-events:none;
+
+filter:blur(35px);
 
 z-index:-2;
 
 }
 
-img{
-
-display:block;
-
-max-width:100%;
-
-}
-
-a{
-
-text-decoration:none;
-
-color:inherit;
-
-}
-
-section{
-
-padding:140px 7%;
-
-position:relative;
-
-}
-
-.container{
-
-width:100%;
-
-max-width:var(--max);
-
-margin:auto;
-
-}
-
-.glass{
-
-background:rgba(255,255,255,.03);
-
-backdrop-filter:blur(25px);
-
--webkit-backdrop-filter:blur(25px);
-
-border:1px solid rgba(255,255,255,.07);
-
-}
-
-.blur{
-
-position:absolute;
-
-width:500px;
-
-height:500px;
-
-border-radius:50%;
-
-background:rgba(213,178,125,.06);
-
-filter:blur(120px);
-
-pointer-events:none;
-
-z-index:-1;
-
-}
-
-.blur.left{
-
-left:-250px;
-
-top:-120px;
-
-}
-
-.blur.right{
-
-right:-250px;
-
-bottom:-120px;
-
-}
-
-.small-title{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:12px;
-
-padding:9px 18px;
-
-border-radius:999px;
-
-border:1px solid rgba(213,178,125,.2);
-
-background:rgba(213,178,125,.05);
-
-font-size:.74rem;
-
-letter-spacing:2px;
-
-text-transform:uppercase;
-
-color:var(--gold);
-
-margin-bottom:28px;
-
-}
-
-.small-title::before{
+body::after{
 
 content:"";
 
-width:8px;
-
-height:8px;
-
-border-radius:50%;
-
-background:var(--gold);
-
-}
-
-h1{
-
-font-size:clamp(3rem,6vw,6rem);
-
-line-height:1.02;
-
-font-weight:800;
-
-letter-spacing:-2px;
-
-margin-bottom:28px;
-
-max-width:650px;
-
-}
-
-h2{
-
-font-size:clamp(2.5rem,5vw,4.5rem);
-
-font-weight:800;
-
-line-height:1.05;
-
-letter-spacing:-1px;
-
-}
-
-.gold{
-
-color:var(--gold);
-
-}
-
-.lead{
-
-font-size:1.15rem;
-
-line-height:1.9;
-
-color:var(--text);
-
-max-width:620px;
-
-}
-
-.btns{
-
-display:flex;
-
-gap:18px;
-
-margin-top:45px;
-
-flex-wrap:wrap;
-
-}
-
-.btn{
-
-height:58px;
-
-padding:0 34px;
-
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
-border-radius:999px;
-
-font-weight:700;
-
-transition:var(--transition);
-
-}
-
-.btn-primary{
-
-background:linear-gradient(135deg,#d5b27d,#ebd5af);
-
-color:#111;
-
-}
-
-.btn-primary:hover{
-
-transform:translateY(-4px);
-
-}
-
-.btn-secondary{
-
-border:1px solid rgba(255,255,255,.1);
-
-background:rgba(255,255,255,.03);
-
-}
-
-.btn-secondary:hover{
-
-border-color:var(--gold);
-
-}
-
-header{
-
 position:fixed;
 
-left:0;
+width:700px;
 
-right:0;
+height:700px;
 
-top:18px;
+background:
 
-z-index:9999;
+radial-gradient(circle,rgba(255,255,255,.05),transparent 70%);
 
-padding:0 25px;
+right:-250px;
 
-transition:.4s;
+bottom:-250px;
 
-}
+pointer-events:none;
 
-.nav{
+filter:blur(50px);
 
-max-width:1450px;
-
-margin:auto;
-
-height:78px;
-
-border-radius:22px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:0 24px;
+z-index:-2;
 
 }
 
-.logo{
-
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
-}
-
-.logo img{
-
-height:42px;
-
-width:auto;
-
-}
-
-.logo span{
-
-font-size:.8rem;
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
-color:#999;
-
-}
+/* NAV */
 
 nav{
 
+position:fixed;
+
+top:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:min(1180px,92%);
+
 display:flex;
 
-gap:38px;
+justify-content:space-between;
+
+align-items:center;
+
+padding:16px 28px;
+
+background:rgba(15,15,15,.72);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:22px;
+
+z-index:9999;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+}
+
+nav img{
+
+height:48px;
+
+border-radius:14px;
+
+}
+
+nav div{
+
+display:flex;
+
+gap:28px;
 
 align-items:center;
 
@@ -403,315 +185,1333 @@ align-items:center;
 
 nav a{
 
-font-size:.95rem;
+color:white;
 
-color:#ddd;
+text-decoration:none;
 
-position:relative;
+font-size:14px;
 
-}
+font-weight:500;
 
-nav a::after{
+opacity:.82;
 
-content:"";
-
-position:absolute;
-
-left:0;
-
-bottom:-10px;
-
-width:0;
-
-height:2px;
-
-background:var(--gold);
-
-transition:.4s;
+transition:.35s;
 
 }
 
-nav a:hover::after{
+nav a:hover{
 
-width:100%;
+color:var(--gold);
 
-}
-
-.right-menu{
-
-display:flex;
-
-align-items:center;
-
-gap:16px;
+opacity:1;
 
 }
 
-.more{
-
-width:48px;
-
-height:48px;
-
-border-radius:14px;
-
-display:none;
-
-align-items:center;
-
-justify-content:center;
-
-cursor:pointer;
-
-}
+/* HERO */
 
 .hero{
 
 min-height:100vh;
 
-display:grid;
+display:flex;
 
-grid-template-columns:46% 54%;
-
-gap:70px;
+justify-content:center;
 
 align-items:center;
 
-padding-top:150px;
+text-align:center;
 
-}
+padding:140px 25px 100px;
 
-.hero-left{
+background:
 
-position:relative;
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.82)),
 
-z-index:2;
+url('1D503860-AFDA-4739-BD36-1789D4F64CB6.png');
 
-}
+background-size:cover;
 
-.hero-right{
-
-display:flex;
-
-justify-content:flex-end;
+background-position:center;
 
 position:relative;
-
-}
-
-.hero-video{
-
-width:100%;
-
-max-width:820px;
-
-aspect-ratio:16/9;
-
-border-radius:34px;
 
 overflow:hidden;
 
-position:relative;
-
-box-shadow:var(--shadow);
-
 }
 
-.hero-video iframe,
-
-.hero-video video{
-
-width:100%;
-
-height:100%;
-
-border:none;
-
-display:block;
-
-object-fit:cover;
-
-}
-
-.hero-video::before{
+.hero::after{
 
 content:"";
 
 position:absolute;
 
-width:380px;
+inset:0;
 
-height:380px;
+background:
 
-background:rgba(213,178,125,.12);
-
-border-radius:50%;
-
-filter:blur(100px);
-
-right:-120px;
-
-bottom:-120px;
-
-z-index:-1;
+linear-gradient(to top,#050505 0%,transparent 35%);
 
 }
 
-.play-info{
+.hero-content{
 
-position:absolute;
+max-width:920px;
 
-left:30px;
+position:relative;
 
-bottom:30px;
+z-index:5;
 
-padding:18px 22px;
-
-border-radius:18px;
-
-display:flex;
-
-gap:16px;
-
-align-items:center;
+animation:fadeUp 1s ease;
 
 }
 
-.play-info i{
+.hero-logo{
 
-width:48px;
+width:180px;
 
-height:48px;
+border-radius:22px;
 
-border-radius:50%;
+margin-bottom:35px;
 
-background:rgba(255,255,255,.08);
+box-shadow:
 
-display:flex;
+0 25px 70px rgba(0,0,0,.45);
+
+}
+
+.hero h1{
+
+font-size:68px;
+
+font-weight:700;
+
+line-height:1.08;
+
+margin-bottom:28px;
+
+letter-spacing:-1px;
+
+}
+
+.hero p{
+
+font-size:19px;
+
+line-height:1.9;
+
+color:#dadada;
+
+max-width:760px;
+
+margin:auto;
+
+margin-bottom:45px;
+
+}
+
+/* BOTÓN */
+
+.btn{
+
+display:inline-flex;
 
 align-items:center;
 
 justify-content:center;
 
-color:var(--gold);
+padding:18px 42px;
+
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+border-radius:60px;
+
+color:black;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.35s;
+
+box-shadow:
+
+0 15px 35px rgba(200,169,106,.35);
 
 }
 
-.play-info strong{
+.btn:hover{
 
-display:block;
+transform:translateY(-5px) scale(1.02);
 
-font-size:1rem;
+box-shadow:
 
-}
-
-.play-info span{
-
-display:block;
-
-color:#aaa;
-
-font-size:.85rem;
-
-margin-top:4px;
+0 25px 55px rgba(200,169,106,.5);
 
 }
 
-.hero-bottom{
+/* SECCIONES */
 
-margin-top:70px;
+section{
 
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:18px;
+padding:120px 8%;
 
 }
 
-.hero-bottom div{
+.section-title{
 
-padding:22px;
+font-size:52px;
 
-border-top:1px solid rgba(255,255,255,.06);
+font-weight:700;
 
-font-size:.92rem;
+text-align:center;
 
-color:#bbb;
+margin-bottom:18px;
 
-}
-
-.hero-bottom b{
-
-display:block;
-
-color:white;
-
-margin-bottom:10px;
-
-font-size:1rem;
+letter-spacing:-1px;
 
 }
 
-@media(max-width:1200px){
+.section-sub{
 
-.hero{
+max-width:900px;
 
-grid-template-columns:1fr;
+margin:auto;
 
-padding-top:150px;
+text-align:center;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#cfcfcf;
+
+margin-bottom:70px;
 
 }
 
-.hero-right{
+/* TARJETAS */
 
-justify-content:center;
+.video-card{
+
+background:rgba(255,255,255,.045);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:30px;
+
+overflow:hidden;
+
+backdrop-filter:blur(20px);
+
+transition:.45s;
+
+box-shadow:var(--shadow);
+
+}
+
+.video-card:hover{
+
+transform:translateY(-12px);
+
+border-color:rgba(200,169,106,.45);
+
+box-shadow:
+
+0 35px 80px rgba(0,0,0,.55);
+
+}
+
+.video-info{
+
+padding:28px;
+
+}
+
+.video-info h3{
+
+font-size:24px;
+
+margin-bottom:12px;
+
+}
+
+.video-info p{
+
+line-height:1.8;
+
+color:#d0d0d0;
+
+}
+
+/* Animaciones */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:44px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.section-title{
+
+font-size:36px;
 
 }
 
 nav{
 
-display:none;
+padding:15px 20px;
 
 }
 
-.more{
+nav div{
+
+gap:16px;
+
+}
+
+nav a{
+
+font-size:13px;
+
+}
+
+.hero-logo{
+
+width:145px;
+
+}
+
+}
+
+/* ===========================
+   HERO PREMIUM
+=========================== */
+
+.hero-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:12px 24px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:50px;
+
+backdrop-filter:blur(18px);
+
+margin-bottom:35px;
+
+font-size:14px;
+
+font-weight:500;
+
+color:#ececec;
+
+}
+
+.hero-buttons{
 
 display:flex;
 
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+margin-bottom:60px;
+
 }
 
-.hero-bottom{
+.btn-outline{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:18px 42px;
+
+border-radius:60px;
+
+text-decoration:none;
+
+font-weight:600;
+
+color:white;
+
+border:1px solid rgba(255,255,255,.14);
+
+background:rgba(255,255,255,.04);
+
+backdrop-filter:blur(18px);
+
+transition:.35s;
+
+}
+
+.btn-outline:hover{
+
+background:rgba(255,255,255,.08);
+
+transform:translateY(-5px);
+
+}
+
+.hero-stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:22px;
+
+margin-top:15px;
+
+}
+
+.stat{
+
+padding:28px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:26px;
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+transition:.4s;
+
+}
+
+.stat:hover{
+
+transform:translateY(-8px);
+
+border-color:rgba(200,169,106,.45);
+
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.stat h2{
+
+font-size:34px;
+
+color:var(--gold);
+
+margin-bottom:10px;
+
+}
+
+.stat span{
+
+font-size:15px;
+
+color:#d6d6d6;
+
+line-height:1.5;
+
+}
+
+/* ===========================
+   GRID GENERAL
+=========================== */
+
+.video-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.video-card iframe{
+
+width:100%;
+
+height:500px;
+
+border:none;
+
+}
+
+/* ===========================
+   MÓVIL
+=========================== */
+
+@media(max-width:900px){
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.hero-stats{
 
 grid-template-columns:repeat(2,1fr);
 
 }
 
-}
+.video-card iframe{
 
-@media(max-width:700px){
-
-section{
-
-padding:110px 24px;
+height:420px;
 
 }
 
-.hero-bottom{
+}
+
+@media(max-width:600px){
+
+.hero-stats{
 
 grid-template-columns:1fr;
 
 }
 
-.btn{
+.hero h1{
 
-width:100%;
+font-size:38px;
 
 }
 
-.logo img{
+.hero p{
 
-height:34px;
+font-size:16px;
+
+}
+
+.section-title{
+
+font-size:34px;
+
+}
+
+}
+
+/* ETIQUETAS DE LAS TARJETAS */
+
+.card-tag{
+
+display:inline-block;
+
+padding:8px 16px;
+
+margin-bottom:18px;
+
+border-radius:50px;
+
+background:rgba(200,169,106,.15);
+
+border:1px solid rgba(200,169,106,.35);
+
+color:var(--gold);
+
+font-size:13px;
+
+font-weight:600;
+
+letter-spacing:.5px;
+
+text-transform:uppercase;
+
+}
+
+/* ===========================
+      PRECIOS
+=========================== */
+
+.pricing-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:20px;
+
+}
+
+.price-card{
+
+position:relative;
+
+padding:45px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+transition:.4s;
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.price-card:hover{
+
+transform:translateY(-12px);
+
+border-color:rgba(200,169,106,.45);
+
+}
+
+.price-card h4{
+
+font-size:15px;
+
+letter-spacing:2px;
+
+color:var(--gold);
+
+margin-bottom:15px;
+
+}
+
+.price-card h2{
+
+font-size:56px;
+
+margin-bottom:20px;
+
+}
+
+.price-desc{
+
+color:#cfcfcf;
+
+line-height:1.7;
+
+margin-bottom:30px;
+
+}
+
+.price-card ul{
+
+list-style:none;
+
+margin-bottom:35px;
+
+}
+
+.price-card li{
+
+padding:10px 0;
+
+color:#dddddd;
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.price-card .btn{
+
+margin-top:auto;
+
+}
+
+.featured{
+
+transform:scale(1.04);
+
+border:1px solid rgba(200,169,106,.55);
+
+box-shadow:0 25px 70px rgba(200,169,106,.18);
+
+}
+
+.featured:hover{
+
+transform:scale(1.06);
+
+}
+
+.featured-badge{
+
+position:absolute;
+
+top:-15px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+padding:10px 22px;
+
+border-radius:40px;
+
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+color:black;
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+}
+
+/* ===========================
+        BENEFICIOS
+=========================== */
+
+.benefits-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.benefit-card{
+
+padding:40px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+transition:.4s;
+
+}
+
+.benefit-card:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(200,169,106,.45);
+
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.benefit-icon{
+
+width:72px;
+
+height:72px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:34px;
+
+margin-bottom:25px;
+
+border-radius:20px;
+
+background:rgba(200,169,106,.12);
+
+border:1px solid rgba(200,169,106,.25);
+
+}
+
+.benefit-card h3{
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+.benefit-card p{
+
+line-height:1.8;
+
+color:#d3d3d3;
+
+}
+
+/* ===========================
+        TIMELINE
+=========================== */
+
+.timeline{
+
+max-width:900px;
+
+margin:70px auto 0;
+
+position:relative;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:30px;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:rgba(200,169,106,.35);
+
+}
+
+.timeline-item{
+
+display:flex;
+
+gap:35px;
+
+margin-bottom:55px;
+
+position:relative;
+
+}
+
+.timeline-number{
+
+width:62px;
+
+height:62px;
+
+flex-shrink:0;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+color:black;
+
+font-weight:700;
+
+font-size:18px;
+
+box-shadow:0 15px 35px rgba(200,169,106,.35);
+
+z-index:2;
+
+}
+
+.timeline-content{
+
+flex:1;
+
+padding:28px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:24px;
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+transition:.35s;
+
+}
+
+.timeline-content:hover{
+
+transform:translateY(-6px);
+
+border-color:rgba(200,169,106,.45);
+
+}
+
+.timeline-content h3{
+
+margin-bottom:12px;
+
+font-size:24px;
+
+}
+
+.timeline-content p{
+
+line-height:1.8;
+
+color:#d2d2d2;
+
+}
+
+@media(max-width:700px){
+
+.timeline::before{
+
+display:none;
+
+}
+
+.timeline-item{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.timeline-number{
+
+margin:auto;
+
+}
+
+}
+
+/* ===========================
+        CTA PREMIUM
+=========================== */
+
+.cta-section{
+
+padding:140px 8%;
+
+}
+
+.cta-box{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:80px 60px;
+
+border-radius:40px;
+
+text-align:center;
+
+background:
+
+linear-gradient(145deg,
+rgba(200,169,106,.14),
+rgba(255,255,255,.05));
+
+border:1px solid rgba(200,169,106,.25);
+
+backdrop-filter:blur(22px);
+
+box-shadow:
+
+0 40px 100px rgba(0,0,0,.45);
+
+}
+
+.cta-mini{
+
+display:inline-block;
+
+padding:10px 22px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.10);
+
+margin-bottom:30px;
+
+letter-spacing:2px;
+
+font-size:12px;
+
+font-weight:600;
+
+color:var(--gold);
+
+}
+
+.cta-box h2{
+
+font-size:56px;
+
+line-height:1.15;
+
+max-width:850px;
+
+margin:auto;
+
+margin-bottom:30px;
+
+}
+
+.cta-box p{
+
+max-width:760px;
+
+margin:auto;
+
+font-size:19px;
+
+line-height:1.9;
+
+color:#d6d6d6;
+
+margin-bottom:45px;
+
+}
+
+@media(max-width:900px){
+
+.cta-box{
+
+padding:50px 30px;
+
+}
+
+.cta-box h2{
+
+font-size:38px;
+
+}
+
+.cta-box p{
+
+font-size:17px;
+
+}
+
+}
+
+/* ===========================
+        ABOUT
+=========================== */
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.about-image img{
+
+width:100%;
+
+border-radius:32px;
+
+box-shadow:0 35px 80px rgba(0,0,0,.45);
+
+transition:.4s;
+
+}
+
+.about-image img:hover{
+
+transform:scale(1.02);
+
+}
+
+.about-content h2{
+
+font-size:48px;
+
+line-height:1.15;
+
+margin:25px 0;
+
+}
+
+.about-content p{
+
+line-height:1.9;
+
+font-size:18px;
+
+color:#d5d5d5;
+
+margin-bottom:22px;
+
+}
+
+.about-stats{
+
+display:flex;
+
+gap:50px;
+
+margin-top:45px;
+
+}
+
+.about-stats h3{
+
+font-size:42px;
+
+color:var(--gold);
+
+margin-bottom:6px;
+
+}
+
+.about-stats span{
+
+color:#d5d5d5;
+
+}
+
+@media(max-width:900px){
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-content h2{
+
+font-size:36px;
+
+}
+
+.about-stats{
+
+justify-content:space-between;
+
+gap:15px;
+
+}
+
+.about-stats h3{
+
+font-size:28px;
+
+}
+
+}
+
+/* ===========================
+        CONTACTO
+=========================== */
+
+.contact-box{
+
+max-width:900px;
+
+margin:auto;
+
+padding:70px 50px;
+
+border-radius:36px;
+
+text-align:center;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 30px 80px rgba(0,0,0,.35);
+
+}
+
+.contact-box h2{
+
+font-size:54px;
+
+margin:25px 0;
+
+line-height:1.15;
+
+}
+
+.contact-box p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#d5d5d5;
+
+max-width:700px;
+
+margin:auto;
+
+margin-bottom:40px;
+
+}
+
+.contact-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+/* ===========================
+        FOOTER
+=========================== */
+
+footer{
+
+padding:80px 8% 50px;
+
+text-align:center;
+
+opacity:.95;
+
+}
+
+.footer-logo{
+
+width:90px;
+
+border-radius:20px;
+
+margin-bottom:25px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+}
+
+footer h3{
+
+font-size:30px;
+
+margin-bottom:10px;
+
+}
+
+footer p{
+
+color:#bfbfbf;
+
+line-height:1.8;
+
+}
+
+.footer-links{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+margin:35px 0;
+
+}
+
+.footer-links a{
+
+color:#d7d7d7;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+color:var(--gold);
+
+}
+
+.copyright{
+
+margin-top:35px;
+
+font-size:14px;
+
+opacity:.6;
+
+}
+
+@media(max-width:900px){
+
+.contact-box{
+
+padding:45px 25px;
+
+}
+
+.contact-box h2{
+
+font-size:38px;
+
+}
+
+.contact-box p{
+
+font-size:16px;
 
 }
 
@@ -723,193 +1523,102 @@ height:34px;
 
 <body>
 
-<div class="blur left"></div>
-<div class="blur right"></div>
-
-<!-- ==========================
-HEADER
+<!-- =========================
+     NAVEGACIÓN
 ========================== -->
-
-<header id="header">
-
-<div class="nav glass">
-
-<a href="#inicio" class="logo">
-
-<img src="images/logo.png" alt="Kirels Visual">
-
-</a>
 
 <nav>
 
-<a href="#portfolio">Portfolio</a>
+<img src="IMG_7790.jpeg" alt="Kirels Visual Logo">
+
+<div>
+
+<a href="#portfolio">Proyectos</a>
 
 <a href="#servicios">Servicios</a>
 
-<a href="#proceso">Proceso</a>
+<a href="#precios">Precios</a>
 
-<a href="#faq">FAQ</a>
+<a href="#sobre">Sobre KV</a>
 
 <a href="#contacto">Contacto</a>
+
+</div>
 
 </nav>
 
-<div class="right-menu">
-
-<a href="#contacto" class="btn btn-primary">
-
-Presupuesto
-
-</a>
-
-<div class="more glass" id="menuButton">
-
-<i class="fa-solid fa-bars"></i>
-
-</div>
-
-</div>
-
-</div>
-
-</header>
-
-<!-- ==========================
-MOBILE MENU
+<!-- =========================
+          HERO
 ========================== -->
 
-<div class="mobile-menu" id="mobileMenu">
+<section class="hero">
 
-<div class="mobile-content glass">
+<div class="hero-content">
 
-<a href="#portfolio">Portfolio</a>
-
-<a href="#servicios">Servicios</a>
-
-<a href="#proceso">Proceso</a>
-
-<a href="#sobre">Sobre</a>
-
-<a href="#faq">FAQ</a>
-
-<a href="#contacto">Contacto</a>
-
-<a href="#contacto" class="btn btn-primary">
-
-Solicitar presupuesto
-
-</a>
-
+<div class="hero-badge">
+✨ Contenido visual premium para alojamientos y marcas
 </div>
 
-</div>
-
-<!-- ==========================
-HERO
-========================== -->
-
-<section id="inicio">
-
-<div class="container hero">
-
-<div class="hero-left">
-
-<div class="small-title">
-
-Contenido visual premium
-
-</div>
+<img src="IMG_7790.jpeg" class="hero-logo" alt="Kirels Visual">
 
 <h1>
 
-Haz que tu alojamiento
-<span class="gold">destaque</span>
-desde el primer vistazo.
+Haz que tu alojamiento destaque
+antes incluso de que el cliente reserve.
 
 </h1>
 
-<p class="lead">
+<p>
 
-Creamos vídeos cinematográficos y páginas web que aumentan el valor percibido de alojamientos turísticos, hoteles e inmobiliarias.
+Creamos vídeos promocionales, páginas web y contenido visual premium utilizando las fotografías que ya tienes.
+
+Transformamos una buena imagen en una herramienta capaz de transmitir confianza, aumentar el valor percibido y ayudarte a conseguir más reservas.
 
 </p>
 
-<div class="btns">
+<div class="hero-buttons">
 
-<a href="#portfolio" class="btn btn-primary">
-
+<a href="#portfolio" class="btn">
 Ver proyectos
-
 </a>
 
-<a href="#contacto" class="btn btn-secondary">
-
-Solicitar presupuesto
-
+<a href="#contacto" class="btn-outline">
+Solicitar información
 </a>
 
 </div>
 
-<div class="hero-bottom">
+<div class="hero-stats">
 
-<div>
+<div class="stat">
 
-<b>Vídeo</b>
+<h2>100%</h2>
 
-Producción cinematográfica
-
-</div>
-
-<div>
-
-<b>Web</b>
-
-Diseño premium
+<span>Trabajo online</span>
 
 </div>
 
-<div>
+<div class="stat">
 
-<b>Fotografía</b>
+<h2>3-5</h2>
 
-Imagen profesional
-
-</div>
-
-<div>
-
-<b>España</b>
-
-Trabajamos donde estés
+<span>Días de entrega</span>
 
 </div>
 
-</div>
+<div class="stat">
+
+<h2>25%</h2>
+
+<span>Reserva inicial</span>
 
 </div>
 
-<div class="hero-right">
+<div class="stat">
 
-<div class="hero-video glass">
+<h2>🇪🇸</h2>
 
-<iframe
-src="https://www.youtube.com/embed/TU_VIDEO?rel=0&showinfo=0"
-allowfullscreen>
-</iframe>
-
-<div class="play-info glass">
-
-<i class="fa-solid fa-play"></i>
-
-<div>
-
-<strong>Kirels Visual</strong>
-
-<span>Showreel</span>
-
-</div>
-
-</div>
+<span>Servicio en toda España</span>
 
 </div>
 
@@ -919,365 +1628,109 @@ allowfullscreen>
 
 </section>
 
-<!-- ==========================
-SEPARADOR
+<!-- =========================
+        PROYECTOS
 ========================== -->
-
-<section class="divider">
-
-<div class="container">
-
-<div class="divider-line"></div>
-
-</div>
-
-</section>
-
-<style>
-
-/* ==========================
-MOBILE MENU
-========================== */
-
-.mobile-menu{
-
-position:fixed;
-
-inset:0;
-
-background:rgba(0,0,0,.55);
-
-backdrop-filter:blur(18px);
-
-display:flex;
-
-justify-content:center;
-
-align-items:flex-start;
-
-padding-top:110px;
-
-opacity:0;
-
-visibility:hidden;
-
-transition:.35s;
-
-z-index:9998;
-
-}
-
-.mobile-menu.active{
-
-opacity:1;
-
-visibility:visible;
-
-}
-
-.mobile-content{
-
-width:min(94%,500px);
-
-padding:28px;
-
-border-radius:28px;
-
-display:flex;
-
-flex-direction:column;
-
-gap:22px;
-
-}
-
-.mobile-content a{
-
-font-size:1.05rem;
-
-padding:10px 0;
-
-border-bottom:1px solid rgba(255,255,255,.05);
-
-}
-
-.mobile-content .btn{
-
-margin-top:15px;
-
-width:100%;
-
-}
-
-/* ==========================
-DIVIDER
-========================== */
-
-.divider{
-
-padding:40px 7%;
-
-}
-
-.divider-line{
-
-height:1px;
-
-background:
-
-linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.12),
-transparent
-);
-
-}
-
-/* ==========================
-HEADER SCROLL
-========================== */
-
-header.scrolled{
-
-top:10px;
-
-}
-
-header.scrolled .nav{
-
-height:68px;
-
-background:rgba(10,10,10,.82);
-
-backdrop-filter:blur(30px);
-
-box-shadow:0 25px 50px rgba(0,0,0,.35);
-
-}
-
-/* ==========================
-HERO EFFECTS
-========================== */
-
-.hero-video{
-
-transition:.5s;
-
-}
-
-.hero-video:hover{
-
-transform:translateY(-6px);
-
-}
-
-.hero-video iframe{
-
-transition:transform 1.2s;
-
-}
-
-.hero-video:hover iframe{
-
-transform:scale(1.03);
-
-}
-
-.play-info{
-
-transition:.4s;
-
-}
-
-.hero-video:hover .play-info{
-
-transform:translateY(-6px);
-
-}
-
-</style>
-
-<!-- ==========================================================
-PORTFOLIO
-=========================================================== -->
 
 <section id="portfolio">
 
-<div class="container">
+<h2 class="section-title">
+Proyectos realizados
+</h2>
 
-<div class="section-head">
+<p class="section-sub">
 
-<div class="small-title">
+Algunos ejemplos de cómo transformamos fotografías en vídeos promocionales y contenido visual capaz de transmitir calidad, emoción y confianza desde el primer segundo.
 
-Portfolio
+</p>
 
+<div class="video-grid">
+
+<div class="video-card">
+
+<iframe src="https://www.youtube.com/embed/jEPj1epDyRs" allowfullscreen></iframe>
+
+<div class="video-info">
+
+<div class="card-tag">
+Alojamientos
 </div>
 
-<h2>
-
-Nuestros trabajos hablan
-<span class="gold">por nosotros.</span>
-
-</h2>
+<h3>Vídeos para alojamientos turísticos</h3>
 
 <p>
 
-Cada vídeo está pensado para transmitir una experiencia antes incluso de que el cliente llegue al alojamiento.
+Mostramos la experiencia de alojarse antes incluso de que el huésped llegue, creando una primera impresión mucho más atractiva.
 
 </p>
 
 </div>
 
-<div class="portfolio-slider">
+</div>
 
-<button class="slider-arrow prev">
+<div class="video-card">
 
-<i class="fa-solid fa-chevron-left"></i>
+<iframe src="https://www.youtube.com/embed/uk4pyIlGCSE" allowfullscreen></iframe>
 
-</button>
+<div class="video-info">
 
-<div class="slider-window">
+<div class="card-tag">
+Inmobiliario
+</div>
 
-<div class="slider-track" id="portfolioTrack">
+<h3>Presentaciones de inmuebles</h3>
 
-<!-- VIDEO 1 -->
+<p>
 
-<div class="portfolio-item">
+Convertimos fotografías en recorridos visuales dinámicos que generan más interés y aumentan el valor percibido del inmueble.
 
-<div class="portfolio-video"
-
-data-video="https://www.youtube.com/embed/VIDEO1?autoplay=1">
-
-<img src="https://img.youtube.com/vi/VIDEO1/maxresdefault.jpg">
-
-<div class="video-overlay">
-
-<div class="play-button">
-
-<i class="fa-solid fa-play"></i>
+</p>
 
 </div>
 
 </div>
 
+<div class="video-card">
+
+<iframe src="https://www.youtube.com/embed/XrVrc4fSvkg" allowfullscreen></iframe>
+
+<div class="video-info">
+
+<div class="card-tag">
+Marca
 </div>
 
-<div class="portfolio-info">
+<h3>Contenido para empresas</h3>
 
-<h3>Villa Mallorca</h3>
+<p>
 
-<span>Vídeo Promocional</span>
+Creamos piezas visuales preparadas para redes sociales, páginas web y campañas publicitarias con una imagen totalmente profesional.
 
-</div>
-
-</div>
-
-<!-- VIDEO 2 -->
-
-<div class="portfolio-item">
-
-<div class="portfolio-video"
-
-data-video="https://www.youtube.com/embed/VIDEO2?autoplay=1">
-
-<img src="https://img.youtube.com/vi/VIDEO2/maxresdefault.jpg">
-
-<div class="video-overlay">
-
-<div class="play-button">
-
-<i class="fa-solid fa-play"></i>
+</p>
 
 </div>
 
 </div>
 
+<div class="video-card">
+
+<iframe src="https://www.youtube.com/embed/8F1cfAr7ZWw" allowfullscreen></iframe>
+
+<div class="video-info">
+
+<div class="card-tag">
+Social Media
 </div>
 
-<div class="portfolio-info">
+<h3>Contenido para redes sociales</h3>
 
-<h3>Hotel Boutique</h3>
+<p>
 
-<span>Vídeo Promocional</span>
+Vídeos verticales y horizontales optimizados para captar la atención durante los primeros segundos y mejorar la presencia digital.
 
-</div>
-
-</div>
-
-<!-- VIDEO 3 -->
-
-<div class="portfolio-item">
-
-<div class="portfolio-video"
-
-data-video="https://www.youtube.com/embed/VIDEO3?autoplay=1">
-
-<img src="https://img.youtube.com/vi/VIDEO3/maxresdefault.jpg">
-
-<div class="video-overlay">
-
-<div class="play-button">
-
-<i class="fa-solid fa-play"></i>
+</p>
 
 </div>
-
-</div>
-
-</div>
-
-<div class="portfolio-info">
-
-<h3>Apartamento Turístico</h3>
-
-<span>Vídeo Promocional</span>
-
-</div>
-
-</div>
-
-<!-- VIDEO 4 -->
-
-<div class="portfolio-item">
-
-<div class="portfolio-video"
-
-data-video="https://www.youtube.com/embed/VIDEO4?autoplay=1">
-
-<img src="https://img.youtube.com/vi/VIDEO4/maxresdefault.jpg">
-
-<div class="video-overlay">
-
-<div class="play-button">
-
-<i class="fa-solid fa-play"></i>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="portfolio-info">
-
-<h3>Villa Costa Brava</h3>
-
-<span>Vídeo Promocional</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<button class="slider-arrow next">
-
-<i class="fa-solid fa-chevron-right"></i>
-
-</button>
 
 </div>
 
@@ -1285,614 +1738,89 @@ data-video="https://www.youtube.com/embed/VIDEO4?autoplay=1">
 
 </section>
 
-<!-- ==========================================================
-LIGHTBOX
-=========================================================== -->
-
-<div class="video-lightbox" id="videoLightbox">
-
-<div class="video-box">
-
-<button class="close-video">
-
-<i class="fa-solid fa-xmark"></i>
-
-</button>
-
-<iframe
-
-id="portfolioPlayer"
-
-allowfullscreen
-
-allow="autoplay">
-
-</iframe>
-
-</div>
-
-</div>
-
-<style>
-
-/*==========================================================
-PORTFOLIO
-==========================================================*/
-
-#portfolio{
-
-background:#080808;
-
-}
-
-.section-head{
-
-max-width:720px;
-
-margin:0 auto 80px;
-
-text-align:center;
-
-}
-
-.section-head h2{
-
-margin-bottom:25px;
-
-}
-
-.section-head p{
-
-font-size:1.08rem;
-
-line-height:1.9;
-
-color:#a8a8a8;
-
-}
-
-.portfolio-slider{
-
-display:flex;
-
-align-items:center;
-
-gap:35px;
-
-}
-
-.slider-window{
-
-overflow:hidden;
-
-flex:1;
-
-}
-
-.slider-track{
-
-display:flex;
-
-gap:35px;
-
-transition:.6s cubic-bezier(.2,.7,.2,1);
-
-}
-
-.portfolio-item{
-
-min-width:520px;
-
-}
-
-.portfolio-video{
-
-position:relative;
-
-aspect-ratio:16/10;
-
-overflow:hidden;
-
-border-radius:32px;
-
-cursor:pointer;
-
-background:#111;
-
-box-shadow:0 35px 70px rgba(0,0,0,.35);
-
-}
-
-.portfolio-video img{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-transition:1s;
-
-}
-
-.portfolio-video:hover img{
-
-transform:scale(1.08);
-
-}
-
-.video-overlay{
-
-position:absolute;
-
-inset:0;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.45));
-
-opacity:0;
-
-transition:.45s;
-
-}
-
-.portfolio-video:hover .video-overlay{
-
-opacity:1;
-
-}
-
-.play-button{
-
-width:92px;
-
-height:92px;
-
-border-radius:50%;
-
-background:rgba(255,255,255,.12);
-
-backdrop-filter:blur(20px);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:1.8rem;
-
-color:white;
-
-border:1px solid rgba(255,255,255,.18);
-
-transition:.35s;
-
-}
-
-.play-button:hover{
-
-transform:scale(1.1);
-
-background:rgba(213,178,125,.9);
-
-color:#111;
-
-}
-
-.portfolio-info{
-
-padding:28px 8px;
-
-}
-
-.portfolio-info h3{
-
-font-size:1.45rem;
-
-margin-bottom:8px;
-
-}
-
-.portfolio-info span{
-
-color:#999;
-
-}
-
-.slider-arrow{
-
-width:62px;
-
-height:62px;
-
-border-radius:18px;
-
-border:none;
-
-background:rgba(255,255,255,.05);
-
-color:white;
-
-font-size:1rem;
-
-cursor:pointer;
-
-transition:.35s;
-
-}
-
-.slider-arrow:hover{
-
-background:var(--gold);
-
-color:#111;
-
-}
-
-.video-lightbox{
-
-position:fixed;
-
-inset:0;
-
-background:rgba(0,0,0,.88);
-
-backdrop-filter:blur(18px);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-opacity:0;
-
-visibility:hidden;
-
-transition:.4s;
-
-z-index:999999;
-
-}
-
-.video-lightbox.active{
-
-opacity:1;
-
-visibility:visible;
-
-}
-
-.video-box{
-
-width:min(1200px,92%);
-
-aspect-ratio:16/9;
-
-position:relative;
-
-}
-
-.video-box iframe{
-
-width:100%;
-
-height:100%;
-
-border:none;
-
-border-radius:28px;
-
-background:#000;
-
-}
-
-.close-video{
-
-position:absolute;
-
-right:-18px;
-
-top:-18px;
-
-width:54px;
-
-height:54px;
-
-border:none;
-
-border-radius:50%;
-
-background:white;
-
-cursor:pointer;
-
-font-size:1.2rem;
-
-}
-
-@media(max-width:900px){
-
-.portfolio-item{
-
-min-width:100%;
-
-}
-
-.slider-arrow{
-
-display:none;
-
-}
-
-}
-
-</style>
-
-<script>
-
-/*==========================================================
-HEADER
-==========================================================*/
-
-const header=document.getElementById("header");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>40){
-
-header.classList.add("scrolled");
-
-}else{
-
-header.classList.remove("scrolled");
-
-}
-
-});
-
-/*==========================================================
-MOBILE MENU
-==========================================================*/
-
-const menuButton=document.getElementById("menuButton");
-
-const mobileMenu=document.getElementById("mobileMenu");
-
-menuButton.addEventListener("click",()=>{
-
-mobileMenu.classList.toggle("active");
-
-});
-
-mobileMenu.querySelectorAll("a").forEach(link=>{
-
-link.addEventListener("click",()=>{
-
-mobileMenu.classList.remove("active");
-
-});
-
-});
-
-/*==========================================================
-PORTFOLIO SLIDER
-==========================================================*/
-
-const track=document.getElementById("portfolioTrack");
-
-const cards=document.querySelectorAll(".portfolio-item");
-
-const prev=document.querySelector(".prev");
-
-const next=document.querySelector(".next");
-
-let current=0;
-
-function moveSlider(){
-
-const width=cards[0].offsetWidth+35;
-
-track.style.transform=`translateX(-${current*width}px)`;
-
-}
-
-next.addEventListener("click",()=>{
-
-if(current<cards.length-1){
-
-current++;
-
-}else{
-
-current=0;
-
-}
-
-moveSlider();
-
-});
-
-prev.addEventListener("click",()=>{
-
-if(current>0){
-
-current--;
-
-}else{
-
-current=cards.length-1;
-
-}
-
-moveSlider();
-
-});
-
-/*==========================================================
-LIGHTBOX
-==========================================================*/
-
-const player=document.getElementById("portfolioPlayer");
-
-const lightbox=document.getElementById("videoLightbox");
-
-document.querySelectorAll(".portfolio-video").forEach(video=>{
-
-video.addEventListener("click",()=>{
-
-player.src=video.dataset.video;
-
-lightbox.classList.add("active");
-
-});
-
-});
-
-document.querySelector(".close-video").addEventListener("click",()=>{
-
-player.src="";
-
-lightbox.classList.remove("active");
-
-});
-
-lightbox.addEventListener("click",e=>{
-
-if(e.target===lightbox){
-
-player.src="";
-
-lightbox.classList.remove("active");
-
-}
-
-});
-
-</script>
-
-<!-- ==========================================================
-SERVICIOS
-=========================================================== -->
+<!-- =========================
+        SERVICIOS
+========================== -->
 
 <section id="servicios">
 
-<div class="container">
-
-<div class="section-head">
-
-<div class="small-title">
-
+<h2 class="section-title">
 Servicios
-
-</div>
-
-<h2>
-
-Todo lo que necesitas para
-<span class="gold">diferenciarte.</span>
-
 </h2>
 
+<p class="section-sub">
+
+Creamos una presencia digital completa para que tu alojamiento transmita profesionalidad y consiga más reservas.
+
+</p>
+
+<div class="video-grid">
+
+<div class="video-card">
+
+<div class="video-info">
+
+<div class="card-tag">Vídeo</div>
+
+<h3>🎬 Vídeos promocionales</h3>
+
 <p>
 
-Una imagen cuidada transmite confianza. Nosotros nos encargamos de crearla.
+Transformamos tus fotografías en vídeos dinámicos con acabado cinematográfico, ideales para páginas web, redes sociales y plataformas de reservas.
 
 </p>
 
 </div>
 
-<div class="services-grid">
-
-<div class="service-card glass">
-
-<div class="service-number">
-
-01
-
 </div>
 
-<h3>
+<div class="video-card">
 
-Vídeo Cinematográfico
+<div class="video-info">
 
-</h3>
+<div class="card-tag">Web</div>
+
+<h3>🌐 Diseño de páginas web</h3>
 
 <p>
 
-Vídeos diseñados para despertar emociones y aumentar el valor percibido del alojamiento.
+Creamos páginas modernas, rápidas, adaptadas a móviles y enfocadas en transmitir confianza desde el primer vistazo.
 
 </p>
 
 </div>
 
-<div class="service-card glass">
-
-<div class="service-number">
-
-02
-
 </div>
 
-<h3>
+<div class="video-card">
 
-Diseño Web
+<div class="video-info">
 
-</h3>
+<div class="card-tag">Imagen</div>
+
+<h3>📸 Optimización de fotografías</h3>
 
 <p>
 
-Webs elegantes, rápidas y optimizadas para convertir visitas en reservas.
+Mejoramos iluminación, color y calidad para conseguir una imagen mucho más profesional sin necesidad de realizar nuevas sesiones.
 
 </p>
 
 </div>
 
-<div class="service-card glass">
-
-<div class="service-number">
-
-03
-
 </div>
 
-<h3>
+<div class="video-card">
 
-Fotografía
+<div class="video-info">
 
-</h3>
+<div class="card-tag">Reservas</div>
+
+<h3>📅 Sistema de reservas</h3>
 
 <p>
 
-Imágenes profesionales preparadas para web, Booking, Airbnb y redes sociales.
-
-</p>
-
-</div>
-
-<div class="service-card glass">
-
-<div class="service-number">
-
-04
-
-</div>
-
-<h3>
-
-Contenido Social
-
-</h3>
-
-<p>
-
-Reels y contenido vertical adaptado a Instagram, TikTok y campañas publicitarias.
+Integramos formularios, calendarios de disponibilidad y sistemas de reserva para facilitar la gestión de tu alojamiento.
 
 </p>
 
@@ -1904,210 +1832,335 @@ Reels y contenido vertical adaptado a Instagram, TikTok y campañas publicitaria
 
 </section>
 
-<style>
+<!-- =========================
+        PLANES
+========================== -->
 
-/*==========================================================
-SERVICIOS
-==========================================================*/
+<section id="precios">
 
-#servicios{
+<h2 class="section-title">
+Planes y precios
+</h2>
 
-background:#050505;
+<p class="section-sub">
 
-}
+Elige la solución que mejor se adapte a tu alojamiento. Todos los proyectos se realizan de forma 100 % online utilizando tus fotografías.
 
-.services-grid{
+</p>
 
-display:grid;
+<div class="pricing-grid">
 
-grid-template-columns:repeat(2,1fr);
+<!-- PACK 1 -->
 
-gap:34px;
+<div class="price-card">
 
-margin-top:70px;
+<h4>PACK BÁSICO</h4>
 
-}
+<h2>99€</h2>
 
-.service-card{
+<p class="price-desc">
+Ideal para comenzar a mejorar tu imagen online.
+</p>
 
-padding:55px;
+<ul>
 
-border-radius:34px;
+<li>✔ Vídeo promocional</li>
 
-transition:.45s;
+<li>✔ Formato horizontal</li>
 
-position:relative;
+<li>✔ Música profesional</li>
 
-overflow:hidden;
+<li>✔ Edición completa</li>
 
-min-height:290px;
+<li>✔ Entrega rápida</li>
 
-}
+</ul>
 
-.service-card::before{
+<a href="#contacto" class="btn">
+Solicitar
+</a>
 
-content:"";
+</div>
 
-position:absolute;
+<!-- PREMIUM -->
 
-width:260px;
+<div class="price-card featured">
 
-height:260px;
+<div class="featured-badge">
+MÁS ELEGIDO
+</div>
 
-right:-120px;
+<h4>PACK PREMIUM</h4>
 
-top:-120px;
+<h2>149€</h2>
 
-border-radius:50%;
+<p class="price-desc">
 
-background:rgba(213,178,125,.05);
+La opción más completa para conseguir una imagen profesional.
 
-filter:blur(45px);
+</p>
 
-}
+<ul>
 
-.service-card:hover{
+<li>✔ Todo el Pack Básico</li>
 
-transform:translateY(-10px);
+<li>✔ Movimiento cinematográfico</li>
 
-border-color:rgba(213,178,125,.25);
+<li>✔ Formato horizontal y vertical</li>
 
-}
+<li>✔ Mejora profesional de fotografías</li>
 
-.service-number{
+<li>✔ Fotografías optimizadas</li>
 
-font-size:4rem;
+<li>✔ Publicación en redes</li>
 
-font-weight:800;
+<li>✔ Acabado Premium</li>
 
-color:rgba(213,178,125,.10);
+</ul>
 
-margin-bottom:35px;
+<a href="#contacto" class="btn">
+Lo quiero
+</a>
 
-}
+</div>
 
-.service-card h3{
+<!-- WEB -->
 
-font-size:2rem;
+<div class="price-card">
 
-margin-bottom:18px;
+<h4>PÁGINA WEB</h4>
 
-letter-spacing:-1px;
+<h2>299€</h2>
 
-}
+<p class="price-desc">
 
-.service-card p{
+Una web profesional preparada para convertir visitas en reservas.
 
-font-size:1.05rem;
+</p>
 
-line-height:1.9;
+<ul>
 
-color:#aaaaaa;
+<li>✔ Diseño personalizado</li>
 
-max-width:430px;
+<li>✔ Adaptada a móvil</li>
 
-}
+<li>✔ WhatsApp</li>
 
-@media(max-width:900px){
+<li>✔ Google Maps</li>
 
-.services-grid{
+<li>✔ SEO básico</li>
 
-grid-template-columns:1fr;
+<li>✔ Dominio incluido</li>
 
-}
+</ul>
 
-.service-card{
+<a href="#contacto" class="btn">
+Solicitar
+</a>
 
-padding:40px;
+</div>
 
-}
+</div>
 
-}
+</section>
 
-</style>
+<!-- =========================
+        POR QUÉ KIRELS VISUAL
+========================== -->
 
-<!-- ==========================================================
-PROCESO
-=========================================================== -->
+<section id="ventajas">
+
+<h2 class="section-title">
+¿Por qué elegir Kirels Visual?
+</h2>
+
+<p class="section-sub">
+
+No solo diseñamos vídeos y páginas web. Creamos una imagen capaz de transmitir confianza, aumentar el valor percibido y ayudarte a destacar frente a la competencia.
+
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<div class="benefit-icon">🚀</div>
+
+<h3>Entrega rápida</h3>
+
+<p>
+
+La mayoría de proyectos están terminados entre 3 y 5 días laborables.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">📸</div>
+
+<h3>Aprovechamos tus fotografías</h3>
+
+<p>
+
+No necesitas contratar una nueva sesión fotográfica para obtener un resultado profesional.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">🌍</div>
+
+<h3>100% online</h3>
+
+<p>
+
+Trabajamos con alojamientos de cualquier punto de España sin desplazamientos.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">🎬</div>
+
+<h3>Acabado cinematográfico</h3>
+
+<p>
+
+Cada vídeo está diseñado para generar impacto y transmitir una imagen de mayor calidad.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">📱</div>
+
+<h3>Preparado para todas las plataformas</h3>
+
+<p>
+
+Web, Instagram, Facebook, TikTok, YouTube o campañas publicitarias.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">⭐</div>
+
+<h3>Imagen Premium</h3>
+
+<p>
+
+Diseño moderno, elegante y pensado para aumentar la confianza del futuro cliente.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+        PROCESO
+========================== -->
 
 <section id="proceso">
 
-<div class="container">
-
-<div class="section-head">
-
-<div class="small-title">
-
-Proceso
-
-</div>
-
-<h2>
-
-Simple para ti.
-<span class="gold">Muy cuidado para nosotros.</span>
-
+<h2 class="section-title">
+Así de sencillo es trabajar con nosotros
 </h2>
 
+<p class="section-sub">
+
+Todo el proceso es online, rápido y pensado para que obtengas un resultado profesional sin desplazamientos ni complicaciones.
+
+</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-number">
+01
+</div>
+
+<div class="timeline-content">
+
+<h3>Nos envías tus fotografías</h3>
+
 <p>
 
-Nos encargamos de todo el proceso para que únicamente tengas que aprobar el resultado final.
+Utilizamos las imágenes que ya tienes de tu alojamiento. Si están publicadas en Booking, Airbnb o tu web, normalmente son suficientes.
 
 </p>
 
 </div>
 
-<div class="process-grid">
+</div>
 
-<div class="process-card">
+<div class="timeline-item">
 
-<span>01</span>
+<div class="timeline-number">
+02
+</div>
 
-<h3>
+<div class="timeline-content">
 
-Cuéntanos tu proyecto
-
-</h3>
+<h3>Diseñamos tu proyecto</h3>
 
 <p>
 
-Analizamos el alojamiento, el público al que va dirigido y qué imagen queremos transmitir.
+Creamos el vídeo, la página web o ambos, cuidando cada detalle para conseguir una imagen mucho más atractiva.
 
 </p>
 
 </div>
 
-<div class="process-card">
+</div>
 
-<span>02</span>
+<div class="timeline-item">
 
-<h3>
+<div class="timeline-number">
+03
+</div>
 
-Creamos el contenido
+<div class="timeline-content">
 
-</h3>
+<h3>Revisión</h3>
 
 <p>
 
-Grabamos, fotografiamos, editamos y diseñamos cada pieza siguiendo una misma identidad visual.
+Te mostramos una versión previa para que puedas comprobar que todo está exactamente como esperabas.
 
 </p>
 
 </div>
 
-<div class="process-card">
+</div>
 
-<span>03</span>
+<div class="timeline-item">
 
-<h3>
+<div class="timeline-number">
+04
+</div>
 
-Listo para publicar
+<div class="timeline-content">
 
-</h3>
+<h3>Entrega final</h3>
 
 <p>
 
-Recibes todo optimizado para tu página web, redes sociales y plataformas de reservas.
+Recibes todo listo para publicar: vídeos, fotografías optimizadas y, si corresponde, tu nueva página web.
 
 </p>
 
@@ -2119,391 +2172,118 @@ Recibes todo optimizado para tu página web, redes sociales y plataformas de res
 
 </section>
 
-<!-- ==========================================================
-SOBRE
-=========================================================== -->
+<!-- =========================
+        CTA PREMIUM
+========================== -->
+
+<section class="cta-section">
+
+<div class="cta-box">
+
+<span class="cta-mini">
+KIRELS VISUAL
+</span>
+
+<h2>
+
+Tu alojamiento solo tiene unos segundos para causar una buena impresión.
+
+</h2>
+
+<p>
+
+Una imagen cuidada transmite confianza. Un vídeo profesional despierta emociones. Una buena página web convierte visitas en reservas.
+
+Nosotros nos encargamos de todo.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contacto" class="btn">
+Solicitar presupuesto
+</a>
+
+<a href="#portfolio" class="btn-outline">
+Ver proyectos
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+        SOBRE KV
+========================== -->
 
 <section id="sobre">
 
-<div class="container about-grid">
+<div class="about-grid">
 
-<div class="about-left">
+<div class="about-image">
 
-<div class="small-title">
-
-Kirels Visual
+<img src="710F23B8-FF0B-4339-B38B-EFC51A1F6B14.png" alt="Kirels Visual">
 
 </div>
+
+<div class="about-content">
+
+<span class="card-tag">
+SOBRE NOSOTROS
+</span>
 
 <h2>
 
-La imagen es la primera
-<span class="gold">reserva.</span>
+No creamos simplemente vídeos.
+Creamos primeras impresiones.
 
 </h2>
 
-<p class="lead">
+<p>
 
-Una buena fotografía llama la atención.
-Un buen vídeo despierta emociones.
-Una buena web convierte visitas en clientes.
-
-Nuestro trabajo consiste en unir esas tres piezas para que tu alojamiento destaque desde el primer momento.
+En Kirels Visual ayudamos a alojamientos turísticos, empresas e inmobiliarias a transmitir una imagen mucho más profesional utilizando el material que ya poseen.
 
 </p>
 
-<div class="about-data">
+<p>
+
+Combinamos diseño, narrativa visual y tecnología para transformar fotografías estáticas en contenido que genera confianza y aumenta el valor percibido de cada proyecto.
+
+</p>
+
+<p>
+
+Nuestro objetivo no es únicamente crear una web bonita o un vídeo atractivo. Queremos que quien visite tu alojamiento piense desde el primer segundo:
+
+<strong>"Este lugar merece la pena."</strong>
+
+</p>
+
+<div class="about-stats">
 
 <div>
 
-<h3>
+<h3>100%</h3>
 
-+100
-
-</h3>
-
-<span>
-
-Proyectos realizados
-
-</span>
+<span>Online</span>
 
 </div>
 
 <div>
 
-<h3>
+<h3>3-5</h3>
 
-España
-
-</h3>
-
-<span>
-
-Cobertura nacional
-
-</span>
+<span>Días</span>
 
 </div>
 
-</div>
+<div>
 
-</div>
+<h3>Premium</h3>
 
-<div class="about-right">
-
-<div class="about-image glass">
-
-<img src="images/about.jpg" alt="Kirels Visual">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<style>
-
-/*==========================================================
-PROCESO
-==========================================================*/
-
-#proceso{
-
-background:#090909;
-
-}
-
-.process-grid{
-
-margin-top:90px;
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:35px;
-
-}
-
-.process-card{
-
-padding:55px;
-
-border-top:1px solid rgba(255,255,255,.08);
-
-transition:.4s;
-
-}
-
-.process-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.process-card span{
-
-display:block;
-
-font-size:5rem;
-
-font-weight:800;
-
-line-height:1;
-
-margin-bottom:35px;
-
-color:rgba(213,178,125,.12);
-
-}
-
-.process-card h3{
-
-font-size:2rem;
-
-margin-bottom:18px;
-
-letter-spacing:-1px;
-
-}
-
-.process-card p{
-
-line-height:1.9;
-
-color:#aaaaaa;
-
-font-size:1.02rem;
-
-}
-
-/*==========================================================
-SOBRE
-==========================================================*/
-
-#sobre{
-
-background:#050505;
-
-}
-
-.about-grid{
-
-display:grid;
-
-grid-template-columns:48% 52%;
-
-gap:90px;
-
-align-items:center;
-
-}
-
-.about-image{
-
-padding:18px;
-
-border-radius:34px;
-
-overflow:hidden;
-
-}
-
-.about-image img{
-
-width:100%;
-
-display:block;
-
-border-radius:20px;
-
-}
-
-.about-data{
-
-display:flex;
-
-gap:70px;
-
-margin-top:60px;
-
-}
-
-.about-data h3{
-
-font-size:3rem;
-
-font-weight:800;
-
-margin-bottom:8px;
-
-color:var(--gold);
-
-}
-
-.about-data span{
-
-color:#9d9d9d;
-
-}
-
-@media(max-width:1000px){
-
-.process-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.about-grid{
-
-grid-template-columns:1fr;
-
-gap:60px;
-
-}
-
-.about-data{
-
-justify-content:space-between;
-
-}
-
-}
-
-@media(max-width:700px){
-
-.process-card{
-
-padding:35px 10px;
-
-}
-
-.about-data{
-
-flex-direction:column;
-
-gap:35px;
-
-}
-
-}
-
-</style>
-
-<!-- ==========================================================
-FAQ
-=========================================================== -->
-
-<section id="faq">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="small-title">
-
-Preguntas frecuentes
-
-</div>
-
-<h2>
-
-Resolvemos las dudas
-<span class="gold">más habituales.</span>
-
-</h2>
-
-</div>
-
-<div class="faq-wrapper">
-
-<div class="faq-item glass">
-
-<button class="faq-question">
-
-¿Cuánto tarda un proyecto?
-
-<i class="fa-solid fa-plus"></i>
-
-</button>
-
-<div class="faq-answer">
-
-<p>
-
-Depende del servicio contratado, aunque la mayoría de proyectos se entregan entre una y dos semanas.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="faq-item glass">
-
-<button class="faq-question">
-
-¿Trabajáis en toda España?
-
-<i class="fa-solid fa-plus"></i>
-
-</button>
-
-<div class="faq-answer">
-
-<p>
-
-Sí. Nos desplazamos para realizar grabaciones y también trabajamos de forma totalmente online cuando el proyecto lo permite.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="faq-item glass">
-
-<button class="faq-question">
-
-¿Puedo solicitar cambios?
-
-<i class="fa-solid fa-plus"></i>
-
-</button>
-
-<div class="faq-answer">
-
-<p>
-
-Sí. Todos los proyectos incluyen revisiones para que el resultado final represente exactamente la imagen que buscas.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="faq-item glass">
-
-<button class="faq-question">
-
-¿Qué necesitáis para empezar?
-
-<i class="fa-solid fa-plus"></i>
-
-</button>
-
-<div class="faq-answer">
-
-<p>
-
-Solo necesitamos conocer tu proyecto. A partir de ahí organizamos todo el proceso.
-
-</p>
+<span>Acabado</span>
 
 </div>
 
@@ -2515,52 +2295,121 @@ Solo necesitamos conocer tu proyecto. A partir de ahí organizamos todo el proce
 
 </section>
 
-<!-- ==========================================================
-CTA
-=========================================================== -->
+<!-- =========================
+        GARANTÍAS
+========================== -->
+
+<section id="garantias">
+
+<h2 class="section-title">
+Trabajamos con total transparencia
+</h2>
+
+<p class="section-sub">
+
+Queremos que contrates con tranquilidad. Nuestro proceso está pensado para que tengas seguridad desde el primer momento.
+
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<div class="benefit-icon">💳</div>
+
+<h3>Solo un 25% para comenzar</h3>
+
+<p>
+
+Únicamente solicitamos una pequeña reserva para iniciar el proyecto. El resto se abona cuando el trabajo esté terminado.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">👀</div>
+
+<h3>Revisión antes de entregar</h3>
+
+<p>
+
+Siempre te mostramos una versión previa para que puedas revisar el resultado antes de darlo por finalizado.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">🤝</div>
+
+<h3>Sin sorpresas</h3>
+
+<p>
+
+Antes de empezar dejamos claro qué incluye el proyecto, los plazos y el resultado esperado.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">🛡️</div>
+
+<h3>Compromiso Kirels Visual</h3>
+
+<p>
+
+Si el trabajo final no cumple con lo acordado, devolvemos íntegramente el importe de la reserva.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+        CONTACTO
+========================== -->
 
 <section id="contacto">
 
-<div class="container">
+<div class="contact-box">
 
-<div class="cta-box glass">
-
-<div>
-
-<div class="small-title">
-
-Hablemos
-
-</div>
+<span class="card-tag">
+CONTACTO
+</span>
 
 <h2>
 
-Es el momento de que tu alojamiento
-<span class="gold">transmita todo su potencial.</span>
+¿Hablamos sobre tu proyecto?
 
 </h2>
 
-</div>
+<p>
 
-<div class="cta-actions">
+Cuéntanos qué necesitas y te responderemos con una propuesta personalizada, sin compromiso.
 
-<a href="https://wa.me/34600000000" class="btn btn-primary">
+</p>
 
-<i class="fa-brands fa-whatsapp"></i>
+<div class="contact-buttons">
 
-&nbsp;
-
+<a class="btn" href="https://wa.me/34677994250" target="_blank">
 WhatsApp
-
 </a>
 
-<a href="mailto:info@kirelsvisual.es" class="btn btn-secondary">
-
-Enviar correo
-
+<a class="btn-outline" href="mailto:info@kirelsvisual.es">
+Email
 </a>
 
-</div>
+<a class="btn-outline" href="https://instagram.com/kirelsvisual" target="_blank">
+Instagram
+</a>
 
 </div>
 
@@ -2568,411 +2417,40 @@ Enviar correo
 
 </section>
 
-<!-- ==========================================================
-FOOTER
-=========================================================== -->
-
 <footer>
 
-<div class="container footer">
+<img src="IMG_7790.jpeg" class="footer-logo" alt="Kirels Visual">
 
-<div>
-
-<img src="images/logo.png" class="footer-logo">
+<h3>Kirels Visual</h3>
 
 <p>
 
-Contenido visual para alojamientos, hoteles e inmobiliarias.
+Vídeos promocionales · Páginas web · Contenido visual premium
 
 </p>
 
-</div>
+<div class="footer-links">
 
-<div>
-
-<h4>
-
-Navegación
-
-</h4>
-
-<a href="#portfolio">Portfolio</a>
+<a href="#portfolio">Proyectos</a>
 
 <a href="#servicios">Servicios</a>
 
-<a href="#proceso">Proceso</a>
+<a href="#precios">Precios</a>
 
-<a href="#faq">FAQ</a>
+<a href="#sobre">Sobre</a>
+
+<a href="#contacto">Contacto</a>
 
 </div>
 
-<div>
+<p class="copyright">
 
-<h4>
-
-Contacto
-
-</h4>
-
-<p>
-
-info@kirelsvisual.es
+© 2026 Kirels Visual · Todos los derechos reservados.
 
 </p>
-
-<p>
-
-+34 XXX XXX XXX
-
-</p>
-
-</div>
-
-</div>
-
-<div class="copyright">
-
-© 2025 Kirels Visual · Todos los derechos reservados.
-
-</div>
 
 </footer>
-
-<a href="https://wa.me/34600000000"
-
-class="whatsapp"
-
-target="_blank">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-</a>
-
-<style>
-
-/*=========================
-FAQ
-=========================*/
-
-#faq{
-
-background:#080808;
-
-}
-
-.faq-wrapper{
-
-max-width:900px;
-
-margin:70px auto 0;
-
-display:flex;
-
-flex-direction:column;
-
-gap:18px;
-
-}
-
-.faq-item{
-
-border-radius:24px;
-
-overflow:hidden;
-
-}
-
-.faq-question{
-
-width:100%;
-
-background:none;
-
-border:none;
-
-padding:28px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-color:white;
-
-font-size:1.05rem;
-
-cursor:pointer;
-
-}
-
-.faq-answer{
-
-max-height:0;
-
-overflow:hidden;
-
-transition:.45s;
-
-padding:0 28px;
-
-}
-
-.faq-answer p{
-
-color:#a9a9a9;
-
-line-height:1.8;
-
-padding-bottom:25px;
-
-}
-
-.faq-item.active .faq-answer{
-
-max-height:250px;
-
-}
-
-.faq-item.active i{
-
-transform:rotate(45deg);
-
-}
-
-/*=========================
-CTA
-=========================*/
-
-#contacto{
-
-background:#050505;
-
-}
-
-.cta-box{
-
-padding:90px;
-
-border-radius:40px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-gap:60px;
-
-}
-
-.cta-actions{
-
-display:flex;
-
-gap:18px;
-
-flex-wrap:wrap;
-
-}
-
-/*=========================
-FOOTER
-=========================*/
-
-footer{
-
-background:#030303;
-
-padding:90px 7% 40px;
-
-border-top:1px solid rgba(255,255,255,.06);
-
-}
-
-.footer{
-
-display:grid;
-
-grid-template-columns:2fr 1fr 1fr;
-
-gap:60px;
-
-}
-
-.footer-logo{
-
-height:54px;
-
-margin-bottom:25px;
-
-}
-
-.footer h4{
-
-margin-bottom:20px;
-
-color:white;
-
-}
-
-.footer a,
-
-.footer p{
-
-display:block;
-
-margin-bottom:12px;
-
-color:#8d8d8d;
-
-}
-
-.footer a:hover{
-
-color:white;
-
-}
-
-.copyright{
-
-margin-top:70px;
-
-text-align:center;
-
-color:#666;
-
-font-size:.9rem;
-
-}
-
-.whatsapp{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:68px;
-
-height:68px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:#25D366;
-
-color:white;
-
-font-size:2rem;
-
-box-shadow:0 20px 45px rgba(0,0,0,.35);
-
-z-index:99999;
-
-transition:.3s;
-
-}
-
-.whatsapp:hover{
-
-transform:scale(1.08);
-
-}
-
-@media(max-width:900px){
-
-.cta-box{
-
-padding:45px;
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-.footer{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-}
-
-</style>
-
-<script>
-
-/* FAQ */
-
-document.querySelectorAll(".faq-question").forEach(button=>{
-
-button.addEventListener("click",()=>{
-
-button.parentElement.classList.toggle("active");
-
-});
-
-});
-
-/* Animaciones */
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},{threshold:.15});
-
-document.querySelectorAll("section,.service-card,.portfolio-item,.process-card").forEach(el=>{
-
-el.classList.add("hidden");
-
-observer.observe(el);
-
-});
-
-</script>
-
-<style>
-
-.hidden{
-
-opacity:0;
-
-transform:translateY(70px);
-
-transition:1s cubic-bezier(.2,.7,.2,1);
-
-}
-
-.show{
-
-opacity:1;
-
-transform:none;
-
-}
-
-</style>
 
 </body>
 
 </html>
-
