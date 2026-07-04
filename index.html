@@ -144,9 +144,37 @@ border-radius:14px;
 
 display:flex;
 
-gap:34px;
+gap:32px;
 
 align-items:center;
+
+justify-content:flex-end;
+
+flex-wrap:wrap;
+
+}
+
+.menu a{
+
+font-size:15px;
+
+font-weight:500;
+
+letter-spacing:.3px;
+
+opacity:.9;
+
+transition:.35s;
+
+}
+
+.menu a:hover{
+
+color:var(--gold);
+
+opacity:1;
+
+transform:translateY(-2px);
 
 }
 
@@ -338,7 +366,13 @@ font-size:48px;
 
 <nav>
 
+<div class="container" style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+
+<a href="#inicio">
+
 <img src="IMG_7790.jpeg" class="logo">
+
+</a>
 
 <div class="menu">
 
@@ -350,7 +384,15 @@ font-size:48px;
 
 <a href="#sobre">Sobre KV</a>
 
-<a href="#contacto" class="contact-btn">Contacto</a>
+<a href="#faq">FAQ</a>
+
+<a href="#contacto" class="contact-btn">
+
+Solicitar presupuesto
+
+</a>
+
+</div>
 
 </div>
 
