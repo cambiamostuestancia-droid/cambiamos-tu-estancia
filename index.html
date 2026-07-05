@@ -6,68 +6,146 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kirels Visual | Vídeos promocionales y páginas web premium</title>
+<title>Kirels Visual | Luxury Visual Studio</title>
 
-<meta name="description" content="Vídeos promocionales y páginas web premium para alojamientos, inmobiliarias y empresas.">
+<meta name="description" content="Creamos vídeos promocionales y páginas web premium para inmobiliarias, alojamientos y empresas que quieren destacar con una imagen elegante y preparada para generar resultados.">
 
-<meta name="theme-color" content="#050505">
+<meta name="keywords" content="vídeos promocionales, diseño web premium, inmobiliarias, luxury real estate, páginas web, Kirels Visual">
+
+<meta name="author" content="Kirels Visual">
+
+<meta property="og:title" content="Kirels Visual">
+<meta property="og:description" content="Contenido visual premium para empresas que quieren destacar.">
+<meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
-
---gold:#c8a96a;
---gold-light:#e6cf97;
-
---black:#050505;
---black2:#0d0d0d;
---black3:#171717;
-
---text:#ffffff;
---soft:#d5d5d5;
-
---radius:28px;
-
---shadow:0 35px 90px rgba(0,0,0,.45);
-
---transition:.45s cubic-bezier(.22,.61,.36,1);
-
-}
-
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+
+--black:#030303;
+--black2:#090909;
+--white:#ffffff;
+--gold:#d8b46a;
+--gold-light:#f1d79b;
+
+--glass:rgba(255,255,255,.045);
+--glass-border:rgba(255,255,255,.08);
+
+--shadow:0 35px 90px rgba(0,0,0,.55);
 
 }
 
 html{
 
-scroll-behavior:smooth;
+overflow-x:hidden;
 
 }
 
 body{
 
-font-family:'Poppins',sans-serif;
+font-family:'Inter',sans-serif;
+background:var(--black);
+color:white;
+overflow-x:hidden;
+line-height:1.7;
+-webkit-font-smoothing:antialiased;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-450px;
+left:-350px;
+
+width:900px;
+height:900px;
 
 background:
+radial-gradient(circle,
+rgba(216,180,106,.08),
+transparent 70%);
 
-radial-gradient(circle at top left,rgba(200,169,106,.13),transparent 30%),
+pointer-events:none;
 
-radial-gradient(circle at bottom right,rgba(255,255,255,.04),transparent 28%),
+z-index:-10;
 
-linear-gradient(180deg,#020202,#090909,#050505);
+}
 
+body::after{
+
+content:"";
+
+position:fixed;
+
+right:-450px;
+bottom:-450px;
+
+width:900px;
+height:900px;
+
+background:
+radial-gradient(circle,
+rgba(255,255,255,.03),
+transparent 70%);
+
+pointer-events:none;
+
+z-index:-10;
+
+}
+
+::-webkit-scrollbar{
+
+width:9px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#060606;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(var(--gold),#9b7b42);
+border-radius:100px;
+
+}
+
+section{
+
+padding:180px 8%;
+
+}
+
+.container{
+
+max-width:1500px;
+margin:auto;
+
+}
+
+a{
+
+text-decoration:none;
 color:white;
-
-overflow-x:hidden;
 
 }
 
@@ -78,65 +156,57 @@ max-width:100%;
 
 }
 
-a{
-
-text-decoration:none;
-color:inherit;
-
-}
-
-.container{
-
-width:min(1280px,92%);
-margin:auto;
-
-}
-
-section{
-
-padding:140px 0;
-
-}
-
 nav{
 
 position:fixed;
 
-top:22px;
+top:0;
+left:0;
 
-left:50%;
-
-transform:translateX(-50%);
-
-width:min(1280px,92%);
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:18px 30px;
-
-background:rgba(8,8,8,.65);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:24px;
+width:100%;
 
 z-index:9999;
 
-transition:.4s;
+transition:.45s;
+
+background:rgba(8,8,8,.45);
+
+backdrop-filter:blur(24px);
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.navbar{
+
+max-width:1600px;
+
+margin:auto;
+
+padding:26px 4%;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
 
 }
 
 .logo{
 
-height:56px;
+font-size:29px;
 
-border-radius:14px;
+letter-spacing:8px;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+}
+
+.logo span{
+
+color:var(--gold);
 
 }
 
@@ -144,25 +214,19 @@ border-radius:14px;
 
 display:flex;
 
-gap:32px;
-
-align-items:center;
-
-justify-content:flex-end;
-
-flex-wrap:wrap;
+gap:48px;
 
 }
 
 .menu a{
 
-font-size:15px;
+font-size:13px;
 
-font-weight:500;
+text-transform:uppercase;
 
-letter-spacing:.3px;
+letter-spacing:2px;
 
-opacity:.9;
+opacity:.72;
 
 transition:.35s;
 
@@ -170,87 +234,170 @@ transition:.35s;
 
 .menu a:hover{
 
-color:var(--gold);
-
 opacity:1;
-
-transform:translateY(-2px);
-
-}
-
-.menu a{
-
-font-size:15px;
-
-font-weight:500;
-
-opacity:.82;
-
-transition:.3s;
-
-}
-
-.menu a:hover{
-
-opacity:1;
-
 color:var(--gold);
 
 }
 
 .contact-btn{
 
-padding:14px 28px;
-
-background:linear-gradient(135deg,var(--gold),var(--gold-light));
+padding:16px 34px;
 
 border-radius:100px;
 
-color:#111;
+border:1px solid rgba(216,180,106,.35);
 
-font-weight:700;
+background:rgba(255,255,255,.04);
+
+backdrop-filter:blur(20px);
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+transition:.35s;
+
+}
+
+.contact-btn:hover{
+
+background:var(--gold);
+
+color:black;
+
+transform:translateY(-4px);
 
 }
 
 .hero{
 
-min-height:100vh;
+position:relative;
 
-display:grid;
+height:100vh;
 
-grid-template-columns:1.1fr .9fr;
+display:flex;
 
 align-items:center;
 
-gap:90px;
+overflow:hidden;
 
-padding-top:170px;
+}
+
+.video-background{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+width:120vw;
+height:120vh;
+
+transform:translate(-50%,-50%);
+
+overflow:hidden;
+
+}
+
+.video-background iframe{
+
+width:100%;
+height:100%;
+
+border:0;
+
+pointer-events:none;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(to right,
+rgba(0,0,0,.82),
+rgba(0,0,0,.35),
+rgba(0,0,0,.82)),
+
+linear-gradient(to bottom,
+rgba(0,0,0,.25),
+rgba(0,0,0,.88));
+
+z-index:2;
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:5;
+
+max-width:930px;
+
+}
+
+.hero-tag{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:12px 24px;
+
+border-radius:100px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+font-size:12px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+margin-bottom:40px;
 
 }
 
 .hero h1{
 
-font-size:clamp(58px,6vw,84px);
+font-size:clamp(64px,8vw,112px);
 
 line-height:1.02;
 
-letter-spacing:-2px;
+letter-spacing:-4px;
 
-margin-bottom:28px;
+font-weight:700;
+
+max-width:900px;
+
+margin-bottom:40px;
 
 }
 
 .hero p{
 
-font-size:20px;
+font-size:23px;
 
-line-height:1.9;
+color:rgba(255,255,255,.76);
 
-color:var(--soft);
+max-width:760px;
 
-max-width:650px;
-
-margin-bottom:42px;
+margin-bottom:60px;
 
 }
 
@@ -258,89 +405,264 @@ margin-bottom:42px;
 
 display:flex;
 
-gap:20px;
+gap:22px;
 
 flex-wrap:wrap;
 
 }
 
-.btn{
+.btn-primary{
 
-padding:18px 38px;
+padding:21px 42px;
 
-border-radius:100px;
-
-background:linear-gradient(135deg,var(--gold),var(--gold-light));
-
-color:#111;
-
-font-weight:700;
-
-}
-
-.btn-outline{
-
-padding:18px 38px;
+background:var(--gold);
 
 border-radius:100px;
 
-border:1px solid rgba(255,255,255,.12);
+color:black;
 
-background:rgba(255,255,255,.03);
+font-weight:600;
 
-backdrop-filter:blur(15px);
+transition:.35s;
 
 }
 
-.video-frame{
+.btn-primary:hover{
 
-width:100%;
+transform:translateY(-5px);
 
-aspect-ratio:16/9;
+box-shadow:
+0 25px 60px rgba(216,180,106,.35);
 
-border-radius:32px;
+}
 
-overflow:hidden;
+.btn-secondary{
 
-background:#111;
+padding:21px 42px;
+
+border-radius:100px;
 
 border:1px solid rgba(255,255,255,.08);
+
+background:rgba(255,255,255,.04);
+
+backdrop-filter:blur(18px);
+
+transition:.35s;
+
+}
+
+.btn-secondary:hover{
+
+border-color:var(--gold);
+
+color:var(--gold);
+
+}
+
+.scroll-indicator{
+
+position:absolute;
+
+bottom:45px;
+
+left:8%;
+
+z-index:20;
+
+font-size:12px;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+opacity:.55;
+
+}
+
+.section-intro{
+
+margin-bottom:90px;
+
+}
+
+.section-intro span{
+
+display:inline-block;
+
+margin-bottom:25px;
+
+color:var(--gold);
+
+font-size:13px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+}
+
+.section-intro h2{
+
+font-size:clamp(48px,6vw,84px);
+
+line-height:1.05;
+
+letter-spacing:-3px;
+
+max-width:900px;
+
+margin-bottom:30px;
+
+}
+
+.section-intro p{
+
+max-width:760px;
+
+font-size:21px;
+
+color:rgba(255,255,255,.70);
+
+}
+
+.services{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+}
+
+.service-card{
+
+padding:65px 55px;
+
+background:var(--glass);
+
+border:1px solid var(--glass-border);
+
+border-radius:34px;
+
+backdrop-filter:blur(30px);
+
+transition:.45s;
+
+position:relative;
+
+overflow:hidden;
 
 box-shadow:var(--shadow);
 
 }
 
-.video-frame iframe{
+.service-card::before{
 
-width:100%;
+content:"";
 
-height:100%;
+position:absolute;
 
-border:none;
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+rgba(216,180,106,.12),
+transparent);
+
+top:-120px;
+right:-120px;
+
+transition:.6s;
 
 }
 
-@media(max-width:1050px){
+.service-card:hover{
 
-.hero{
+transform:translateY(-10px);
+
+border-color:rgba(216,180,106,.28);
+
+}
+
+.service-card:hover::before{
+
+transform:scale(1.4);
+
+}
+
+.service-number{
+
+font-size:14px;
+
+letter-spacing:4px;
+
+color:var(--gold);
+
+margin-bottom:40px;
+
+}
+
+.service-card h3{
+
+font-size:34px;
+
+margin-bottom:24px;
+
+}
+
+.service-card p{
+
+font-size:18px;
+
+color:rgba(255,255,255,.70);
+
+}
+
+.service-link{
+
+display:inline-flex;
+
+margin-top:45px;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+}
+
+.fade{
+
+opacity:0;
+
+transform:translateY(70px);
+
+transition:1.1s;
+
+}
+
+.fade.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+@media(max-width:1200px){
+
+.services{
 
 grid-template-columns:1fr;
-
-text-align:center;
-
-gap:60px;
-
-}
-
-.hero p{
-
-margin:auto auto 40px;
-
-}
-
-.hero-buttons{
-
-justify-content:center;
 
 }
 
@@ -350,11 +672,1100 @@ display:none;
 
 }
 
-.hero h1{
+}
 
-font-size:48px;
+@media(max-width:768px){
+
+section{
+
+padding:120px 7%;
 
 }
+
+.hero{
+
+height:100svh;
+
+}
+
+.hero h1{
+
+font-size:54px;
+
+letter-spacing:-2px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+text-align:center;
+
+}
+
+.logo{
+
+font-size:22px;
+
+letter-spacing:5px;
+
+}
+
+}
+
+/* ===========================
+   PROYECTOS
+=========================== */
+
+.projects{
+
+display:flex;
+flex-direction:column;
+gap:180px;
+
+}
+
+.project{
+
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:80px;
+align-items:center;
+
+}
+
+.project.reverse{
+
+grid-template-columns:.85fr 1.15fr;
+
+}
+
+.project.reverse .project-video{
+
+order:2;
+
+}
+
+.project.reverse .project-info{
+
+order:1;
+
+}
+
+.project-video{
+
+position:relative;
+
+border-radius:34px;
+
+overflow:hidden;
+
+background:#000;
+
+box-shadow:0 45px 90px rgba(0,0,0,.55);
+
+border:1px solid rgba(255,255,255,.05);
+
+}
+
+.project-video::before{
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,.25),
+transparent
+);
+
+pointer-events:none;
+
+z-index:2;
+
+}
+
+.project-video iframe{
+
+width:100%;
+aspect-ratio:16/9;
+display:block;
+border:0;
+
+}
+
+.project-info small{
+
+display:inline-block;
+
+margin-bottom:24px;
+
+font-size:13px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+}
+
+.project-info h3{
+
+font-size:clamp(40px,4vw,70px);
+
+line-height:1.05;
+
+letter-spacing:-2px;
+
+margin-bottom:35px;
+
+}
+
+.project-info p{
+
+font-size:20px;
+
+color:rgba(255,255,255,.72);
+
+max-width:620px;
+
+margin-bottom:45px;
+
+}
+
+.project-line{
+
+width:120px;
+height:1px;
+
+background:linear-gradient(
+90deg,
+var(--gold),
+transparent
+);
+
+margin-bottom:45px;
+
+}
+
+/* ===========================
+   PROCESO
+=========================== */
+
+.process{
+
+position:relative;
+
+max-width:1050px;
+
+margin:auto;
+
+padding-left:70px;
+
+}
+
+.process::before{
+
+content:"";
+
+position:absolute;
+
+left:18px;
+top:0;
+
+width:2px;
+height:100%;
+
+background:linear-gradient(
+180deg,
+rgba(216,180,106,.6),
+rgba(255,255,255,.08)
+);
+
+}
+
+.step{
+
+position:relative;
+
+margin-bottom:90px;
+
+}
+
+.step:last-child{
+
+margin-bottom:0;
+
+}
+
+.step::before{
+
+content:"";
+
+position:absolute;
+
+left:-62px;
+top:14px;
+
+width:22px;
+height:22px;
+
+border-radius:50%;
+
+background:var(--gold);
+
+box-shadow:
+
+0 0 25px rgba(216,180,106,.55);
+
+}
+
+.step-number{
+
+font-size:13px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+margin-bottom:18px;
+
+}
+
+.step h3{
+
+font-size:38px;
+
+margin-bottom:22px;
+
+}
+
+.step p{
+
+font-size:20px;
+
+color:rgba(255,255,255,.70);
+
+max-width:700px;
+
+}
+
+/* ===========================
+   PRECIOS
+=========================== */
+
+.pricing{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+}
+
+.price-card{
+
+padding:70px 60px;
+
+background:rgba(255,255,255,.04);
+
+border-radius:34px;
+
+border:1px solid rgba(255,255,255,.07);
+
+backdrop-filter:blur(28px);
+
+transition:.45s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.price-card::before{
+
+content:"";
+
+position:absolute;
+
+width:280px;
+height:280px;
+
+right:-140px;
+top:-140px;
+
+background:radial-gradient(circle,
+rgba(216,180,106,.14),
+transparent);
+
+transition:.6s;
+
+}
+
+.price-card:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(216,180,106,.35);
+
+}
+
+.price-card:hover::before{
+
+transform:scale(1.3);
+
+}
+
+.price-card small{
+
+display:block;
+
+font-size:13px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+margin-bottom:35px;
+
+}
+
+.price-card h3{
+
+font-size:34px;
+
+margin-bottom:45px;
+
+}
+
+.price{
+
+font-size:64px;
+
+font-weight:700;
+
+line-height:1;
+
+margin-bottom:35px;
+
+}
+
+.price span{
+
+font-size:22px;
+
+font-weight:400;
+
+opacity:.75;
+
+}
+
+.price-card p{
+
+font-size:18px;
+
+color:rgba(255,255,255,.68);
+
+}
+
+/* ===========================
+   GARANTÍA
+=========================== */
+
+.guarantee{
+
+text-align:center;
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+.guarantee span{
+
+display:inline-block;
+
+margin-bottom:25px;
+
+font-size:13px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+}
+
+.guarantee h2{
+
+font-size:clamp(46px,6vw,88px);
+
+line-height:1.08;
+
+letter-spacing:-3px;
+
+margin-bottom:40px;
+
+}
+
+.guarantee p{
+
+font-size:22px;
+
+color:rgba(255,255,255,.72);
+
+max-width:820px;
+
+margin:auto;
+
+}
+
+/* ===========================
+   SOBRE NOSOTROS
+=========================== */
+
+.about-image{
+
+position:relative;
+
+height:82vh;
+
+min-height:650px;
+
+overflow:hidden;
+
+border-radius:38px;
+
+border:1px solid rgba(255,255,255,.06);
+
+box-shadow:0 40px 120px rgba(0,0,0,.55);
+
+}
+
+.about-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+filter:brightness(.72);
+
+transform:scale(1.02);
+
+transition:1.5s;
+
+}
+
+.about-image:hover img{
+
+transform:scale(1.05);
+
+}
+
+.about-overlay{
+
+position:absolute;
+
+left:80px;
+
+bottom:80px;
+
+max-width:760px;
+
+z-index:10;
+
+}
+
+.about-overlay::before{
+
+content:"";
+
+position:absolute;
+
+left:-80px;
+
+bottom:-80px;
+
+width:120vw;
+
+height:450px;
+
+background:linear-gradient(to top,
+rgba(0,0,0,.92),
+rgba(0,0,0,.45),
+transparent);
+
+z-index:-1;
+
+}
+
+.about-small{
+
+display:inline-block;
+
+margin-bottom:25px;
+
+font-size:13px;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+}
+
+.about-overlay h2{
+
+font-size:clamp(42px,5vw,72px);
+
+line-height:1.05;
+
+letter-spacing:-2px;
+
+margin-bottom:28px;
+
+}
+
+.about-overlay p{
+
+font-size:21px;
+
+max-width:700px;
+
+color:rgba(255,255,255,.82);
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:40px;
+
+}
+
+.stat{
+
+text-align:center;
+
+padding:50px;
+
+background:rgba(255,255,255,.035);
+
+border-radius:28px;
+
+border:1px solid rgba(255,255,255,.05);
+
+}
+
+.stat h3{
+
+font-size:64px;
+
+margin-bottom:18px;
+
+color:var(--gold);
+
+}
+
+.stat p{
+
+font-size:19px;
+
+color:rgba(255,255,255,.70);
+
+}
+
+ /* ===========================
+   FAQ
+=========================== */
+
+.faq{
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+.faq-item{
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+padding:34px 0;
+
+}
+
+.faq-question{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+cursor:pointer;
+
+gap:30px;
+
+}
+
+.faq-question h3{
+
+font-size:28px;
+
+font-weight:500;
+
+line-height:1.4;
+
+transition:.35s;
+
+}
+
+.faq-question span{
+
+font-size:34px;
+
+font-weight:300;
+
+color:var(--gold);
+
+transition:.4s;
+
+}
+
+.faq-item.active .faq-question span{
+
+transform:rotate(45deg);
+
+}
+
+.faq-item.active .faq-question h3{
+
+color:var(--gold);
+
+}
+
+.faq-answer{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:max-height .5s ease;
+
+}
+
+.faq-answer p{
+
+padding-top:25px;
+
+font-size:19px;
+
+line-height:1.9;
+
+max-width:900px;
+
+color:rgba(255,255,255,.72);
+
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.cta{
+
+text-align:center;
+
+padding:220px 8%;
+
+}
+
+.cta h2{
+
+font-size:clamp(54px,7vw,100px);
+
+line-height:1.05;
+
+letter-spacing:-3px;
+
+max-width:1100px;
+
+margin:auto;
+
+margin-bottom:55px;
+
+}
+
+.cta p{
+
+font-size:22px;
+
+color:rgba(255,255,255,.70);
+
+max-width:760px;
+
+margin:auto;
+
+margin-bottom:60px;
+
+}
+
+.cta-button{
+
+display:inline-flex;
+
+padding:22px 54px;
+
+border-radius:100px;
+
+background:var(--gold);
+
+color:black;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+.cta-button:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 25px 60px rgba(216,180,106,.30);
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+padding:90px 8% 70px;
+
+border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+.footer-container{
+
+max-width:1500px;
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-start;
+
+gap:80px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-brand h2{
+
+font-size:32px;
+
+letter-spacing:8px;
+
+margin-bottom:20px;
+
+}
+
+.footer-brand span{
+
+color:var(--gold);
+
+}
+
+.footer-brand p{
+
+max-width:420px;
+
+font-size:17px;
+
+color:rgba(255,255,255,.65);
+
+}
+
+.footer-links{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.footer-links a{
+
+font-size:15px;
+
+letter-spacing:1px;
+
+opacity:.7;
+
+transition:.35s;
+
+}
+
+.footer-links a:hover{
+
+opacity:1;
+
+color:var(--gold);
+
+}
+
+.footer-bottom{
+
+margin-top:70px;
+
+padding-top:35px;
+
+border-top:1px solid rgba(255,255,255,.06);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-bottom p{
+
+font-size:14px;
+
+color:rgba(255,255,255,.45);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+.project,
+.project.reverse{
+
+grid-template-columns:1fr;
+
+}
+
+.project.reverse .project-video,
+.project.reverse .project-info{
+
+order:initial;
+
+}
+
+.pricing{
+
+grid-template-columns:1fr;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.about-image{
+
+height:520px;
+
+}
+
+.about-text{
+
+left:40px;
+right:40px;
+bottom:40px;
+
+}
+
+.about-text h2{
+
+font-size:46px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+
+padding:120px 7%;
+
+}
+
+.hero{
+
+min-height:100svh;
+
+}
+
+.hero-tag{
+
+font-size:11px;
+
+letter-spacing:2px;
+
+}
+
+.hero h1{
+
+font-size:52px;
+
+letter-spacing:-2px;
+
+}
+
+.section-intro h2{
+
+font-size:44px;
+
+}
+
+.section-intro p{
+
+font-size:18px;
+
+}
+
+.project{
+
+gap:45px;
+
+}
+
+.project-info h3{
+
+font-size:38px;
+
+}
+
+.project-info p{
+
+font-size:18px;
+
+}
+
+.step h3{
+
+font-size:30px;
+
+}
+
+.step p{
+
+font-size:18px;
+
+}
+
+.price{
+
+font-size:54px;
+
+}
+
+.cta h2{
+
+font-size:46px;
+
+}
+
+.footer-container{
+
+flex-direction:column;
+
+gap:50px;
+
+}
+
+.footer-bottom{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+}
+
+/* ===========================
+   ANIMACIONES
+=========================== */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:
+
+opacity 1s ease,
+transform 1s ease;
+
+}
+
+.reveal.visible{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.gold{
+
+color:var(--gold);
 
 }
 
@@ -366,12 +1777,10 @@ font-size:48px;
 
 <nav>
 
-<div class="container" style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+<div class="navbar">
 
-<a href="#inicio">
-
-<img src="IMG_7790.jpeg" class="logo">
-
+<a href="#" class="logo">
+KIRELS <span>VISUAL</span>
 </a>
 
 <div class="menu">
@@ -380,19 +1789,21 @@ font-size:48px;
 
 <a href="#proyectos">Proyectos</a>
 
+<a href="#proceso">Proceso</a>
+
 <a href="#precios">Precios</a>
 
-<a href="#sobre">Sobre KV</a>
+<a href="#nosotros">Nosotros</a>
 
 <a href="#faq">FAQ</a>
 
+</div>
+
 <a href="#contacto" class="contact-btn">
 
-Solicitar presupuesto
+Contacto
 
 </a>
-
-</div>
 
 </div>
 
@@ -400,9 +1811,24 @@ Solicitar presupuesto
 
 <section class="hero">
 
-<div class="container hero">
+<div class="video-background">
 
-<div>
+<iframe
+src="https://www.youtube.com/embed/8L5m2LAYRZo?autoplay=1&mute=1&controls=0&loop=1&playlist=8L5m2LAYRZo&playsinline=1&rel=0"
+allow="autoplay">
+</iframe>
+
+</div>
+
+<div class="container">
+
+<div class="hero-content reveal">
+
+<div class="hero-tag">
+
+Luxury Visual Studio
+
+</div>
 
 <h1>
 
@@ -418,15 +1844,15 @@ Diseñamos vídeos promocionales y páginas web premium para alojamientos, inmob
 
 <div class="hero-buttons">
 
-<a href="#proyectos" class="btn">
+<a href="#proyectos" class="btn-primary">
 
 Ver proyectos
 
 </a>
 
-<a href="#contacto" class="btn-outline">
+<a href="#contacto" class="btn-secondary">
 
-Solicitar presupuesto
+Solicitar información
 
 </a>
 
@@ -434,99 +1860,425 @@ Solicitar presupuesto
 
 </div>
 
-<div>
+</div>
 
-<div class="video-frame">
+<div class="scroll-indicator">
 
-<iframe src="https://www.youtube.com/embed/8L5m2LAYRZo?autoplay=1&mute=1&loop=1&playlist=8L5m2LAYRZo"
-allow="autoplay; encrypted-media"
+SCROLL
+
+</div>
+
+</section>
+
+<section id="servicios">
+
+<div class="container">
+
+<div class="section-intro reveal">
+
+<span>
+
+SERVICIOS
+
+</span>
+
+<h2>
+
+Diseño, estrategia y contenido visual pensado para diferenciar tu negocio.
+
+</h2>
+
+<p>
+
+Cada proyecto se desarrolla desde cero con una única finalidad: transmitir profesionalidad, aumentar el valor percibido de tu marca y conseguir que cada visita recuerde tu empresa desde el primer instante.
+
+</p>
+
+</div>
+
+<div class="services reveal">
+
+<div class="service-card">
+
+<div class="service-number">
+01
+</div>
+
+<h3>
+
+Vídeos promocionales
+
+</h3>
+
+<p>
+
+Creamos vídeos con una estética cinematográfica capaces de transformar fotografías en una presentación visual elegante, emocional y preparada para captar la atención desde el primer segundo.
+
+</p>
+
+<a href="#proyectos" class="service-link">
+
+Descubrir proyectos →
+
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-number">
+02
+</div>
+
+<h3>
+
+Páginas web premium
+
+</h3>
+
+<p>
+
+Diseñamos páginas web completamente personalizadas con un estilo minimalista, moderno y exclusivo para transmitir confianza y convertir visitantes en futuros clientes.
+
+</p>
+
+<a href="#precios" class="service-link">
+
+Ver opciones →
+
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-number">
+03
+</div>
+
+<h3>
+
+Imagen de marca
+
+</h3>
+
+<p>
+
+Unificamos diseño, contenido y experiencia visual para construir una identidad sólida que transmita profesionalidad en cualquier plataforma digital.
+
+</p>
+
+<a href="#contacto" class="service-link">
+
+Empezar proyecto →
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="proyectos">
+
+<div class="container">
+
+<div class="section-intro reveal">
+
+<span>
+
+PROYECTOS
+
+</span>
+
+<h2>
+
+Cada proyecto está diseñado para que la primera impresión sea imposible de olvidar.
+
+</h2>
+
+<p>
+
+El objetivo no es únicamente mostrar un espacio o un producto. Buscamos transmitir sensaciones, aumentar el valor percibido y conseguir que cada vídeo genere interés antes incluso del primer contacto.
+
+</p>
+
+</div>
+
+<div class="projects">
+
+<div class="project reveal">
+
+<div class="project-video">
+
+<iframe
+src="https://www.youtube.com/embed/8L5m2LAYRZo"
+title="Luxury Real Estate"
 allowfullscreen>
-
 </iframe>
 
 </div>
 
+<div class="project-info">
+
+<small>
+
+Luxury Real Estate
+
+</small>
+
+<div class="project-line"></div>
+
+<h3>
+
+Vídeos que elevan el valor percibido de cada propiedad.
+
+</h3>
+
+<p>
+
+Vídeos promocionales creados para viviendas de alto nivel que transmiten exclusividad, elegancia y ayudan a que cada propiedad destaque desde el primer segundo. Una presentación cuidada permite captar la atención mucho antes de organizar una visita.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="project reverse reveal">
+
+<div class="project-video">
+
+<iframe
+src="https://www.youtube.com/embed/7cFAfWe3hqI"
+title="Alojamientos rurales"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="project-info">
+
+<small>
+
+Alojamientos rurales
+
+</small>
+
+<div class="project-line"></div>
+
+<h3>
+
+Convierte fotografías en experiencias capaces de despertar emociones.
+
+</h3>
+
+<p>
+
+Transformamos fotografías en vídeos que transmiten la experiencia de alojarse, aumentando el valor percibido del establecimiento y generando una conexión emocional con el viajero antes de realizar la reserva.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="project reveal">
+
+<div class="project-video">
+
+<iframe
+src="https://www.youtube.com/embed/uk4pyIlGCSE"
+title="Alojamientos turísticos"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="project-info">
+
+<small>
+
+Alojamientos turísticos
+
+</small>
+
+<div class="project-line"></div>
+
+<h3>
+
+Cada estancia merece una presentación que inspire confianza desde el primer vistazo.
+
+</h3>
+
+<p>
+
+Creamos contenido visual que muestra la personalidad de cada alojamiento, generando confianza e inspirando a los viajeros antes incluso de reservar. Un vídeo cuidado transmite mucho más que una colección de fotografías.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="project reverse reveal">
+
+<div class="project-video">
+
+<iframe
+src="https://www.youtube.com/embed/XrVrc4fSvkg"
+title="Marcas y productos"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="project-info">
+
+<small>
+
+Marcas y productos
+
+</small>
+
+<div class="project-line"></div>
+
+<h3>
+
+Contenido visual diseñado para reforzar el valor de cualquier marca.
+
+</h3>
+
+<p>
+
+Creamos piezas audiovisuales que combinan elegancia, ritmo y una presentación cuidada para captar la atención, reforzar la imagen de marca y transmitir profesionalidad en cualquier plataforma digital.
+
+</p>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- =========================
-        SERVICIOS
-========================= -->
-
-<section id="servicios" style="background:#0b0b0b;">
+<section id="proceso">
 
 <div class="container">
 
-<div style="text-align:center;max-width:850px;margin:0 auto 90px;">
+<div class="section-intro reveal">
 
-<span style="display:inline-block;padding:10px 22px;border-radius:100px;background:rgba(200,169,106,.08);border:1px solid rgba(200,169,106,.18);color:#e3cb91;letter-spacing:2px;font-size:12px;text-transform:uppercase;">
+<span>
 
-Servicios
+PROCESO
 
 </span>
 
-<h2 style="font-size:clamp(42px,5vw,66px);margin:28px 0;">
+<h2>
 
-Todo lo que necesitas para destacar.
+Un proceso sencillo, rápido y completamente online.
 
 </h2>
 
-<p style="font-size:19px;color:#d0d0d0;line-height:1.9;">
+<p>
 
-Creamos soluciones visuales pensadas para transmitir profesionalidad, aumentar el valor percibido y diferenciar tu negocio desde el primer segundo.
-
-</p>
-
-</div>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;">
-
-<div style="padding:40px;border-radius:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);">
-
-<h3 style="font-size:26px;margin-bottom:18px;">🎬 Vídeos promocionales</h3>
-
-<p style="line-height:1.9;color:#d0d0d0;">
-
-Transformamos fotografías y vídeos en piezas visuales con acabado cinematográfico para captar la atención desde el primer segundo.
+Nos encargamos de todo para que puedas centrarte en tu negocio. Desde el primer contacto hasta la entrega final, cada paso está pensado para ofrecer una experiencia clara, ágil y con un resultado de nivel premium.
 
 </p>
 
 </div>
 
-<div style="padding:40px;border-radius:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);">
+<div class="process">
 
-<h3 style="font-size:26px;margin-bottom:18px;">🌐 Páginas web premium</h3>
+<div class="step reveal">
 
-<p style="line-height:1.9;color:#d0d0d0;">
+<div class="step-number">
 
-Diseñamos páginas modernas, rápidas y elegantes que transmiten confianza y convierten visitantes en clientes.
+01 · CONTACTO
+
+</div>
+
+<h3>
+
+Cuéntanos tu proyecto.
+
+</h3>
+
+<p>
+
+Explícanos qué quieres conseguir y comparte el material disponible. Analizaremos tus necesidades para ofrecer la mejor solución visual adaptada a tu negocio.
 
 </p>
 
 </div>
 
-<div style="padding:40px;border-radius:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);">
+<div class="step reveal">
 
-<h3 style="font-size:26px;margin-bottom:18px;">📸 Optimización de imágenes</h3>
+<div class="step-number">
 
-<p style="line-height:1.9;color:#d0d0d0;">
+02 · PLANIFICACIÓN
 
-Mejoramos iluminación, color y calidad para conseguir una imagen mucho más profesional y atractiva.
+</div>
+
+<h3>
+
+Diseñamos la estrategia visual.
+
+</h3>
+
+<p>
+
+Definimos el estilo, la estructura y la dirección creativa del proyecto para conseguir una presentación coherente, elegante y alineada con tu marca.
 
 </p>
 
 </div>
 
-<div style="padding:40px;border-radius:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);">
+<div class="step reveal">
 
-<h3 style="font-size:26px;margin-bottom:18px;">🚀 Estrategia visual</h3>
+<div class="step-number">
 
-<p style="line-height:1.9;color:#d0d0d0;">
+03 · PRODUCCIÓN
 
-Te ayudamos a construir una imagen coherente y premium para destacar frente a tu competencia.
+</div>
+
+<h3>
+
+Creamos el contenido.
+
+</h3>
+
+<p>
+
+Desarrollamos el vídeo o la página web cuidando cada detalle: composición, ritmo, animaciones, tipografía y experiencia visual para transmitir una imagen de máxima calidad.
+
+</p>
+
+</div>
+
+<div class="step reveal">
+
+<div class="step-number">
+
+04 · ENTREGA
+
+</div>
+
+<h3>
+
+Recibes un proyecto listo para destacar.
+
+</h3>
+
+<p>
+
+Tras una revisión final, entregamos el trabajo optimizado y preparado para publicarse en tu web, redes sociales o plataformas digitales.
 
 </p>
 
@@ -538,353 +2290,113 @@ Te ayudamos a construir una imagen coherente y premium para destacar frente a tu
 
 </section>
 
-<!-- =========================
-        PROYECTOS
-========================= -->
-
-<section id="proyectos" style="background:#050505;">
+<section id="precios">
 
 <div class="container">
 
-<div style="text-align:center;max-width:900px;margin:0 auto 90px;">
+<div class="section-intro reveal">
 
-<span style="display:inline-block;padding:10px 22px;border-radius:100px;background:rgba(200,169,106,.08);border:1px solid rgba(200,169,106,.18);color:#e3cb91;letter-spacing:2px;font-size:12px;text-transform:uppercase;">
-
-Algunos de nuestros proyectos
-
-</span>
-
-<h2 style="font-size:clamp(42px,5vw,66px);margin:28px 0;">
-
-Cada proyecto está diseñado para transmitir emociones.
-
-</h2>
-
-<p style="font-size:19px;color:#d0d0d0;line-height:1.9;max-width:780px;margin:auto;">
-
-Transformamos fotografías y vídeos en contenido visual capaz de aumentar el valor percibido y generar una primera impresión inolvidable.
-
-</p>
-
-</div>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:40px;">
-
-<!-- Proyecto 1 -->
-
-<div style="background:#101010;border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.08);">
-
-<iframe src="https://www.youtube.com/embed/8L5m2LAYRZo"
-style="width:100%;aspect-ratio:16/9;border:none;"
-allowfullscreen></iframe>
-
-<div style="padding:30px;">
-
-<h3 style="margin-bottom:16px;">🏡 Inmobiliario de lujo</h3>
-
-<p style="line-height:1.9;color:#d0d0d0;">
-
-Vídeos promocionales creados para viviendas de alto nivel que transmiten exclusividad, elegancia y ayudan a que cada propiedad destaque desde el primer segundo.
-
-</p>
-
-</div>
-
-</div>
-
-<!-- Proyecto 2 -->
-
-<div style="background:#101010;border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.08);">
-
-<iframe src="https://www.youtube.com/embed/7cFAfWe3hqI"
-style="width:100%;aspect-ratio:16/9;border:none;"
-allowfullscreen></iframe>
-
-<div style="padding:30px;">
-
-<h3 style="margin-bottom:16px;">🌿 Alojamientos rurales</h3>
-
-<p style="line-height:1.9;color:#d0d0d0;">
-
-Transformamos fotografías en vídeos que transmiten la experiencia de alojarse, despertando emociones y aumentando el valor percibido antes de realizar la reserva.
-
-</p>
-
-</div>
-
-</div>
-
-<!-- Proyecto 3 -->
-
-<div style="background:#101010;border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.08);">
-
-<iframe src="https://www.youtube.com/embed/uk4pyIlGCSE"
-style="width:100%;aspect-ratio:16/9;border:none;"
-allowfullscreen></iframe>
-
-<div style="padding:30px;">
-
-<h3 style="margin-bottom:16px;">🏨 Alojamientos turísticos</h3>
-
-<p style="line-height:1.9;color:#d0d0d0;">
-
-Creamos contenido visual que muestra la personalidad de cada alojamiento, generando confianza e inspirando a los viajeros antes incluso de reservar.
-
-</p>
-
-</div>
-
-</div>
-
-<!-- Proyecto 4 -->
-
-<div style="background:#101010;border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.08);">
-
-<iframe src="https://www.youtube.com/embed/XrVrc4fSvkg"
-style="width:100%;aspect-ratio:16/9;border:none;"
-allowfullscreen></iframe>
-
-<div style="padding:30px;">
-
-<h3 style="margin-bottom:16px;">🛍️ Marcas y productos</h3>
-
-<p style="line-height:1.9;color:#d0d0d0;">
-
-Contenido visual diseñado para reforzar la imagen de marca, captar la atención y transmitir profesionalidad en cualquier plataforma.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-        PROCESO
-========================= -->
-
-<section id="proceso" style="background:#0d0d0d;">
-
-<div class="container">
-
-<div style="text-align:center;max-width:900px;margin:0 auto 90px;">
-
-<span style="display:inline-block;padding:10px 22px;border-radius:100px;background:rgba(200,169,106,.08);border:1px solid rgba(200,169,106,.18);color:#e3cb91;letter-spacing:2px;font-size:12px;text-transform:uppercase;">
-
-Nuestro proceso
-
-</span>
-
-<h2 style="font-size:clamp(42px,5vw,66px);margin:28px 0;">
-
-Así trabajamos contigo
-
-</h2>
-
-<p style="font-size:19px;color:#d0d0d0;line-height:1.9;max-width:760px;margin:auto;">
-
-Un proceso sencillo, rápido y completamente online para conseguir un resultado profesional sin complicaciones.
-
-</p>
-
-</div>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:35px;">
-
-<div style="padding:40px;background:#121212;border-radius:30px;border:1px solid rgba(255,255,255,.08);">
-
-<div style="font-size:56px;color:#c8a96a;font-weight:700;margin-bottom:20px;">01</div>
-
-<h3 style="margin-bottom:18px;">Cuéntanos tu proyecto</h3>
-
-<p style="line-height:1.9;color:#d0d0d0;">
-
-Explícanos qué necesitas y envíanos las fotografías o vídeos disponibles.
-
-</p>
-
-</div>
-
-<div style="padding:40px;background:#121212;border-radius:30px;border:1px solid rgba(255,255,255,.08);">
-
-<div style="font-size:56px;color:#c8a96a;font-weight:700;margin-bottom:20px;">02</div>
-
-<h3 style="margin-bottom:18px;">Creamos tu propuesta</h3>
-
-<p style="line-height:1.9;color:#d0d0d0;">
-
-Diseñamos un vídeo o una página web con un estilo elegante y pensado para convertir.
-
-</p>
-
-</div>
-
-<div style="padding:40px;background:#121212;border-radius:30px;border:1px solid rgba(255,255,255,.08);">
-
-<div style="font-size:56px;color:#c8a96a;font-weight:700;margin-bottom:20px;">03</div>
-
-<h3 style="margin-bottom:18px;">Revisión contigo</h3>
-
-<p style="line-height:1.9;color:#d0d0d0;">
-
-Te mostramos una versión previa para realizar los ajustes necesarios antes de la entrega.
-
-</p>
-
-</div>
-
-<div style="padding:40px;background:#121212;border-radius:30px;border:1px solid rgba(255,255,255,.08);">
-
-<div style="font-size:56px;color:#c8a96a;font-weight:700;margin-bottom:20px;">04</div>
-
-<h3 style="margin-bottom:18px;">Entrega final</h3>
-
-<p style="line-height:1.9;color:#d0d0d0;">
-
-Recibes el proyecto listo para utilizar en tu web, redes sociales o campañas.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-        PRECIOS
-========================= -->
-
-<!-- =========================
-        PRECIOS
-========================= -->
-
-<section id="precios" style="background:#050505;">
-
-<div class="container">
-
-<div style="text-align:center;max-width:900px;margin:0 auto 90px;">
-
-<span style="display:inline-block;padding:10px 22px;border-radius:100px;background:rgba(200,169,106,.08);border:1px solid rgba(200,169,106,.18);color:#e3cb91;letter-spacing:2px;font-size:12px;text-transform:uppercase;">
+<span>
 
 PRECIOS
 
 </span>
 
-<h2 style="font-size:clamp(42px,5vw,66px);margin:28px 0;">
+<h2>
 
-Invierte en una imagen que marque la diferencia
+Servicios premium con una inversión accesible.
 
 </h2>
 
-<p style="font-size:19px;color:#d0d0d0;line-height:1.9;max-width:800px;margin:auto;">
+<p>
 
-Todos los proyectos incluyen asesoramiento personalizado y un acabado profesional adaptado a tu marca.
+Cada proyecto es único. Estos precios sirven como punto de partida y pueden adaptarse según las necesidades específicas de cada cliente.
 
 </p>
 
 </div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:35px;align-items:stretch;">
+<div class="pricing">
 
-<!-- BÁSICO -->
+<div class="price-card reveal">
 
-<div style="background:#101010;border:1px solid rgba(255,255,255,.08);border-radius:32px;padding:45px;">
+<small>
 
-<h3 style="font-size:28px;margin-bottom:15px;">
 Vídeo Promocional
+
+</small>
+
+<h3>
+
+Presentación profesional.
+
 </h3>
 
-<h2 style="font-size:58px;color:#c8a96a;margin-bottom:25px;">
-Desde 99€
-</h2>
+<div class="price">
 
-<p style="color:#d0d0d0;line-height:2;">
+99<span>€</span>
 
-✔ Vídeo promocional profesional<br>
-✔ Hasta 30 segundos<br>
-✔ Música con licencia<br>
-✔ Formato horizontal<br>
-✔ Optimizado para web y redes sociales<br>
-✔ Entrega en alta calidad
+</div>
+
+<p>
+
+Desde 99 €. Ideal para negocios que desean mejorar su imagen con un vídeo elegante y atractivo.
 
 </p>
 
 </div>
 
-<!-- PREMIUM -->
+<div class="price-card reveal">
 
-<div style="background:linear-gradient(180deg,#c8a96a,#e4ce98);color:#111;border-radius:34px;padding:55px;transform:scale(1.05);box-shadow:0 35px 90px rgba(200,169,106,.35);">
-
-<div style="display:inline-block;background:#111;color:#fff;padding:8px 18px;border-radius:100px;font-size:12px;font-weight:700;margin-bottom:22px;">
-
-MÁS CONTRATADO
-
-</div>
-
-<h3 style="font-size:30px;margin-bottom:15px;">
+<small>
 
 Vídeo Premium
 
+</small>
+
+<h3>
+
+Mayor impacto visual.
+
 </h3>
 
-<h2 style="font-size:66px;margin-bottom:25px;">
+<div class="price">
 
-Desde 149€
+149<span>€</span>
 
-</h2>
+</div>
 
-<p style="line-height:2;">
+<p>
 
-✔ Movimiento cinematográfico avanzado<br>
-✔ Mayor duración del vídeo<br>
-✔ Horizontal y vertical<br>
-✔ Optimización profesional de imágenes<br>
-✔ Música premium<br>
-✔ Más escenas y transiciones<br>
-✔ Miniatura personalizada<br>
-✔ Adaptado para redes sociales<br>
-✔ Entrega prioritaria<br>
-✔ Una revisión incluida
+Desde 149 €. Una propuesta con un acabado más cinematográfico y una experiencia visual superior.
 
 </p>
 
 </div>
 
-<!-- WEB -->
+<div class="price-card reveal">
 
-<div style="background:#101010;border:1px solid rgba(255,255,255,.08);border-radius:32px;padding:45px;">
-
-<h3 style="font-size:28px;margin-bottom:15px;">
+<small>
 
 Página Web Premium
 
+</small>
+
+<h3>
+
+Diseño web exclusivo.
+
 </h3>
 
-<h2 style="font-size:58px;color:#c8a96a;margin-bottom:25px;">
+<div class="price">
 
-Desde 299€
+299<span>€</span>
 
-</h2>
+</div>
 
-<p style="color:#d0d0d0;line-height:2;">
+<p>
 
-✔ Diseño totalmente personalizado<br>
-✔ Adaptada a móviles y tablets<br>
-✔ Botón de WhatsApp integrado<br>
-✔ Formulario de contacto<br>
-✔ Google Maps<br>
-✔ Optimización SEO inicial<br>
-✔ Animaciones premium<br>
-✔ Optimización de velocidad<br>
-✔ Preparada para futuras ampliaciones
+Desde 299 €. Una página web diseñada completamente desde cero para transmitir profesionalidad, diferenciar tu marca y convertir visitas en oportunidades reales.
 
 </p>
 
@@ -896,83 +2408,27 @@ Desde 299€
 
 </section>
 
-<!-- =========================
-        GARANTÍA
-========================= -->
-
-<section id="garantia" style="background:#0b0b0b;">
+<section id="garantia">
 
 <div class="container">
 
-<div style="max-width:1100px;margin:auto;background:linear-gradient(135deg,#111,#1a1a1a);border:1px solid rgba(255,255,255,.08);border-radius:35px;padding:70px;">
+<div class="guarantee reveal">
 
-<div style="text-align:center;">
+<span>
 
-<span style="display:inline-block;padding:10px 22px;border-radius:100px;background:rgba(200,169,106,.08);border:1px solid rgba(200,169,106,.18);color:#e3cb91;font-size:12px;letter-spacing:2px;text-transform:uppercase;">
-
-Garantía Kirels Visual
+GARANTÍA
 
 </span>
 
-<h2 style="font-size:clamp(42px,5vw,66px);margin:30px 0;">
+<h2>
 
-Trabajamos para que contrates con total tranquilidad.
-
-</h2>
-
-<p style="font-size:19px;line-height:1.9;color:#d0d0d0;max-width:850px;margin:auto;">
-
-Solo solicitamos un pequeño anticipo para comenzar. Antes de entregar el proyecto podrás revisarlo y solicitar los ajustes necesarios para asegurarnos de que el resultado sea exactamente el esperado.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-        SOBRE NOSOTROS
-========================= -->
-
-<section id="sobre" style="background:#050505;">
-
-<div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;">
-
-<div>
-
-<img src="710F23B8-FF0B-4339-B38B-EFC51A1F6B14.png"
-
-style="width:100%;border-radius:34px;box-shadow:0 40px 90px rgba(0,0,0,.45);">
-
-</div>
-
-<div>
-
-<span style="display:inline-block;padding:10px 22px;border-radius:100px;background:rgba(200,169,106,.08);border:1px solid rgba(200,169,106,.18);color:#e3cb91;font-size:12px;letter-spacing:2px;text-transform:uppercase;">
-
-Sobre Kirels Visual
-
-</span>
-
-<h2 style="font-size:clamp(42px,5vw,64px);margin:28px 0;">
-
-Creamos la imagen que hace destacar a tu negocio.
+Cada proyecto se desarrolla con el mismo nivel de detalle que esperarías de una marca premium.
 
 </h2>
 
-<p style="font-size:18px;line-height:1.9;color:#d0d0d0;margin-bottom:24px;">
+<p>
 
-En Kirels Visual combinamos diseño, inteligencia artificial, edición audiovisual y desarrollo web para transformar fotografías y vídeos en herramientas capaces de captar la atención desde el primer segundo.
-
-</p>
-
-<p style="font-size:18px;line-height:1.9;color:#d0d0d0;">
-
-Nuestro objetivo no es únicamente crear una web bonita o un vídeo atractivo. Queremos ayudarte a transmitir una imagen premium, generar confianza y aumentar el valor percibido de tu marca.
+No utilizamos plantillas prediseñadas ni soluciones genéricas. Cada vídeo y cada página web se crean de forma personalizada para reflejar la identidad de tu negocio, transmitir confianza y ofrecer una imagen cuidada en cada detalle.
 
 </p>
 
@@ -982,57 +2438,106 @@ Nuestro objetivo no es únicamente crear una web bonita o un vídeo atractivo. Q
 
 </section>
 
-<!-- =========================
-        PREGUNTAS FRECUENTES
-========================= -->
-
-<section id="faq" style="background:#0b0b0b;">
+<section id="nosotros">
 
 <div class="container">
 
-<div style="text-align:center;max-width:900px;margin:0 auto 90px;">
+<div class="section-intro reveal">
 
-<span style="display:inline-block;padding:10px 22px;border-radius:100px;background:rgba(200,169,106,.08);border:1px solid rgba(200,169,106,.18);color:#e3cb91;font-size:12px;letter-spacing:2px;text-transform:uppercase;">
+<span>
 
-Preguntas frecuentes
+SOBRE NOSOTROS
 
 </span>
 
-<h2 style="font-size:clamp(42px,5vw,66px);margin:28px 0;">
+<h2>
 
-Resolvemos tus dudas
+Diseño visual con una filosofía clara: menos ruido, más impacto.
 
 </h2>
 
-<p style="font-size:19px;color:#d0d0d0;line-height:1.9;">
+<p>
 
-Todo el proceso se realiza de forma sencilla, rápida y completamente online.
+Creemos que la elegancia nace de la simplicidad. Por eso desarrollamos proyectos con una estética limpia, moderna y atemporal, donde cada elemento tiene un propósito y cada detalle está pensado para mejorar la percepción de tu marca.
 
 </p>
 
 </div>
 
-<div style="max-width:900px;margin:auto;display:grid;gap:20px;">
+<div class="about-image reveal">
 
-<div style="background:#121212;border-radius:24px;padding:30px;border:1px solid rgba(255,255,255,.08);">
-<h3>¿Necesito fotografías profesionales?</h3>
-<p style="margin-top:15px;color:#d0d0d0;line-height:1.8;">
-No. Podemos trabajar con el material que ya tengas y mejorarlo para conseguir un resultado mucho más atractivo.
-</p>
+    <!-- Sustituye la ruta por tu fotografía -->
+    <img src="images/sobre-nosotros.jpg" alt="Juan Carlos Saiz - Kirels Visual">
+
+    <div class="about-overlay">
+
+        <span class="about-small">
+            KIRELS VISUAL
+        </span>
+
+        <h2>
+
+            No vendemos vídeos.<br>
+            Creamos experiencias visuales que hacen que una marca se perciba diferente desde el primer segundo.
+
+        </h2>
+
+        <p>
+
+            Cada proyecto nace desde cero para transmitir elegancia, aumentar el valor percibido y ayudar a que nuestros clientes destaquen con una imagen moderna, exclusiva y preparada para generar resultados.
+
+        </p>
+
+    </div>
+
 </div>
 
-<div style="background:#121212;border-radius:24px;padding:30px;border:1px solid rgba(255,255,255,.08);">
-<h3>¿Cuánto tarda un proyecto?</h3>
-<p style="margin-top:15px;color:#d0d0d0;line-height:1.8;">
-La mayoría de trabajos se entregan entre 3 y 5 días laborables.
+<div class="stat reveal">
+
+<h3>
+
+100%
+
+</h3>
+
+<p>
+
+Online
+
 </p>
+
 </div>
 
-<div style="background:#121212;border-radius:24px;padding:30px;border:1px solid rgba(255,255,255,.08);">
-<h3>¿Trabajáis en toda España?</h3>
-<p style="margin-top:15px;color:#d0d0d0;line-height:1.8;">
-Sí. Todo nuestro servicio es online, por lo que podemos colaborar con clientes de cualquier lugar.
+<div class="stat reveal">
+
+<h3>
+
+3–5
+
+</h3>
+
+<p>
+
+Días de entrega habituales
+
 </p>
+
+</div>
+
+<div class="stat reveal">
+
+<h3>
+
+Premium
+
+</h3>
+
+<p>
+
+Calidad en cada proyecto
+
+</p>
+
 </div>
 
 </div>
@@ -1041,65 +2546,121 @@ Sí. Todo nuestro servicio es online, por lo que podemos colaborar con clientes 
 
 </section>
 
-<!-- =========================
-        CONTACTO
-========================= -->
-
-<section id="contacto" style="background:#050505;">
+<section id="faq">
 
 <div class="container">
 
-<div style="padding:90px 60px;background:linear-gradient(135deg,#111,#1b1b1b);border-radius:40px;border:1px solid rgba(255,255,255,.08);text-align:center;">
+<div class="section-intro reveal">
 
-<h2 style="font-size:clamp(48px,6vw,74px);margin-bottom:30px;">
+<span>
 
-¿Preparado para destacar?
+PREGUNTAS FRECUENTES
+
+</span>
+
+<h2>
+
+Resolvemos las dudas más habituales antes de empezar.
 
 </h2>
 
-<p style="font-size:20px;color:#d0d0d0;line-height:1.9;max-width:760px;margin:auto auto 45px;">
+<p>
 
-Cuéntanos tu proyecto y prepararemos una propuesta personalizada para ayudarte a transmitir una imagen mucho más profesional.
-
-</p>
-
-<div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
-
-<a href="https://wa.me/34677994250"
-style="padding:18px 40px;border-radius:100px;background:linear-gradient(135deg,#c8a96a,#e3cb91);color:#111;font-weight:700;text-decoration:none;">
-
-WhatsApp
-
-</a>
-
-<a href="mailto:info@kirelsvisual.es"
-style="padding:18px 40px;border-radius:100px;border:1px solid rgba(255,255,255,.12);color:white;text-decoration:none;">
-
-Correo electrónico
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer style="padding:70px 0;background:#030303;text-align:center;">
-
-<img src="IMG_7790.jpeg" style="height:70px;margin:auto auto 25px;">
-
-<p style="color:#9d9d9d;">
-
-© 2026 Kirels Visual · Todos los derechos reservados.
+Si tienes cualquier otra consulta, estaremos encantados de ayudarte personalmente.
 
 </p>
 
-</footer>
+</div>
 
-</body>
+<div class="faq">
 
-</html>
+<div class="faq-item">
+
+<div class="faq-question">
+
+<h3>
+
+¿Necesito disponer de vídeos profesionales?
+
+</h3>
+
+<span>
+
++
+
+</span>
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+No. En muchos proyectos trabajamos a partir de fotografías proporcionadas por el cliente, transformándolas en un vídeo promocional con un acabado visual elegante y atractivo.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<h3>
+
+¿Cuánto tiempo tarda un proyecto?
+
+</h3>
+
+<span>
+
++
+
+</span>
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+La mayoría de los trabajos se entregan entre tres y cinco días laborables, aunque el plazo puede variar en función de la complejidad del proyecto.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<h3>
+
+¿La página web será completamente personalizada?
+
+</h3>
+
+<span>
+
++
+
+</span>
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+Sí. Cada web se desarrolla desde cero, adaptando el diseño a la identidad visual del cliente y evitando el uso de plantillas genéricas.
+
+</p>
+
+</div>
+
+</div>
 
