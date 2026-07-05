@@ -194,19 +194,55 @@ justify-content:space-between;
 
 .logo{
 
-font-size:29px;
+display:flex;
 
-letter-spacing:8px;
+align-items:center;
 
-font-weight:700;
-
-text-transform:uppercase;
+gap:16px;
 
 }
 
-.logo span{
+.logo img{
+
+width:48px;
+
+height:48px;
+
+object-fit:contain;
+
+}
+
+.logo-text{
+
+display:flex;
+
+flex-direction:column;
+
+line-height:1;
+
+}
+
+.logo-text h2{
+
+font-size:20px;
+
+letter-spacing:3px;
+
+font-weight:700;
+
+margin:0;
+
+}
+
+.logo-text span{
+
+font-size:14px;
+
+letter-spacing:6px;
 
 color:var(--gold);
+
+margin-top:6px;
 
 }
 
@@ -239,7 +275,7 @@ color:var(--gold);
 
 }
 
-..menu-toggle{
+.menu-toggle{
 
 width:68px;
 height:68px;
@@ -1870,9 +1906,19 @@ color:var(--gold);
 
 <div class="navbar">
 
-<a href="#" class="logo">
-KIRELS <span>VISUAL</span>
-</a>
+<div class="logo">
+
+<img src="IMG_7790.jpeg" alt="Kirels Visual">
+
+<div class="logo-text">
+
+<h2>KIRELS</h2>
+
+<span>VISUAL</span>
+
+</div>
+
+</div>
 
 <div class="menu">
 
