@@ -514,7 +514,7 @@ box-shadow:0 30px 80px rgba(0,0,0,.45);
 
 }
 
-.hero-video iframe{
+.hero-video video{
 
 position:absolute;
 top:0;
@@ -523,7 +523,9 @@ left:0;
 width:100%;
 height:100%;
 
-border:0;
+object-fit:cover;
+
+display:block;
 
 }
 
@@ -2041,12 +2043,18 @@ Diseñamos vídeos promocionales y páginas web premium para alojamientos, inmob
 
 <div class="hero-video">
 
-<iframe
-src="https://www.youtube.com/embed/8L5m2LAYRZo?autoplay=1&mute=1&loop=1&playlist=8L5m2LAYRZo&controls=0&playsinline=1&rel=0&modestbranding=1"
-title="Kirels Visual"
-allow="autoplay; encrypted-media"
-allowfullscreen>
-</iframe>
+<video
+autoplay
+muted
+loop
+playsinline
+preload="auto">
+
+<source src="copy_35ED9CE8-EAE2-42AD-88E5-BF4BAC7948A7.mov" type="video/quicktime">
+
+Tu navegador no soporta vídeo HTML5.
+
+</video>
 
 </div>
 
