@@ -427,8 +427,11 @@ overflow:hidden;
 
 width:100%;
 max-width:1200px;
-
 margin:70px auto;
+
+position:relative;
+padding-bottom:56.25%;
+height:0;
 
 overflow:hidden;
 
@@ -442,23 +445,14 @@ box-shadow:0 30px 80px rgba(0,0,0,.45);
 
 .hero-video iframe{
 
+position:absolute;
+top:0;
+left:0;
+
 width:100%;
-
-height:675px;
-
-display:block;
+height:100%;
 
 border:0;
-
-}
-
-@media(max-width:768px){
-
-.hero-video iframe{
-
-height:220px;
-
-}
 
 }
 
@@ -1977,10 +1971,9 @@ Diseñamos vídeos promocionales y páginas web premium para alojamientos, inmob
 <div class="hero-video">
 
 <iframe
-src="https://www.youtube.com/embed/8L5m2LAYRZo"
+src="https://www.youtube.com/embed/8L5m2LAYRZo?autoplay=1&mute=1&loop=1&playlist=8L5m2LAYRZo&controls=0&playsinline=1&rel=0&modestbranding=1"
 title="Kirels Visual"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allow="autoplay; encrypted-media"
 allowfullscreen>
 </iframe>
 
