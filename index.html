@@ -425,47 +425,40 @@ overflow:hidden;
 
 .hero-video{
 
-position:relative;
-
 width:100%;
+max-width:1200px;
 
-max-width:1400px;
-
-margin:60px auto;
-
-border-radius:30px;
+margin:70px auto;
 
 overflow:hidden;
 
+border-radius:30px;
+
 background:#000;
 
-box-shadow:0 25px 70px rgba(0,0,0,.45);
-
-}
-
-.hero-video::before{
-
-content:"";
-
-display:block;
-
-padding-top:56.25%;
+box-shadow:0 30px 80px rgba(0,0,0,.45);
 
 }
 
 .hero-video iframe{
 
-position:absolute;
-
-top:0;
-
-left:0;
-
 width:100%;
 
-height:100%;
+height:675px;
+
+display:block;
 
 border:0;
+
+}
+
+@media(max-width:768px){
+
+.hero-video iframe{
+
+height:220px;
+
+}
 
 }
 
@@ -1295,7 +1288,7 @@ object-fit:cover;
 
 display:block;
 
-filter:brightness(.45);
+filter:brightness(.95);
 
 transition:1.2s;
 
@@ -1308,18 +1301,8 @@ transform:scale(1.05);
 }
 
 .about-overlay{
+
 display:none;
-}
-
-position:absolute;
-
-left:80px;
-
-bottom:80px;
-
-max-width:760px;
-
-z-index:10;
 
 }
 
@@ -1994,9 +1977,10 @@ Diseñamos vídeos promocionales y páginas web premium para alojamientos, inmob
 <div class="hero-video">
 
 <iframe
-src="https://www.youtube.com/embed/8L5m2LAYRZo?autoplay=1&mute=1&controls=0&loop=1&playlist=8L5m2LAYRZo&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3"
+src="https://www.youtube.com/embed/8L5m2LAYRZo?autoplay=1&mute=1&playsinline=1&controls=1&rel=0"
 title="Kirels Visual"
-allow="autoplay; encrypted-media"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen>
 </iframe>
 
@@ -2627,6 +2611,8 @@ Creemos que la elegancia nace de la simplicidad. Por eso desarrollamos proyectos
 
 </div>
 
+<div class="stats">
+
 <div class="stat reveal">
 
 <h3>
@@ -2672,6 +2658,8 @@ Premium
 Calidad en cada proyecto
 
 </p>
+
+</div>
 
 </div>
 
