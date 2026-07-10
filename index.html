@@ -719,12 +719,6 @@ WHY IT MATTERS
 
         </div>
 
-        <button class="close-button" id="closeButton">
-
-            ✕
-
-        </button>
-
     </div>
 
     <a href="#">Work</a>
@@ -953,21 +947,28 @@ WHY IT MATTERS
 <script>
 
 const menuButton = document.getElementById("menuButton");
+const closeButton = document.getElementById("closeButton");
 const mobileMenu = document.getElementById("mobileMenu");
 
 menuButton.addEventListener("click", () => {
 
-    mobileMenu.classList.toggle("active");
+    mobileMenu.classList.add("active");
 
-    if (mobileMenu.classList.contains("active")) {
+});
 
-        menuButton.innerHTML = "✕";
+closeButton.addEventListener("click", () => {
 
-    } else {
+    mobileMenu.classList.remove("active");
 
-        menuButton.innerHTML = "☰";
+});
 
-    }
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mobileMenu.classList.remove("active");
+
+    });
 
 });
 
