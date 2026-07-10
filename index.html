@@ -531,7 +531,7 @@
 
     max-width:700px;
 
-    margin:120px auto;
+    margin:70px auto;
 
     aspect-ratio:1/1;
 
@@ -553,9 +553,79 @@
 
 }
 
-</style>
+/* ===========================
+   WHY IT MATTERS
+=========================== */
 
-    </style>
+.why-matters{
+
+    background:#F8F6F2;
+
+    color:#1B1B1B;
+
+    padding:80px 8% 140px;
+
+}
+
+.why-title{
+
+    margin-bottom:70px;
+
+}
+
+.why-title h2{
+
+    font-size:15px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#888;
+
+    font-weight:600;
+
+}
+
+.benefit{
+
+    border-top:1px solid #E8E4DD;
+
+    padding:45px 0;
+
+}
+
+.benefit:last-child{
+
+    border-bottom:1px solid #E8E4DD;
+
+}
+
+.benefit h3{
+
+    font-size:34px;
+
+    font-weight:300;
+
+    margin-bottom:16px;
+
+    color:#1B1B1B;
+
+}
+
+.benefit p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#666;
+
+    max-width:650px;
+
+}
+
+</style>
 
 </head>
 
@@ -612,24 +682,6 @@
     <a href="#">Contact</a>
 
     <div class="mobile-language">
-
-        EN | ES
-
-    </div>
-
-</div>
-
-<div class="mobile-menu" id="mobileMenu">
-
-    <a href="#">Work</a>
-
-    <a href="#">Industries</a>
-
-    <a href="#">Process</a>
-
-    <a href="#">Contact</a>
-
-    <div class="language-switch">
 
         EN | ES
 
@@ -701,7 +753,7 @@
 
         </p>
 
-        <a href="javascript:void(0)" class="learn-more">
+        <a href="#selected-projects" class="learn-more">
 
             Learn More →
 
@@ -794,6 +846,19 @@
     </div>
 
 </section>
+
+<script>
+
+const menuButton = document.getElementById("menuButton");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuButton.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("active");
+
+});
+
+</script>
 
 </body>
 
