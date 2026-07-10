@@ -145,6 +145,38 @@ rgba(0,0,0,.12)
 
 }
 
+.close-button{
+
+    display:none;
+
+    position:absolute;
+
+    top:26px;
+
+    right:26px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+    z-index:300;
+
+}
+
+.close-button:hover{
+
+    transform:rotate(90deg);
+
+}
+
 .mobile-menu{
 
     position:fixed;
@@ -658,6 +690,10 @@ WHY IT MATTERS
         ☰
 
     </button>
+    
+    <button class="close-button" id="closeButton">
+    ✕
+</button>
 
     <ul class="desktop-menu">
 
