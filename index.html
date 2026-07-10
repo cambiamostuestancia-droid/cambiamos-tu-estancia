@@ -104,9 +104,35 @@
 
         }
 
-        nav ul{
+        .desktop-menu{
 
-            display:flex;
+    display:flex;
+
+    gap:45px;
+
+    list-style:none;
+
+    font-size:15px;
+
+    align-items:center;
+
+}
+
+.menu-button{
+
+    display:none;
+
+    font-size:32px;
+
+    color:white;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+}
 
             gap:45px;
 
@@ -251,6 +277,36 @@
             background:white;
 
         }
+        
+        @media (max-width:900px){
+
+    .desktop-menu{
+
+        display:none;
+
+    }
+
+    .menu-button{
+
+        display:block;
+
+    }
+
+    nav{
+
+        padding:30px;
+
+    }
+
+    .logo{
+
+        font-size:14px;
+
+        letter-spacing:3px;
+
+    }
+
+}
 
     </style>
 
@@ -268,29 +324,35 @@
 
     <div class="overlay"></div>
 
-    <nav>
+   <nav>
 
-        <div class="logo">
+    <div class="logo">
 
-            KIRELS VISUAL
+        KIRELS VISUAL
 
-        </div>
+    </div>
 
-        <ul>
+    <button class="menu-button">
 
-            <li><a href="#">Work</a></li>
+        ☰
 
-            <li><a href="#">Philosophy</a></li>
+    </button>
 
-            <li><a href="#">Process</a></li>
+    <ul class="desktop-menu">
 
-            <li><a href="#">Contact</a></li>
+        <li><a href="#">Work</a></li>
 
-            <li>EN | ES</li>
+        <li><a href="#">Philosophy</a></li>
 
-        </ul>
+        <li><a href="#">Process</a></li>
 
-    </nav>
+        <li><a href="#">Contact</a></li>
+
+        <li>EN | ES</li>
+
+    </ul>
+
+</nav>
 
     <div class="hero-content">
 
