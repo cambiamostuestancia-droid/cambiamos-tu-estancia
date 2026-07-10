@@ -194,7 +194,7 @@
 
         h1{
 
-           font-size:clamp(52px,6vw,88px);
+           font-size:clamp(48px,5.8vw,82px);
 
            line-height:1.02;
 
@@ -206,11 +206,11 @@
 
         .hero-content p{
 
-            font-size:22px;
+            font-size:20px;
 
             line-height:1.8;
 
-            max-width:580px;
+            max-width:430px;
 
             color:rgba(255,255,255,.85);
 
@@ -236,11 +236,19 @@
 
         }
 
-        .hero-button:hover{
+        .hero-button{
 
-            transform:translateX(6px);
+    transition:.4s ease;
 
-        }
+}
+
+.hero-button:hover{
+
+    letter-spacing:.4px;
+
+    transform:translateX(8px);
+
+}
 
         .scroll{
 
@@ -366,8 +374,7 @@
 
         <p>
 
-            Crafting cinematic visual experiences for real estate, hospitality and premium brands.
-
+            Cinematic visual experiences crafted to elevate premium spaces.
         </p>
 
         <a href="#" class="hero-button">
