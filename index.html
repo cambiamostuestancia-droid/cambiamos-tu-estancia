@@ -135,11 +135,75 @@
 
     line-height:1;
 
+    z-index:200;
+
 }
 
 .menu-button:hover{
 
-    transform:rotate(90deg) scale(1.05);
+    transform:rotate(90deg);
+
+}
+
+.mobile-menu{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.82);
+
+    backdrop-filter:blur(18px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:34px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.45s ease;
+
+    z-index:150;
+
+}
+
+.mobile-menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:34px;
+
+    font-weight:300;
+
+}
+
+.mobile-language{
+
+    margin-top:30px;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+    opacity:.75;
+
+}
+
+.mobile-menu.active{
+
+    opacity:1;
+
+    visibility:visible;
 
 }
 
@@ -415,7 +479,7 @@
 
     </div>
 
-    <button class="menu-button">
+    <button class="menu-button" id="menuButton">
 
         ☰
 
@@ -436,6 +500,42 @@
     </ul>
 
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="#">Work</a>
+
+    <a href="#">Industries</a>
+
+    <a href="#">Process</a>
+
+    <a href="#">Contact</a>
+
+    <div class="mobile-language">
+
+        EN | ES
+
+    </div>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="#">Work</a>
+
+    <a href="#">Industries</a>
+
+    <a href="#">Process</a>
+
+    <a href="#">Contact</a>
+
+    <div class="language-switch">
+
+        EN | ES
+
+    </div>
+
+</div>
 
     <div class="hero-content">
 
