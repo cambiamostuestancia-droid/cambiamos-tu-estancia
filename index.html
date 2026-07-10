@@ -147,13 +147,7 @@ rgba(0,0,0,.12)
 
 .close-button{
 
-    display:none;
-
-    position:absolute;
-
-    top:26px;
-
-    right:26px;
+    display:block;
 
     background:none;
 
@@ -167,13 +161,41 @@ rgba(0,0,0,.12)
 
     transition:.35s ease;
 
-    z-index:300;
-
 }
 
 .close-button:hover{
 
     transform:rotate(90deg);
+
+}
+
+.mobile-top{
+
+    position:absolute;
+
+    top:28px;
+
+    left:28px;
+
+    right:28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.mobile-logo{
+
+    font-size:14px;
+
+    letter-spacing:5px;
+
+    font-weight:600;
+
+    color:white;
 
 }
 
@@ -713,6 +735,22 @@ WHY IT MATTERS
 
 <div class="mobile-menu" id="mobileMenu">
 
+    <div class="mobile-top">
+
+        <div class="mobile-logo">
+
+            KIRELS VISUAL
+
+        </div>
+
+        <button class="close-button" id="closeButton">
+
+            ✕
+
+        </button>
+
+    </div>
+
     <a href="#">Work</a>
 
     <a href="#">Industries</a>
@@ -939,11 +977,26 @@ WHY IT MATTERS
 <script>
 
 const menuButton = document.getElementById("menuButton");
+const closeButton = document.getElementById("closeButton");
 const mobileMenu = document.getElementById("mobileMenu");
 
 menuButton.addEventListener("click", () => {
 
-    mobileMenu.classList.toggle("active");
+    mobileMenu.classList.add("active");
+
+    menuButton.style.display = "none";
+
+    closeButton.style.display = "block";
+
+});
+
+closeButton.addEventListener("click", () => {
+
+    mobileMenu.classList.remove("active");
+
+    closeButton.style.display = "none";
+
+    menuButton.style.display = "block";
 
 });
 
