@@ -235,9 +235,9 @@ rgba(0,0,0,.12)
 
     visibility:visible;
 
-    background:rgba(0,0,0,.55);
+    background:rgba(0,0,0,.35);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(10px);
 
 }
 
@@ -685,9 +685,25 @@ WHY IT MATTERS
 
     <button class="menu-button" id="menuButton">
 
-        ☰
+    ☰
+
+</button>
+
+<div class="mobile-top">
+
+    <div class="mobile-logo">
+
+        KIRELS VISUAL
+
+    </div>
+
+    <button class="close-button" id="closeButton">
+
+        ✕
 
     </button>
+
+</div>
     
     <button class="close-button" id="closeButton">
     ✕
@@ -950,25 +966,25 @@ const menuButton = document.getElementById("menuButton");
 const closeButton = document.getElementById("closeButton");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuButton.addEventListener("click", () => {
+menuButton.onclick = () => {
 
     mobileMenu.classList.add("active");
 
-});
+};
 
-closeButton.addEventListener("click", () => {
+closeButton.onclick = () => {
 
     mobileMenu.classList.remove("active");
 
-});
+};
 
 document.querySelectorAll(".mobile-menu a").forEach(link => {
 
-    link.addEventListener("click", () => {
+    link.onclick = () => {
 
         mobileMenu.classList.remove("active");
 
-    });
+    };
 
 });
 
