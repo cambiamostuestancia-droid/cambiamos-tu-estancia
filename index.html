@@ -121,7 +121,7 @@
 
     display:none;
 
-    font-size:36px;
+    font-size:38px;
 
     color:white;
 
@@ -131,13 +131,15 @@
 
     cursor:pointer;
 
-    transition:0.4s ease;
+    transition:.45s ease;
+
+    line-height:1;
 
 }
 
 .menu-button:hover{
 
-    transform:rotate(90deg);
+    transform:rotate(90deg) scale(1.05);
 
 }
 
@@ -259,39 +261,45 @@
 
         .scroll{
 
-            position:absolute;
+    position:absolute;
 
-            bottom:45px;
+    bottom:40px;
 
-            left:50%;
+    left:50%;
 
-            transform:translateX(-50%);
+    transform:translateX(-50%);
 
-            z-index:10;
+    display:flex;
 
-            display:flex;
+    flex-direction:column;
 
-            flex-direction:column;
+    align-items:center;
 
-            align-items:center;
+    gap:8px;
 
-            gap:10px;
+    z-index:20;
 
-            font-size:13px;
+}
 
-            letter-spacing:2px;
+.scroll span{
 
-        }
+    font-size:13px;
 
-        .line{
+    letter-spacing:2px;
 
-            width:1px;
+    opacity:.85;
 
-            height:45px;
+}
 
-            background:white;
+.arrow{
 
-        }
+    font-size:22px;
+
+    line-height:1;
+
+    animation:bounce 2.5s infinite;
+
+}
         
         @media (max-width:900px){
 
@@ -305,23 +313,83 @@
 
         display:block;
 
+        font-size:38px;
+
     }
 
     nav{
 
-        padding:30px;
+        padding:26px 26px 0 26px;
 
     }
 
     .logo{
 
-        font-size:14px;
+        font-size:13px;
 
-        letter-spacing:3px;
+        letter-spacing:5px;
 
     }
 
 }
+
+@media (max-width:900px){
+
+    .desktop-menu{
+
+        display:none;
+
+    }
+
+    .menu-button{
+
+        display:block;
+
+        font-size:38px;
+
+    }
+
+    nav{
+
+        padding:26px 26px 0 26px;
+
+    }
+
+    .logo{
+
+        font-size:13px;
+
+        letter-spacing:5px;
+
+    }
+
+}
+
+/* Scroll Animation */
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+</style>
 
     </style>
 
@@ -386,7 +454,7 @@
 
         <a href="#" class="hero-button">
 
-            View Our Work →
+            Explore Our Work →
 
         </a>
 
@@ -394,11 +462,11 @@
 
     <div class="scroll">
 
-        <span>SCROLL</span>
+    <div class="arrow">↓</div>
 
-        <div class="line"></div>
+    <span>Scroll</span>
 
-    </div>
+</div>
 
 </section>
 
