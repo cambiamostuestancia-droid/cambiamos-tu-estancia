@@ -145,30 +145,6 @@ rgba(0,0,0,.12)
 
 }
 
-.close-button{
-
-    display:block;
-
-    background:none;
-
-    border:none;
-
-    color:white;
-
-    font-size:34px;
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
-}
-
-.close-button:hover{
-
-    transform:rotate(90deg);
-
-}
-
 .mobile-top{
 
     position:absolute;
@@ -977,26 +953,21 @@ WHY IT MATTERS
 <script>
 
 const menuButton = document.getElementById("menuButton");
-const closeButton = document.getElementById("closeButton");
 const mobileMenu = document.getElementById("mobileMenu");
 
 menuButton.addEventListener("click", () => {
 
-    mobileMenu.classList.add("active");
+    mobileMenu.classList.toggle("active");
 
-    menuButton.style.display = "none";
+    if (mobileMenu.classList.contains("active")) {
 
-    closeButton.style.display = "block";
+        menuButton.innerHTML = "✕";
 
-});
+    } else {
 
-closeButton.addEventListener("click", () => {
+        menuButton.innerHTML = "☰";
 
-    mobileMenu.classList.remove("active");
-
-    closeButton.style.display = "none";
-
-    menuButton.style.display = "block";
+    }
 
 });
 
