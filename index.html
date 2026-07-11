@@ -235,9 +235,9 @@ rgba(0,0,0,.12)
 
     visibility:visible;
 
-    background:rgba(0,0,0,.35);
+    background:rgba(0,0,0,.55);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(18px);
 
 }
 
@@ -685,25 +685,9 @@ WHY IT MATTERS
 
     <button class="menu-button" id="menuButton">
 
-    ☰
-
-</button>
-
-<div class="mobile-top">
-
-    <div class="mobile-logo">
-
-        KIRELS VISUAL
-
-    </div>
-
-    <button class="close-button" id="closeButton">
-
-        ✕
+        ☰
 
     </button>
-
-</div>
     
     <button class="close-button" id="closeButton">
     ✕
@@ -734,6 +718,12 @@ WHY IT MATTERS
             KIRELS VISUAL
 
         </div>
+
+        <button class="close-button" id="closeButton">
+
+            ✕
+
+        </button>
 
     </div>
 
@@ -963,28 +953,21 @@ WHY IT MATTERS
 <script>
 
 const menuButton = document.getElementById("menuButton");
-const closeButton = document.getElementById("closeButton");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuButton.onclick = () => {
+menuButton.addEventListener("click", () => {
 
-    mobileMenu.classList.add("active");
+    mobileMenu.classList.toggle("active");
 
-};
+    if (mobileMenu.classList.contains("active")) {
 
-closeButton.onclick = () => {
+        menuButton.innerHTML = "✕";
 
-    mobileMenu.classList.remove("active");
+    } else {
 
-};
+        menuButton.innerHTML = "☰";
 
-document.querySelectorAll(".mobile-menu a").forEach(link => {
-
-    link.onclick = () => {
-
-        mobileMenu.classList.remove("active");
-
-    };
+    }
 
 });
 
@@ -993,4 +976,3 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
 </body>
 
 </html>
-
