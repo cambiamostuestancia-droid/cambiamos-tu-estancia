@@ -659,6 +659,450 @@ WHY IT MATTERS
 
 }
 
+/*===========================
+FEATURED PROJECTS
+===========================*/
+
+.projects{
+
+    background:#F8F6F2;
+
+    color:#1B1B1B;
+
+    padding:120px 8%;
+
+}
+
+.project{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+    padding:90px 0;
+
+    border-top:1px solid #E8E4DD;
+
+}
+
+.project:last-child{
+
+    border-bottom:1px solid #E8E4DD;
+
+}
+
+.project-info{
+
+    flex:1;
+
+}
+
+.project-info span{
+
+    display:block;
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    color:#9B948A;
+
+    margin-bottom:18px;
+
+}
+
+.project-info h2{
+
+    font-size:clamp(34px,5vw,60px);
+
+    font-weight:300;
+
+    margin-bottom:18px;
+
+    color:#1B1B1B;
+
+}
+
+.project-info p{
+
+    font-size:20px;
+
+    color:#777;
+
+}
+
+.project video{
+
+    width:48%;
+
+    border-radius:12px;
+
+    display:block;
+
+}
+
+/*===========================
+INDUSTRIES
+===========================*/
+
+.industries{
+
+    background:#fff;
+
+    color:#1B1B1B;
+
+    padding:120px 8%;
+
+}
+
+.industry{
+
+    padding:55px 0;
+
+    border-top:1px solid #ECE8E2;
+
+}
+
+.industry:last-child{
+
+    border-bottom:1px solid #ECE8E2;
+
+}
+
+.industry h2{
+
+    font-size:44px;
+
+    font-weight:300;
+
+    margin-bottom:18px;
+
+}
+
+.industry p{
+
+    font-size:21px;
+
+    color:#666;
+
+    max-width:700px;
+
+}
+
+/*===========================
+PROCESS
+===========================*/
+
+.process{
+
+    background:#F8F6F2;
+
+    color:#1B1B1B;
+
+    padding:120px 8%;
+
+}
+
+.step{
+
+    padding:55px 0;
+
+    border-top:1px solid #E8E4DD;
+
+}
+
+.step:last-child{
+
+    border-bottom:1px solid #E8E4DD;
+
+}
+
+.step span{
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    color:#A79D91;
+
+}
+
+.step h3{
+
+    font-size:42px;
+
+    font-weight:300;
+
+    margin:18px 0;
+
+}
+
+.step p{
+
+    font-size:20px;
+
+    color:#666;
+
+    max-width:650px;
+
+}
+
+/*===========================
+WHY KIRELS
+===========================*/
+
+.why-kirels{
+
+    background:#ffffff;
+
+    color:#1B1B1B;
+
+    padding:120px 8%;
+
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:50px;
+
+    margin-top:80px;
+
+}
+
+.why-card{
+
+    padding:45px;
+
+    border:1px solid #E8E4DD;
+
+    border-radius:12px;
+
+    transition:.35s ease;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.why-card span{
+
+    display:block;
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    color:#A79D91;
+
+    margin-bottom:18px;
+
+}
+
+.why-card h3{
+
+    font-size:32px;
+
+    font-weight:300;
+
+    margin-bottom:18px;
+
+    color:#1B1B1B;
+
+}
+
+.why-card p{
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+/*===========================
+CONTACT
+===========================*/
+
+.contact{
+
+    background:#1B1B1B;
+
+    color:white;
+
+    text-align:center;
+
+    padding:150px 8%;
+
+}
+
+.contact h2{
+
+    font-size:clamp(44px,6vw,84px);
+
+    font-weight:300;
+
+    line-height:1.05;
+
+    margin:40px auto;
+
+    max-width:900px;
+
+}
+
+.contact p{
+
+    font-size:22px;
+
+    color:rgba(255,255,255,.75);
+
+    max-width:760px;
+
+    margin:0 auto 60px;
+
+    line-height:1.8;
+
+}
+
+.contact-button{
+
+    display:inline-block;
+
+    padding:20px 42px;
+
+    border:1px solid white;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    transition:.35s;
+
+}
+
+.contact-button:hover{
+
+    background:white;
+
+    color:#1B1B1B;
+
+}
+
+/*===========================
+FOOTER
+===========================*/
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 30px;
+
+}
+
+.footer-logo{
+
+    letter-spacing:5px;
+
+    font-size:15px;
+
+    margin-bottom:25px;
+
+}
+
+footer p{
+
+    color:rgba(255,255,255,.55);
+
+    margin-bottom:15px;
+
+}
+
+footer span{
+
+    color:rgba(255,255,255,.35);
+
+    font-size:14px;
+
+}
+
+/*===========================
+RESPONSIVE
+===========================*/
+
+@media (max-width:900px){
+
+.project{
+
+    flex-direction:column;
+
+    gap:40px;
+
+    padding:60px 0;
+
+}
+
+.project video{
+
+    width:100%;
+
+}
+
+.why-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.industry h2{
+
+    font-size:34px;
+
+}
+
+.step h3{
+
+    font-size:34px;
+
+}
+
+.contact{
+
+    padding:100px 8%;
+
+}
+
+.contact h2{
+
+    font-size:46px;
+
+}
+
+.contact p{
+
+    font-size:18px;
+
+}
+
+}
+
 </style>
 
 </head>
@@ -888,7 +1332,7 @@ WHY IT MATTERS
 
 </section>
 
-<section class="projects">
+<section class="projects" id="projects">
 
     <span class="section-label">
         SELECTED PROJECTS
@@ -898,15 +1342,17 @@ WHY IT MATTERS
 
         <div class="project-info">
 
+            <span>01</span>
+
             <h2>Luxury Real Estate</h2>
 
-            <p>Marbella · Spain</p>
+            <p>Los Angeles · California</p>
 
         </div>
 
         <video autoplay muted loop playsinline>
 
-            <source src="TU_VIDEO_1.mov" type="video/quicktime">
+            <source src="los-angeles.mov" type="video/quicktime">
 
         </video>
 
@@ -916,15 +1362,17 @@ WHY IT MATTERS
 
         <div class="project-info">
 
-            <h2>Boutique Hospitality</h2>
+            <span>02</span>
 
-            <p>Mallorca · Spain</p>
+            <h2>Vacation Rental</h2>
+
+            <p>Hospitality Experience</p>
 
         </div>
 
         <video autoplay muted loop playsinline>
 
-            <source src="TU_VIDEO_2.mov" type="video/quicktime">
+            <source src="vacation-rental.mov" type="video/quicktime">
 
         </video>
 
@@ -933,16 +1381,18 @@ WHY IT MATTERS
     <div class="project">
 
         <div class="project-info">
+
+            <span>03</span>
 
             <h2>Premium Brand</h2>
 
-            <p>Product Campaign</p>
+            <p>Olive Oil Campaign</p>
 
         </div>
 
         <video autoplay muted loop playsinline>
 
-            <source src="TU_VIDEO_3.mov" type="video/quicktime">
+            <source src="olive-oil.mov" type="video/quicktime">
 
         </video>
 
@@ -950,24 +1400,255 @@ WHY IT MATTERS
 
 </section>
 
+<section class="industries" id="industries">
+
+    <span class="section-label">
+
+        INDUSTRIES
+
+    </span>
+
+    <div class="industry">
+
+        <h2>Real Estate</h2>
+
+        <p>Cinematic presentations that help properties stand out before the first visit.</p>
+
+    </div>
+
+    <div class="industry">
+
+        <h2>Hospitality</h2>
+
+        <p>Create desire before guests even arrive.</p>
+
+    </div>
+
+    <div class="industry">
+
+        <h2>Property Owners</h2>
+
+        <p>Transform listings into memorable experiences.</p>
+
+    </div>
+
+    <div class="industry">
+
+        <h2>Premium Brands</h2>
+
+        <p>Visual storytelling designed to elevate perception.</p>
+
+    </div>
+
+</section>
+
+<section class="process" id="process">
+
+    <span class="section-label">
+
+        PROCESS
+
+    </span>
+
+    <div class="step">
+
+        <span>01</span>
+
+        <h3>Discover</h3>
+
+        <p>Understanding your property and your audience.</p>
+
+    </div>
+
+    <div class="step">
+
+        <span>02</span>
+
+        <h3>Create</h3>
+
+        <p>Transforming existing images into cinematic visuals.</p>
+
+    </div>
+
+    <div class="step">
+
+        <span>03</span>
+
+        <h3>Refine</h3>
+
+        <p>Perfecting every detail until it feels premium.</p>
+
+    </div>
+
+    <div class="step">
+
+        <span>04</span>
+
+        <h3>Deliver</h3>
+
+        <p>Ready for websites, social media and campaigns.</p>
+
+    </div>
+
+</section>
+
+<section class="why-kirels">
+
+    <span class="section-label">
+
+        WHY KIRELS
+
+    </span>
+
+    <div class="statement">
+
+        <h2>
+
+            Designed to create
+            unforgettable
+            first impressions.
+
+        </h2>
+
+        <p>
+
+            Every visual is crafted to increase attention,
+            create emotion and elevate perceived value.
+
+        </p>
+
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <span>01</span>
+
+            <h3>
+
+                Attention
+
+            </h3>
+
+            <p>
+
+                Stand out instantly in crowded marketplaces.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <span>02</span>
+
+            <h3>
+
+                Emotion
+
+            </h3>
+
+            <p>
+
+                Help people imagine themselves there before visiting.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <span>03</span>
+
+            <h3>
+
+                Perception
+
+            </h3>
+
+            <p>
+
+                Premium presentation creates premium value.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <span class="section-label">
+
+        CONTACT
+
+    </span>
+
+    <h2>
+
+        Let's create something
+        impossible to ignore.
+
+    </h2>
+
+    <p>
+
+        Ready to transform your next property,
+        hospitality experience or premium brand?
+
+    </p>
+
+    <a href="mailto:hello@kirelsvisual.com" class="contact-button">
+
+        Start Your Project →
+
+    </a>
+
+</section>
+
+<footer>
+
+    <div class="footer-logo">
+
+        KIRELS VISUAL
+
+    </div>
+
+    <p>
+
+        Real Estate · Hospitality · Brands
+
+    </p>
+
+    <span>
+
+        © 2026 Kirels Visual
+
+    </span>
+
+</footer>
+
 <script>
 
 const menuButton = document.getElementById("menuButton");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuButton.addEventListener("click", () => {
+menuButton.addEventListener("click",()=>{
 
     mobileMenu.classList.toggle("active");
 
-    if (mobileMenu.classList.contains("active")) {
+});
 
-        menuButton.innerHTML = "✕";
+document.querySelectorAll(".mobile-menu a").forEach(link=>{
 
-    } else {
+    link.addEventListener("click",()=>{
 
-        menuButton.innerHTML = "☰";
+        mobileMenu.classList.remove("active");
 
-    }
+    });
 
 });
 
@@ -976,3 +1657,5 @@ menuButton.addEventListener("click", () => {
 </body>
 
 </html>
+
+
