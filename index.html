@@ -1219,6 +1219,78 @@ RESPONSIVE
 
 }
 
+/*=========================
+CINEMATIC DIVIDER
+=========================*/
+
+.cinematic-divider{
+
+    position:relative;
+
+    height:90vh;
+
+    overflow:hidden;
+
+}
+
+.cinematic-divider video{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.divider-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.22);
+
+}
+
+.divider-text{
+
+    position:absolute;
+
+    left:8%;
+
+    bottom:12%;
+
+    color:white;
+
+    z-index:2;
+
+}
+
+.divider-text span{
+
+    display:block;
+
+    letter-spacing:5px;
+
+    font-size:13px;
+
+    margin-bottom:18px;
+
+    opacity:.85;
+
+}
+
+.divider-text h2{
+
+    font-size:clamp(42px,6vw,82px);
+
+    font-weight:300;
+
+    line-height:1.05;
+
+}
+
 </style>
 
 </head>
@@ -1601,6 +1673,30 @@ RESPONSIVE
         <h3>Deliver</h3>
 
         <p>Ready for websites, social media and campaigns.</p>
+
+    </div>
+
+</section>
+
+<section class="cinematic-divider">
+
+    <video autoplay muted loop playsinline>
+
+        <source src="copy_2969AB70-9706-401F-AEA9-47EA2B7638CD.mov" type="video/quicktime">
+
+    </video>
+
+    <div class="divider-overlay"></div>
+
+    <div class="divider-text">
+
+        <span>CINEMATIC DETAILS</span>
+
+        <h2>
+            Every frame
+            <br>
+            tells a story.
+        </h2>
 
     </div>
 
