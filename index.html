@@ -123,13 +123,23 @@ NAVBAR
 
 .navbar{
 
-    position:absolute;
+    position:fixed;
 
     top:0;
 
     left:0;
 
     width:100%;
+    
+    background:rgba(20,20,20,.12);
+    
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+    
+    transition:.35s;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
 
     padding:32px 40px;
 
@@ -1401,7 +1411,13 @@ CINEMATIC DIVIDER
 
     </div>
 
-    <div class="scroll">
+    <a href="#projects" class="scroll">
+
+    <div class="arrow">↓</div>
+
+    <span>Scroll</span>
+
+</a>
 
     <div class="arrow">↓</div>
 
@@ -1437,7 +1453,7 @@ CINEMATIC DIVIDER
 
         </p>
 
-        <a href="#selected-projects" class="learn-more">
+        <a href="#projects" class="learn-more">
 
             Learn More →
 
