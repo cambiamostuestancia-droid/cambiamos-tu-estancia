@@ -1347,6 +1347,122 @@ CINEMATIC DIVIDER
 
 }
 
+/*===========================
+FAQ
+===========================*/
+
+.faq{
+
+    background:#fff;
+
+    color:#1B1B1B;
+
+    padding:120px 8%;
+
+}
+
+.faq-item{
+
+    border-top:1px solid #E8E4DD;
+
+}
+
+.faq-item:last-child{
+
+    border-bottom:1px solid #E8E4DD;
+
+}
+
+.faq-question{
+
+    width:100%;
+
+    background:none;
+
+    border:none;
+
+    padding:36px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:32px;
+
+    font-weight:300;
+
+    cursor:pointer;
+
+    color:#1B1B1B;
+
+    text-align:left;
+
+}
+
+.faq-question span{
+
+    font-size:44px;
+
+    font-weight:300;
+
+}
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .45s ease;
+
+}
+
+.faq-answer p{
+
+    padding:0 0 36px;
+
+    max-width:760px;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:#666;
+
+}
+
+.faq-item.active .faq-answer{
+
+    max-height:500px;
+
+}
+
+.faq-item.active .faq-question span{
+
+    transform:rotate(45deg);
+
+    transition:.3s;
+
+}
+
+@media(max-width:900px){
+
+.faq-question{
+
+    font-size:24px;
+
+}
+
+.faq-answer p{
+
+    font-size:18px;
+
+}
+
+}
+
 </style>
 
 </head>
@@ -1875,6 +1991,109 @@ CINEMATIC DIVIDER
 
 </section>
 
+<section class="faq">
+
+    <span class="section-label">
+        FREQUENTLY ASKED QUESTIONS
+    </span>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            What do you need to get started?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                In most cases, I only need the property's existing photographs.
+                I can work with photos you already have, even if they weren't taken professionally.
+                If needed, I can also advise you on how to capture better images for the best possible result.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            What's included?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Every project is tailored to your needs and may include photo review and selection,
+                professional image enhancement, object removal, cinematic video, horizontal and vertical formats,
+                4K delivery, creative direction, revisions included and content ready for websites,
+                property portals and social media.
+                Website design can also be included if required.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            How much does it cost?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Every project is quoted individually depending on the property's size,
+                complexity and final deliverables.
+                Projects start from <strong>€150.</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            How long does delivery take?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Most projects are delivered within 48–72 hours after receiving all the required material.
+                Larger projects may require additional time, which will always be confirmed in advance.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            How does payment work?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                There is no upfront payment.
+                You only pay once the agreed result has been delivered and you're happy with the final work.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
 <section class="contact" id="contact">
 
     <span class="section-label">
@@ -1966,6 +2185,16 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
     link.addEventListener("click", () => {
 
         mobileMenu.classList.remove("active");
+
+    });
+
+});
+
+document.querySelectorAll(".faq-question").forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        button.parentElement.classList.toggle("active");
 
     });
 
