@@ -1565,36 +1565,6 @@ FOOTER LOGO
         translateY(0);
 }
 
-/* ===========================
-   REVEAL ANIMATIONS
-=========================== */
-
-.reveal{
-    opacity:0;
-    transform:translateY(40px);
-    transition:
-        opacity .9s ease,
-        transform .9s ease;
-    will-change:transform, opacity;
-}
-
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
-}
-
-.reveal-delay-1{
-    transition-delay:.15s;
-}
-
-.reveal-delay-2{
-    transition-delay:.3s;
-}
-
-.reveal-delay-3{
-    transition-delay:.45s;
-}
-
 </style>
 
 </head>
@@ -1713,7 +1683,7 @@ FOOTER LOGO
 
     <div class="opportunity-content">
 
-        <h2>
+        <h2> class="reveal">
 
             Every property competes
             <br>
@@ -2342,25 +2312,25 @@ document.querySelectorAll(".faq-question").forEach(button=>{
 
 <script>
 
-const reveals=document.querySelectorAll('.reveal,.reveal-image');
+const reveals = document.querySelectorAll('.reveal, .reveal-image');
 
-const observer=new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries) => {
 
-entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
-entry.target.classList.add('active');
+            entry.target.classList.add('active');
 
-}
+        }
 
+    });
+
+}, {
+    threshold: 0.15
 });
 
-},{
-threshold:.15
-});
-
-reveals.forEach(el=>observer.observe(el));
+reveals.forEach(el => observer.observe(el));
 
 </script>
 
