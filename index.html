@@ -1507,13 +1507,71 @@ FOOTER LOGO
 
 }
 
+/* ===========================
+   PREMIUM SCROLL ANIMATIONS
+=========================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+    will-change:transform,opacity;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Variaciones */
+
+.reveal-delay-1{
+    transition-delay:.15s;
+}
+
+.reveal-delay-2{
+    transition-delay:.3s;
+}
+
+.reveal-delay-3{
+    transition-delay:.45s;
+}
+
+/* Fotografías */
+
+.reveal-image{
+
+    opacity:0;
+
+    transform:
+        scale(1.06)
+        translateY(30px);
+
+    transition:
+
+        opacity 1.1s ease,
+
+        transform 1.2s ease;
+}
+
+.reveal-image.active{
+
+    opacity:1;
+
+    transform:
+        scale(1)
+        translateY(0);
+}
+
 </style>
 
 </head>
 
 <body>
 
-<section class="hero">
+<section class="hero reveal">
 
     <video autoplay muted loop playsinline>
 
@@ -1593,7 +1651,7 @@ FOOTER LOGO
 
     <div class="hero-content">
 
-        <h1>
+        <h1 class="reveal">
 
     Make every
     <br>
@@ -1603,7 +1661,7 @@ FOOTER LOGO
 
 </h1>
 
-        <p>
+        <p class="reveal reveal-delay-1">
 
     Creating unforgettable first impressions
     <br>
@@ -1611,7 +1669,7 @@ FOOTER LOGO
 
 </p>
 
-        <a href="#projects" class="hero-button">
+        <a href="#projects" class="hero-button reveal reveal-delay-2">
 
     Explore Our Work →
 
@@ -2249,6 +2307,30 @@ document.querySelectorAll(".faq-question").forEach(button=>{
     });
 
 });
+
+</script>
+
+<script>
+
+const reveals=document.querySelectorAll('.reveal,.reveal-image');
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('active');
+
+}
+
+});
+
+},{
+threshold:.15
+});
+
+reveals.forEach(el=>observer.observe(el));
 
 </script>
 
