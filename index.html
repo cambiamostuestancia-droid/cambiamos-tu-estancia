@@ -1693,7 +1693,7 @@ FADE UP
 
     <div class="hero-content">
 
-        <h1 class="reveal">
+        <h1 id="heroTitle" class="reveal">
 
     Make every
     <br>
@@ -2369,6 +2369,24 @@ threshold:.2
 });
 
 fadeElements.forEach(el=>fadeObserver.observe(el));
+
+</script>
+
+<script>
+
+const heroTitle = document.getElementById("heroTitle");
+
+document.getElementById("langES").onclick = () => {
+
+heroTitle.innerHTML = `Haz que cada<br>propiedad sea<br>imposible de ignorar.`;
+
+};
+
+document.getElementById("langEN").onclick = () => {
+
+heroTitle.innerHTML = `Make every<br>property<br>impossible to ignore.`;
+
+};
 
 </script>
 
