@@ -1693,7 +1693,7 @@ FADE UP
 
 </h1>
 
-        <p class="reveal reveal-delay-1">
+        <p id="heroSubtitle" class="reveal reveal-delay-1">
 
     Creating unforgettable first impressions
     <br>
@@ -1701,7 +1701,7 @@ FADE UP
 
 </p>
 
-        <a href="#projects" class="hero-button reveal reveal-delay-2">
+        <a href="#projects" id="heroButton" class="hero-button reveal reveal-delay-2">
 
     Explore Our Work →
 
@@ -2365,10 +2365,16 @@ fadeElements.forEach(el=>fadeObserver.observe(el));
 <script>
 
 const heroTitle = document.getElementById("heroTitle");
+const heroSubtitle = document.getElementById("heroSubtitle");
+const heroButton = document.getElementById("heroButton");
 
 document.getElementById("flagES").onclick = () => {
 
 heroTitle.innerHTML = `Haz que cada<br>propiedad sea<br>imposible de ignorar.`;
+
+heroSubtitle.innerHTML = `Creamos primeras impresiones inolvidables<br>para inmobiliarias, alojamientos y marcas.`;
+
+heroButton.innerHTML = `Descubre nuestro trabajo →`;
 
 };
 
@@ -2376,7 +2382,13 @@ document.getElementById("flagEN").onclick = () => {
 
 heroTitle.innerHTML = `Make every<br>property<br>impossible to ignore.`;
 
+heroSubtitle.innerHTML = `Creating unforgettable first impressions<br>for real estate, hospitality and brands.`;
+
+heroButton.innerHTML = `Explore Our Work →`;
+
 };
+
+</script>
 
 </script>
 
