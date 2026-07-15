@@ -1936,19 +1936,21 @@ Visual storytelling designed to elevate perception.
 
 <section class="process" id="process">
 
-    <span class="section-label">
+    <span class="section-label" id="processLabel">
 
-        PROCESS
+    PROCESS
 
-    </span>
+</span>
 
     <div class="step">
 
         <span>01</span>
 
-        <h3>Discover</h3>
+        <h3 id="processTitle1">Discover</h3>
 
-        <p>Understanding your property and your audience.</p>
+<p id="processText1">
+Understanding your property and your audience.
+</p>
 
     </div>
 
@@ -1956,9 +1958,11 @@ Visual storytelling designed to elevate perception.
 
         <span>02</span>
 
-        <h3>Create</h3>
+        <h3 id="processTitle2">Create</h3>
 
-        <p>Transforming existing images into cinematic visuals.</p>
+<p id="processText2">
+Transforming existing images into cinematic visuals.
+</p>
 
     </div>
 
@@ -1966,9 +1970,11 @@ Visual storytelling designed to elevate perception.
 
         <span>03</span>
 
-        <h3>Refine</h3>
+        <h3 id="processTitle3">Refine</h3>
 
-        <p>Perfecting every detail until it feels premium.</p>
+<p id="processText3">
+Perfecting every detail until it feels premium.
+</p>
 
     </div>
 
@@ -1976,9 +1982,11 @@ Visual storytelling designed to elevate perception.
 
         <span>04</span>
 
-        <h3>Deliver</h3>
+        <h3 id="processTitle4">Deliver</h3>
 
-        <p>Ready for websites, social media and campaigns.</p>
+<p id="processText4">
+Ready for websites, social media and campaigns.
+</p>
 
     </div>
 
@@ -2463,6 +2471,33 @@ document.getElementById("industryTitle4").innerHTML =
 document.getElementById("industryText4").innerHTML =
 `Contenido visual diseñado para elevar el valor percibido de tu marca.`;
 
+document.getElementById("processLabel").innerHTML =
+`PROCESO`;
+
+document.getElementById("processTitle1").innerHTML =
+`Descubrir`;
+
+document.getElementById("processText1").innerHTML =
+`Analizamos tu propiedad y el público al que quieres llegar.`;
+
+document.getElementById("processTitle2").innerHTML =
+`Crear`;
+
+document.getElementById("processText2").innerHTML =
+`Transformamos las imágenes existentes en contenido cinematográfico.`;
+
+document.getElementById("processTitle3").innerHTML =
+`Perfeccionar`;
+
+document.getElementById("processText3").innerHTML =
+`Cuidamos cada detalle hasta conseguir un acabado premium.`;
+
+document.getElementById("processTitle4").innerHTML =
+`Entregar`;
+
+document.getElementById("processText4").innerHTML =
+`Listo para webs, portales inmobiliarios, redes sociales y campañas.`;
+
 };
 
 document.getElementById("flagEN").onclick = () => {
@@ -2549,6 +2584,33 @@ document.getElementById("industryTitle4").innerHTML =
 
 document.getElementById("industryText4").innerHTML =
 `Visual storytelling designed to elevate perception.`;
+
+document.getElementById("processLabel").innerHTML =
+`PROCESS`;
+
+document.getElementById("processTitle1").innerHTML =
+`Discover`;
+
+document.getElementById("processText1").innerHTML =
+`Understanding your property and your audience.`;
+
+document.getElementById("processTitle2").innerHTML =
+`Create`;
+
+document.getElementById("processText2").innerHTML =
+`Transforming existing images into cinematic visuals.`;
+
+document.getElementById("processTitle3").innerHTML =
+`Refine`;
+
+document.getElementById("processText3").innerHTML =
+`Perfecting every detail until it feels premium.`;
+
+document.getElementById("processTitle4").innerHTML =
+`Deliver`;
+
+document.getElementById("processText4").innerHTML =
+`Ready for websites, social media and campaigns.`;
 
 };
 
