@@ -1715,7 +1715,7 @@ FADE UP
 
     <div class="opportunity-content">
 
-        <h2 class="reveal">
+        <h2 id="opportunityTitle" class="reveal">
 
             Every property competes
             <br>
@@ -1723,21 +1723,17 @@ FADE UP
 
         </h2>
 
-        <p>
+        <p id="opportunityText1">
+    The way it's presented shapes how people perceive its value.
+</p>
 
-            The way it's presented shapes how people perceive its value.
+        <p id="opportunityText2">
+    Photography captures spaces.
+    <br>
+    Presentation creates emotion.
+</p>
 
-        </p>
-
-        <p>
-
-            Photography captures spaces.
-            <br>
-            Presentation creates emotion.
-
-        </p>
-
-        <a href="#process" class="learn-more">
+        <a href="#process" id="learnMoreButton" class="learn-more">
 
     Learn More →
 
@@ -2367,6 +2363,10 @@ fadeElements.forEach(el=>fadeObserver.observe(el));
 const heroTitle = document.getElementById("heroTitle");
 const heroSubtitle = document.getElementById("heroSubtitle");
 const heroButton = document.getElementById("heroButton");
+const opportunityTitle = document.getElementById("opportunityTitle");
+const opportunityText1 = document.getElementById("opportunityText1");
+const opportunityText2 = document.getElementById("opportunityText2");
+const learnMoreButton = document.getElementById("learnMoreButton");
 
 document.getElementById("flagES").onclick = () => {
 
@@ -2375,6 +2375,14 @@ heroTitle.innerHTML = `Haz que cada<br>propiedad sea<br>imposible de ignorar.`;
 heroSubtitle.innerHTML = `Creamos primeras impresiones inolvidables<br>para inmobiliarias, alojamientos y marcas.`;
 
 heroButton.innerHTML = `Descubre nuestro trabajo →`;
+
+opportunityTitle.innerHTML = `Cada propiedad<br>compite por llamar<br>la atención.`;
+
+opportunityText1.innerHTML = `La forma en que se presenta determina cómo las personas perciben su valor.`;
+
+opportunityText2.innerHTML = `La fotografía muestra espacios.<br>La presentación crea emoción.`;
+
+learnMoreButton.innerHTML = `Descubre más →`;
 
 };
 
@@ -2385,6 +2393,14 @@ heroTitle.innerHTML = `Make every<br>property<br>impossible to ignore.`;
 heroSubtitle.innerHTML = `Creating unforgettable first impressions<br>for real estate, hospitality and brands.`;
 
 heroButton.innerHTML = `Explore Our Work →`;
+
+opportunityTitle.innerHTML = `Every property competes<br>for attention.`;
+
+opportunityText1.innerHTML = `The way it's presented shapes how people perceive its value.`;
+
+opportunityText2.innerHTML = `Photography captures spaces.<br>Presentation creates emotion.`;
+
+learnMoreButton.innerHTML = `Learn More →`;
 
 };
 
