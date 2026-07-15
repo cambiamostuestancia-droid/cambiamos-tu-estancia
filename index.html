@@ -1757,9 +1757,11 @@ FADE UP
 
     <div class="statement">
 
-        <span class="section-label">
-            WHY IT MATTERS
-        </span>
+        <span class="section-label" id="whyLabel">
+
+    WHY IT MATTERS
+
+</span>
 
         <h2 id="whyTitle1">
 
@@ -1816,9 +1818,9 @@ FADE UP
 
 <section class="projects" id="projects">
 
-    <span class="section-label">
-        SELECTED PROJECTS
-    </span>
+    <span class="section-label" id="projectsLabel">
+    SELECTED PROJECTS
+</span>
 
     <div class="project">
 
@@ -1826,9 +1828,9 @@ FADE UP
 
             <span>01</span>
 
-            <h2>Luxury Real Estate</h2>
+            <h2 id="projectTitle1">Luxury Real Estate</h2>
 
-            <p>Los Angeles · California</p>
+            <p id="projectText1">Los Angeles · California</p>
 
         </div>
 
@@ -1846,9 +1848,9 @@ FADE UP
 
             <span>02</span>
 
-            <h2>Vacation Rental</h2>
+            <h2 id="projectTitle2">Vacation Rental</h2>
 
-            <p>Hospitality Experience</p>
+            <p id="projectText2">Hospitality Experience</p>
 
         </div>
 
@@ -1866,9 +1868,9 @@ FADE UP
 
             <span>03</span>
 
-            <h2>Premium Brand</h2>
+            <h2 id="projectTitle3">Premium Brand</h2>
 
-            <p>Olive Oil Campaign</p>
+            <p id="projectText3">Olive Oil Campaign</p>
 
         </div>
 
@@ -2402,6 +2404,30 @@ document.getElementById("whyTitle3").innerHTML =
 document.getElementById("whyText3").innerHTML =
 `Haz que sea imposible de ignorar.`;
 
+document.getElementById("whyLabel").innerHTML =
+`POR QUÉ ES IMPORTANTE`;
+
+document.getElementById("projectsLabel").innerHTML =
+`PROYECTOS DESTACADOS`;
+
+document.getElementById("projectTitle1").innerHTML =
+`Inmobiliaria de lujo`;
+
+document.getElementById("projectText1").innerHTML =
+`Los Ángeles · California`;
+
+document.getElementById("projectTitle2").innerHTML =
+`Apartamento turístico`;
+
+document.getElementById("projectText2").innerHTML =
+`Alquiler Vacacional`;
+
+document.getElementById("projectTitle3").innerHTML =
+`Marca Premium`;
+
+document.getElementById("projectText3").innerHTML =
+`Campaña de Aceite de Oliva`;
+
 };
 
 document.getElementById("flagEN").onclick = () => {
@@ -2437,6 +2463,30 @@ document.getElementById("whyTitle3").innerHTML =
 
 document.getElementById("whyText3").innerHTML =
 `Make sure it's impossible to ignore.`;
+
+document.getElementById("whyLabel").innerHTML =
+`WHY IT MATTERS`;
+
+document.getElementById("projectsLabel").innerHTML =
+`SELECTED PROJECTS`;
+
+document.getElementById("projectTitle1").innerHTML =
+`Luxury Real Estate`;
+
+document.getElementById("projectText1").innerHTML =
+`Los Angeles · California`;
+
+document.getElementById("projectTitle2").innerHTML =
+`Vacation Rental`;
+
+document.getElementById("projectText2").innerHTML =
+`Hospitality Experience`;
+
+document.getElementById("projectTitle3").innerHTML =
+`Premium Brand`;
+
+document.getElementById("projectText3").innerHTML =
+`Olive Oil Campaign`;
 
 };
 
