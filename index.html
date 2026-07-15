@@ -1525,6 +1525,30 @@ FOOTER LOGO
 
 }
 
+/*===========================
+FADE UP
+===========================*/
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
 </style>
 
 </head>
@@ -1639,7 +1663,7 @@ FOOTER LOGO
 
 </section>
 
-<section class="opportunity">
+<section class="opportunity fade-up">
 
     <div class="opportunity-content">
 
@@ -2267,6 +2291,26 @@ document.querySelectorAll(".faq-question").forEach(button=>{
     });
 
 });
+
+const fadeElements = document.querySelectorAll(".fade-up");
+
+const fadeObserver = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:.2
+});
+
+fadeElements.forEach(el=>fadeObserver.observe(el));
 
 </script>
 
