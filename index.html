@@ -235,6 +235,38 @@ NAVBAR
 
 }
 
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.flag-icon{
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.flag-icon:hover{
+
+    transform:scale(1.12);
+
+    opacity:.85;
+
+}
+
 .menu-button{
 
     display:none;
@@ -356,6 +388,20 @@ NAVBAR
 .navbar{
 
     padding:26px;
+
+}
+
+.nav-right{
+
+    gap:10px;
+
+}
+
+.flag-icon{
+
+    width:18px;
+
+    height:18px;
 
 }
 
@@ -1597,11 +1643,23 @@ FADE UP
 
     </ul>
 
+    <div class="nav-right">
+
+    <img src="2544FDF5-17E3-43BA-B1A1-60B710A5D023.png"
+         id="langEN"
+         class="flag-icon"
+         alt="English">
+
+    <img src="8E531448-F6A8-445A-A0F9-399B7DB76FC6.png"
+         id="langES"
+         class="flag-icon"
+         alt="Español">
+
     <button id="menuButton" class="menu-button">
-
         ☰
-
     </button>
+
+</div>
 
 </nav>
 
