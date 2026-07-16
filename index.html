@@ -265,6 +265,14 @@ NAVBAR
 
     opacity:.85;
 
+.flag-icon.active{
+
+    opacity:1;
+
+    transform:scale(1.12);
+
+}
+
 }
 
 .menu-button{
@@ -2402,7 +2410,15 @@ const opportunityText1 = document.getElementById("opportunityText1");
 const opportunityText2 = document.getElementById("opportunityText2");
 const learnMoreButton = document.getElementById("learnMoreButton");
 
+const flagES = document.getElementById("flagES");
+const flagEN = document.getElementById("flagEN");
+
 document.getElementById("flagES").onclick = () => {
+
+flagES.classList.add("active");
+flagEN.classList.remove("active");
+
+localStorage.setItem("language", "es");
 
 heroTitle.innerHTML = `Haz que cada<br>propiedad sea<br>imposible de ignorar.`;
 
@@ -2632,6 +2648,11 @@ document.getElementById("footerIndustries").innerHTML =
 };
 
 document.getElementById("flagEN").onclick = () => {
+
+flagEN.classList.add("active");
+flagES.classList.remove("active");
+
+localStorage.setItem("language", "en");
 
 heroTitle.innerHTML = `Make every<br>property<br>impossible to ignore.`;
 
