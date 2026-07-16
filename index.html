@@ -1623,15 +1623,15 @@ FADE UP
 
     <ul class="desktop-menu">
 
-        <li><a href="#projects">Work</a></li>
+    <li><a href="#projects" id="menuWork">Work</a></li>
 
-        <li><a href="#industries">Industries</a></li>
+    <li><a href="#industries" id="menuIndustries">Industries</a></li>
 
-        <li><a href="#process">Process</a></li>
+    <li><a href="#process" id="menuProcess">Process</a></li>
 
-        <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" id="menuContact">Contact</a></li>
 
-    </ul>
+</ul>
 
     <div class="nav-right">
 
@@ -1661,13 +1661,13 @@ FADE UP
 
     </button>
 
-    <a href="#projects">Work</a>
+    <a href="#projects" id="mobileWork">Work</a>
 
-    <a href="#industries">Industries</a>
+<a href="#industries" id="mobileIndustries">Industries</a>
 
-    <a href="#process">Process</a>
+<a href="#process" id="mobileProcess">Process</a>
 
-    <a href="#contact">Contact</a>
+<a href="#contact" id="mobileContact">Contact</a>
 
     <div class="mobile-language">
 
@@ -2262,27 +2262,29 @@ Premium presentation creates premium value.
 
 <section class="contact" id="contact">
 
-    <span class="section-label">
+    <span class="section-label" id="contactLabel">
 
-        CONTACT
+    CONTACT
 
-    </span>
+</span>
 
-    <h2>
+    <h2 id="contactTitle">
 
-        Let's create something
-        impossible to ignore.
+    Let's create something
+    impossible to ignore.
 
-    </h2>
+</h2>
 
-    <p>
+    <p id="contactText">
 
-        Ready to transform your next property,
-        hospitality experience or premium brand?
+    Ready to transform your next property,
+    hospitality experience or premium brand?
 
-    </p>
+</p>
 
-    <a href="mailto:info@kirelsvisual.es" class="contact-button">
+    <a href="mailto:info@kirelsvisual.es"
+class="contact-button"
+id="contactButton">
 
         Start Your Project →
 
@@ -2586,6 +2588,34 @@ document.getElementById("faqQuestion5").innerHTML =
 document.getElementById("faqAnswer5").innerHTML =
 `No hay pago por adelantado. Solo pagas cuando el trabajo acordado está terminado y estás satisfecho con el resultado.`;
 
+document.getElementById("contactLabel").innerHTML =
+`CONTACTO`;
+
+document.getElementById("contactTitle").innerHTML =
+`Creemos algo<br>imposible de ignorar.`;
+
+document.getElementById("contactText").innerHTML =
+`¿Listo para transformar tu próxima propiedad, alojamiento turístico o marca premium?`;
+
+document.getElementById("contactButton").innerHTML =
+`Comienza tu proyecto →`;
+
+document.getElementById("menuWork").innerHTML = `Trabajos`;
+
+document.getElementById("menuIndustries").innerHTML = `Sectores`;
+
+document.getElementById("menuProcess").innerHTML = `Proceso`;
+
+document.getElementById("menuContact").innerHTML = `Contacto`;
+
+document.getElementById("mobileWork").innerHTML = `Trabajos`;
+
+document.getElementById("mobileIndustries").innerHTML = `Sectores`;
+
+document.getElementById("mobileProcess").innerHTML = `Proceso`;
+
+document.getElementById("mobileContact").innerHTML = `Contacto`;
+
 };
 
 document.getElementById("flagEN").onclick = () => {
@@ -2777,6 +2807,34 @@ document.getElementById("faqQuestion5").innerHTML =
 
 document.getElementById("faqAnswer5").innerHTML =
 `There is no upfront payment. You only pay once the agreed result has been delivered and you're happy with the final work.`;
+  
+document.getElementById("contactLabel").innerHTML =
+`CONTACT`;
+
+document.getElementById("contactTitle").innerHTML =
+`Let's create something<br>impossible to ignore.`;
+
+document.getElementById("contactText").innerHTML =
+`Ready to transform your next property, hospitality experience or premium brand?`;
+
+document.getElementById("contactButton").innerHTML =
+`Start Your Project →`;
+
+document.getElementById("menuWork").innerHTML = `Work`;
+
+document.getElementById("menuIndustries").innerHTML = `Industries`;
+
+document.getElementById("menuProcess").innerHTML = `Process`;
+
+document.getElementById("menuContact").innerHTML = `Contact`;
+
+document.getElementById("mobileWork").innerHTML = `Work`;
+
+document.getElementById("mobileIndustries").innerHTML = `Industries`;
+
+document.getElementById("mobileProcess").innerHTML = `Process`;
+
+document.getElementById("mobileContact").innerHTML = `Contact`;
 
 };
 
