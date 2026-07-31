@@ -1375,6 +1375,132 @@ RESPONSIVE
 
 }
 
+.footer-social{
+
+display:flex;
+
+justify-content:center;
+
+gap:34px;
+
+margin:35px 0;
+
+}
+
+.footer-social img{
+
+width:24px;
+
+height:24px;
+
+opacity:.82;
+
+transition:.3s ease;
+
+}
+
+.footer-social img:hover{
+
+opacity:1;
+
+transform:translateY(-2px) scale(1.08);
+
+}
+
+.footer-divider{
+
+width:180px;
+
+height:1px;
+
+background:rgba(255,255,255,.10);
+
+margin:0 auto 35px;
+
+}
+
+.legal-accordion{
+
+max-width:760px;
+
+margin:auto;
+
+text-align:left;
+
+}
+
+.legal-item{
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.legal-toggle{
+
+width:100%;
+
+background:none;
+
+border:none;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 0;
+
+cursor:pointer;
+
+color:white;
+
+font-size:16px;
+
+}
+
+.arrow{
+
+font-size:24px;
+
+transition:.3s;
+
+}
+
+.legal-content{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:.35s;
+
+}
+
+.legal-content p{
+
+padding-bottom:20px;
+
+color:rgba(255,255,255,.65);
+
+line-height:1.8;
+
+font-size:15px;
+
+}
+
+.legal-item.active .legal-content{
+
+max-height:400px;
+
+}
+
+.legal-item.active .arrow{
+
+transform:rotate(45deg);
+
+}
+
 /*=========================
 CINEMATIC DIVIDER
 =========================*/
@@ -2355,10 +2481,146 @@ id="contactButton">
          class="footer-logo-img">
 
     <p id="footerIndustries">
-
         Real Estate · Hospitality · Brands
-
     </p>
+
+    <div class="footer-social">
+
+        <a href="https://wa.me/34677994250" target="_blank">
+            <img src="C59EBBE6-169E-4297-9FB2-4DFEF9BD6C51.png" alt="WhatsApp">
+        </a>
+
+        <a href="mailto:info@kirelsvisual.es">
+            <img src="F0826F90-808E-4CEB-93F0-6E973202B3F2.png" alt="Email">
+        </a>
+
+        <a href="https://www.instagram.com/kirelsvisual?igsh=NDg3aWkwZjE5N242&utm_source=qr" target="_blank">
+            <img src="DF1D35E1-F16D-4C77-80B0-1664C314B69E.png" alt="Instagram">
+        </a>
+
+        <a href="https://www.linkedin.com/in/juan-carlos-saiz-almendros" target="_blank">
+            <img src="37E9414D-DF18-47A8-8A5F-027FFF64241C.png" alt="LinkedIn">
+        </a>
+
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="legal-accordion">
+
+        <div class="legal-item">
+
+            <button class="legal-toggle">
+
+                <span class="legal-title"
+                      data-en="Legal Notice"
+                      data-es="Aviso Legal">
+
+                    Legal Notice
+
+                </span>
+
+                <span class="arrow">+</span>
+
+            </button>
+
+            <div class="legal-content">
+
+                <p id="legalNoticeText">
+
+                    Kirels Visual is an independent creative studio specializing in premium visual content for real estate, hospitality and brands. All content on this website is protected by copyright and may not be reproduced without permission.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="legal-item">
+
+            <button class="legal-toggle">
+
+                <span class="legal-title"
+                      data-en="Privacy Policy"
+                      data-es="Política de Privacidad">
+
+                    Privacy Policy
+
+                </span>
+
+                <span class="arrow">+</span>
+
+            </button>
+
+            <div class="legal-content">
+
+                <p id="privacyText">
+
+                    This website does not collect personal data through forms. If you contact Kirels Visual by email or WhatsApp, your information will only be used to respond to your enquiry.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="legal-item">
+
+            <button class="legal-toggle">
+
+                <span class="legal-title"
+                      data-en="Cookie Policy"
+                      data-es="Política de Cookies">
+
+                    Cookie Policy
+
+                </span>
+
+                <span class="arrow">+</span>
+
+            </button>
+
+            <div class="legal-content">
+
+                <p id="cookiesText">
+
+                    This website only uses essential technical cookies required for its operation. No analytics, advertising or tracking cookies are used.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="legal-item">
+
+            <button class="legal-toggle">
+
+                <span class="legal-title"
+                      data-en="Terms of Service"
+                      data-es="Términos del Servicio">
+
+                    Terms of Service
+
+                </span>
+
+                <span class="arrow">+</span>
+
+            </button>
+
+            <div class="legal-content">
+
+                <p id="termsText">
+
+                    Every project is tailored individually. Pricing, timelines and deliverables are agreed before work begins. Unless otherwise agreed, Kirels Visual may showcase completed work in its portfolio.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <span>
 
@@ -2673,6 +2935,23 @@ document.getElementById("dividerTitle").innerHTML =
 document.getElementById("footerIndustries").innerHTML =
 `Inmobiliarias · Alojamientos · Marcas`;
 
+document.querySelectorAll(".legal-title")[0].innerHTML = "Aviso Legal";
+document.querySelectorAll(".legal-title")[1].innerHTML = "Política de Privacidad";
+document.querySelectorAll(".legal-title")[2].innerHTML = "Política de Cookies";
+document.querySelectorAll(".legal-title")[3].innerHTML = "Términos del Servicio";
+
+document.getElementById("legalNoticeText").innerHTML =
+`Kirels Visual es un estudio creativo independiente especializado en contenido visual premium para inmobiliarias, alojamientos vacacionales y marcas. Todo el contenido de este sitio web está protegido por derechos de autor y no puede reproducirse sin autorización.`;
+
+document.getElementById("privacyText").innerHTML =
+`Este sitio web no recopila datos personales mediante formularios. Si contactas con Kirels Visual por correo electrónico o WhatsApp, tu información solo se utilizará para responder a tu consulta.`;
+
+document.getElementById("cookiesText").innerHTML =
+`Este sitio web únicamente utiliza las cookies técnicas imprescindibles para su funcionamiento. No se utilizan cookies de análisis, publicidad ni seguimiento.`;
+
+document.getElementById("termsText").innerHTML =
+`Cada proyecto se realiza de forma personalizada. Los precios, plazos y entregables se acuerdan antes de comenzar el trabajo. Salvo acuerdo en contrario, Kirels Visual podrá mostrar los trabajos realizados en su portfolio.`;
+
 };
 
 document.getElementById("flagEN").onclick = () => {
@@ -2907,9 +3186,40 @@ document.getElementById("dividerTitle").innerHTML =
 document.getElementById("footerIndustries").innerHTML =
 `Real Estate · Hospitality · Brands`;
 
+document.querySelectorAll(".legal-title")[0].innerHTML = "Legal Notice";
+document.querySelectorAll(".legal-title")[1].innerHTML = "Privacy Policy";
+document.querySelectorAll(".legal-title")[2].innerHTML = "Cookie Policy";
+document.querySelectorAll(".legal-title")[3].innerHTML = "Terms of Service";
+
+document.getElementById("legalNoticeText").innerHTML =
+`Kirels Visual is an independent creative studio specializing in premium visual content for real estate, hospitality and brands. All content on this website is protected by copyright and may not be reproduced without permission.`;
+
+document.getElementById("privacyText").innerHTML =
+`This website does not collect personal data through forms. If you contact Kirels Visual by email or WhatsApp, your information will only be used to respond to your enquiry.`;
+
+document.getElementById("cookiesText").innerHTML =
+`This website only uses essential technical cookies required for its operation. No analytics, advertising or tracking cookies are used.`;
+
+document.getElementById("termsText").innerHTML =
+`Every project is tailored individually. Pricing, timelines and deliverables are agreed before work begins. Unless otherwise agreed, Kirels Visual may showcase completed work in its portfolio.`;
+
 };
 
 </script>
+
+</script>
+
+<script>
+
+document.querySelectorAll('.legal-toggle').forEach(button=>{
+
+button.addEventListener('click',()=>{
+
+button.parentElement.classList.toggle('active');
+
+});
+
+});
 
 </script>
 
